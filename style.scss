@@ -8,6 +8,7 @@
 
 body {
     background-color: red;
+    font-family: 'Roboto', sans-serif;
 }
 
 .page-wrapper {
@@ -27,5 +28,9 @@ body {
     border: 1px solid rgba(255,255,255,.7);
     border-radius: 2rem;
     box-shadow: 2px 2px 5px 2px rgba(255,255,255,.7);
+}
+
+.navigation-bar ul li {
+    list-style-type: none;
 }
 
