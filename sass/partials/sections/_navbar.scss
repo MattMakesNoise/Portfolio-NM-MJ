@@ -1,0 +1,23 @@
+.navigation-bar {
+    flex: 1 0 200px;
+    position: sticky;
+    top: 0px;
+    padding: 20px 20px;
+    width: 20%;
+    min-height: 100%;
+    border: 1px solid black;
+    .logo-wrapper {
+        .logo {
+            font-size: 5rem;
+            font-weight: 700;
+        }
+    }
+    .nav-links-wrapper {
+        
+    }
+    ul li {
+        list-style-type: none;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
