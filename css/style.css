@@ -30,17 +30,74 @@ body {
 
 .glass {
   background: white;
-  min-height: 90vh;
+  min-height: 280vh;
   width: 95vw;
+  margin-top: 5vh !important;
+  margin-bottom: 5vh !important;
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.3)));
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 2rem;
-  -webkit-box-shadow: 2px 2px 5px 2px rgba(255, 255, 255, 0.7);
-          box-shadow: 2px 2px 5px 2px rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation-bar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 200px;
+          flex: 1 0 200px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  padding: 20px 20px;
+  width: 20%;
+  min-height: 100%;
+  border: 1px solid black;
+}
+
+.navigation-bar .logo-wrapper .logo {
+  font-size: 5rem;
+  font-weight: 700;
 }
 
 .navigation-bar ul li {
   list-style-type: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 1400px;
+          flex: 1 0 1400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid red;
+}
+
+.hero-wrapper {
+  height: 95vh;
+  border: 1px solid green;
+}
+
+.cards-wrapper {
+  height: 90vh;
+  border: 1px solid blue;
+}
+
+.contact-wrapper {
+  height: 90vh;
+  border: 1px solid orange;
 }
 /*# sourceMappingURL=style.css.map */
