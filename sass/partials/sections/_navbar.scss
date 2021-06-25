@@ -1,23 +1,93 @@
 .navigation-bar {
-    flex: 1 0 200px;
-    position: sticky;
-    top: 0px;
-    padding: 20px 20px;
-    width: 20%;
-    min-height: 100%;
-    border: 1px solid black;
+    background-color: #F1F1E6;
+    //Extra Small, Small and Medium
+    @media screen and (min-width: $break-xs) {
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        ul {
+            display: none;
+        }
+    }
+    //large
+    @media screen and (min-width: $break-lg) {
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 200px;
+        position: sticky;
+        top: 0px;
+        padding: 20px 20px;
+        width: 20%;
+        min-height: 100%;
+        ul {
+            display: block;
+        }
+    }
+    //Extra large
+    @media screen and (min-width: $break-xl) {
+        
+    }
     .logo-wrapper {
         .logo {
             font-size: 5rem;
             font-weight: 700;
+            color: $dark-blue;
         }
     }
     .nav-links-wrapper {
+        //Extra Small, Small and Medium
+        @media screen and (min-width: $break-xs) {
+            display: none;
+        }
+        //large
+        @media screen and (min-width: $break-lg) {
+            display: block;
+        }
+        //Extra large
+        @media screen and (min-width: $break-xl) {
+            
+        }
+    }
+    ul {
+        list-style-type: none;
+        li {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            a {
+                color: $light-blue;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-weight: 700;
+                position: relative;
+                padding-bottom: 5px;
+                &::after {
+                    content: '';
+                    width: 90%;
+                    height: 5px;
+                    position: absolute;
+                    top: 100%;
+                    left: 5%;
+                    background: $dark-blue;
+                    transition: transform 0.3s;
+                    transform: scaleX(0);
+                    transform-origin: right;
+                }
+                &:hover {
+                    color: $dark-blue;
+                    &::after {
+                        transform: scaleX(1);
+                        transform-origin: left;
+                    }
+                }
+            }
+        }
         
     }
-    ul li {
-        list-style-type: none;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
+}
+
+.socials-wrapper {
+    border-top: 5px solid $dark-blue;
+    
 }

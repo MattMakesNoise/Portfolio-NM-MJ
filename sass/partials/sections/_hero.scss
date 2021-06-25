@@ -1,4 +1,6 @@
 .hero-wrapper {
-    height: 95vh;
-    border: 1px solid green;
+    height: 100vh;
+    background-image: url(/img/hero-cube-1800x1012.jpg);
+    background-repeat: no-repeat;
+    object-fit: contain;
 }
