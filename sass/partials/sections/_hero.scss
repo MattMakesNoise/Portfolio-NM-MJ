@@ -5,9 +5,30 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     object-fit: contain;
-
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     //Extra Small
     @media screen and (min-width: $break-xs) {
         
     }
+    .scroll-down {
+        text-decoration: none;
+        .scroll-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+            h1 {
+                color: $nearly-white;
+                font-size: 1.5rem;
+                margin-bottom: 4rem;
+            }
+            i {
+                color: $nearly-white;
+                font-size: 2rem;
+            }
+        }
+    }
+    
 }
