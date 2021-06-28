@@ -381,6 +381,44 @@ input[type="checkbox"] {
           box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
+.card a {
+  text-decoration: none;
+  color: #00112B;
+}
+
+.card .overlay {
+  visibility: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  width: 500px;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(211, 211, 211, 0.9);
+  border-radius: 2rem;
+}
+
+.card .overlay:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card .overlay h2 {
+  text-transform: uppercase;
+}
+
 .row-one {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -472,7 +510,123 @@ input[type="checkbox"] {
 }
 
 .contact-wrapper {
-  height: 90vh;
-  border: 1px solid orange;
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#005189), to(#00112B));
+  background-image: linear-gradient(to top right, #005189, #00112B);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-form {
+  border-radius: 2rem;
+  background-color: rgba(241, 241, 230, 0.9);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 60%;
+  height: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2rem;
+}
+
+.contact-form h2,
+.contact-form p {
+  padding-bottom: 1rem;
+  color: #00112B;
+}
+
+.contact-form form {
+  width: 800px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.email-form {
+  width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.email-form input[type=text],
+.email-form textarea {
+  width: 80%;
+  padding: 1rem;
+  border-radius: .25rem;
+  border: 2px solid #00112B;
+  margin: .25rem 0 1rem 80px;
+}
+
+.email-form input[type=text]::-webkit-input-placeholder,
+.email-form textarea::-webkit-input-placeholder {
+  color: #00112B;
+}
+
+.email-form input[type=text]:-ms-input-placeholder,
+.email-form textarea:-ms-input-placeholder {
+  color: #00112B;
+}
+
+.email-form input[type=text]::-ms-input-placeholder,
+.email-form textarea::-ms-input-placeholder {
+  color: #00112B;
+}
+
+.email-form input[type=text]::placeholder,
+.email-form textarea::placeholder {
+  color: #00112B;
+}
+
+.email-form label {
+  margin-left: 80px;
+}
+
+.email-form input[type=submit] {
+  background-color: #005189;
+  color: #F1F1E6;
+  text-transform: uppercase;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 8rem;
+  border-radius: .5rem;
+  border: none;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-left: 80px;
+}
+
+.email-form input[type=submit]:hover {
+  background-color: #00112B;
+  cursor: pointer;
+}
+
+.email-form .make-maroon {
+  color: #29030B;
+  font-size: 1.25rem;
 }
 /*# sourceMappingURL=style.css.map */
