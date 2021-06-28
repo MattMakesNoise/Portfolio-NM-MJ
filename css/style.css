@@ -9,6 +9,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .page-wrapper {
@@ -18,6 +19,7 @@ body {
 }
 
 main {
+  margin-left: 250px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,13 +73,13 @@ main {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 200px;
             flex: 0 1 200px;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0px;
     padding: 20px 20px;
-    width: 20%;
+    width: 250px;
     min-height: 100%;
     background-color: #F1F1E6;
+    border-right: 2px solid #00112B;
   }
   .navigation-bar ul {
     display: block;
@@ -319,6 +321,7 @@ input[type="checkbox"] {
 
 .hero-wrapper .scroll-down {
   text-decoration: none;
+  margin-bottom: 2rem;
 }
 
 .hero-wrapper .scroll-down .scroll-wrapper {
@@ -335,20 +338,137 @@ input[type="checkbox"] {
   z-index: 2;
 }
 
+.hero-wrapper .scroll-down .scroll-wrapper:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
 .hero-wrapper .scroll-down .scroll-wrapper h1 {
   color: #F1F1E6;
   font-size: 1.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 .hero-wrapper .scroll-down .scroll-wrapper i {
   color: #F1F1E6;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .cards-wrapper {
-  height: 90vh;
-  border: 1px solid blue;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card {
+  width: 500px;
+  height: 350px;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.row-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5rem 2rem 5rem 2rem;
+}
+
+.row-one .html-css {
+  background-image: url(/img/camerasilhouette600x400.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.row-one .html-css:hover {
+  opacity: 80%;
+}
+
+.row-one .axure {
+  background-image: url(/img/desk700x394.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.row-one .axure:hover {
+  opacity: 80%;
+}
+
+.row-one .project-three {
+  background-image: url(/img/keyboard600x400.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.row-one .project-three:hover {
+  opacity: 80%;
+}
+
+.row-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.row-two .project-four {
+  background-image: url(/img/web600x400.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.row-two .project-four:hover {
+  opacity: 80%;
+}
+
+.row-two .project-five {
+  background-image: url(/img/spookydude600x400.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.row-two .project-five:hover {
+  opacity: 80%;
+}
+
+.row-two .project-six {
+  background-image: url(/img/devices600x400.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.row-two .project-six:hover {
+  opacity: 80%;
 }
 
 .contact-wrapper {
