@@ -1,9 +1,11 @@
 .navigation-bar {
-    background-color: #F1F1E6;
     //Extra Small, Small and Medium
     @media screen and (min-width: $break-xs) {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
         position: fixed;
         width: 100%;
         top: 0;
@@ -15,12 +17,15 @@
     @media screen and (min-width: $break-lg) {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
         flex: 0 1 200px;
         position: sticky;
         top: 0px;
         padding: 20px 20px;
         width: 20%;
         min-height: 100%;
+        background-color: $nearly-white;
         ul {
             display: block;
         }
@@ -30,10 +35,31 @@
         
     }
     .logo-wrapper {
+        
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (min-width: $break-xs) {
+            border: 5px solid $nearly-white;
+        }
+        //large
+        @media screen and (min-width: $break-lg) {
+            border: 5px solid $dark-blue;
+        }
         .logo {
-            font-size: 5rem;
             font-weight: 700;
-            color: $dark-blue;
+            @media screen and (min-width: $break-xs) {
+                font-size: 3.5rem;
+                padding: .25rem .5rem;
+                color: $nearly-white;
+            }
+            //large
+            @media screen and (min-width: $break-lg) {
+                padding: 0.5rem 1rem;
+                font-size: 5rem;
+                color: $dark-blue;
+            }
         }
     }
     .nav-links-wrapper {
@@ -44,6 +70,7 @@
         //large
         @media screen and (min-width: $break-lg) {
             display: block;
+            margin-left: 1rem;
         }
         //Extra large
         @media screen and (min-width: $break-xl) {
@@ -64,11 +91,11 @@
                 padding-bottom: 5px;
                 &::after {
                     content: '';
-                    width: 90%;
+                    width: 100%;
                     height: 5px;
                     position: absolute;
                     top: 100%;
-                    left: 5%;
+                    left: 0;
                     background: $dark-blue;
                     transition: transform 0.3s;
                     transform: scaleX(0);
@@ -87,7 +114,60 @@
     }
 }
 
+.burger-wrapper {
+    //Extra Small
+    @media screen and (min-width: $break-xs) {
+        
+    }
+    //Small
+    @media screen and (min-width: $break-sm) {
+        
+    }
+    //Medium
+    @media screen and (min-width: $break-md) {
+        
+    }
+    //large
+    @media screen and (min-width: $break-lg) {
+        display: none;
+    }
+    //Extra large
+    @media screen and (min-width: $break-xl) {
+        display: none;
+    }
+}
+
 .socials-wrapper {
+    margin-left: 1rem;
     border-top: 5px solid $dark-blue;
     
+}
+
+#burger-icon span{
+    display: block;
+    margin: 4px;
+    height: 9px;
+    width: 60px;
+    background: $nearly-white;
+    border-radius: 9px;
+}
+
+#burger-menu:checked ~ #burger-icon span:nth-child(1){
+    -webkit-transform: rotate(135deg) translate(21px,-13px);
+    -moz-transform: rotate(135deg) translate(21px,-13px);
+    -o-transform: rotate(135deg) translate(21px,-13px);
+    transform: rotate(135deg) translate(21px,-13px);
+}
+  #burger-menu:checked ~ #burger-icon span:nth-child(2){
+     opacity: 0;
+}
+  #burger-menu:checked ~ #burger-icon span:nth-child(3){
+    -webkit-transform: rotate(-135deg) translate(3px);
+    -moz-transform: rotate(-135deg) translate(3px);
+    -o-transform: rotate(-135deg) translate(3px);
+    transform: rotate(-135deg) translate(3px);
+}
+
+input[type="checkbox"]{
+    display: none;
 }

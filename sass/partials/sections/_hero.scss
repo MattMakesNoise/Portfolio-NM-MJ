@@ -1,6 +1,13 @@
 .hero-wrapper {
     height: 100vh;
+    width: auto;
     background-image: url(/img/hero-cube-1800x1012.jpg);
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     object-fit: contain;
+
+    //Extra Small
+    @media screen and (min-width: $break-xs) {
+        
+    }
 }

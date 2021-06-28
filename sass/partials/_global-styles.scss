@@ -19,3 +19,24 @@ main {
     display: flex;
     flex-direction: column;
 }
+
+//Extra Small
+@media screen and (min-width: $break-xs) {
+    
+}
+//Small
+@media screen and (min-width: $break-sm) {
+    
+}
+//Medium
+@media screen and (min-width: $break-md) {
+    
+}
+//large
+@media screen and (min-width: $break-lg) {
+    
+}
+//Extra large
+@media screen and (min-width: $break-xl) {
+    
+}

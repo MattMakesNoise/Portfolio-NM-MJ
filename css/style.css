@@ -28,11 +28,7 @@ main {
           flex-direction: column;
 }
 
-.navigation-bar {
-  background-color: #F1F1E6;
-}
-
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 280px) {
   .navigation-bar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -41,6 +37,13 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.5rem 1rem;
     position: fixed;
     width: 100%;
     top: 0;
@@ -59,6 +62,12 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-flex: 0;
         -ms-flex: 0 1 200px;
             flex: 0 1 200px;
@@ -68,19 +77,59 @@ main {
     padding: 20px 20px;
     width: 20%;
     min-height: 100%;
+    background-color: #F1F1E6;
   }
   .navigation-bar ul {
     display: block;
   }
 }
 
-.navigation-bar .logo-wrapper .logo {
-  font-size: 5rem;
-  font-weight: 700;
-  color: #00112B;
+.navigation-bar .logo-wrapper {
+  border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 280px) {
+  .navigation-bar .logo-wrapper {
+    border: 5px solid #F1F1E6;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navigation-bar .logo-wrapper {
+    border: 5px solid #00112B;
+  }
+}
+
+.navigation-bar .logo-wrapper .logo {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 280px) {
+  .navigation-bar .logo-wrapper .logo {
+    font-size: 3.5rem;
+    padding: .25rem .5rem;
+    color: #F1F1E6;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navigation-bar .logo-wrapper .logo {
+    padding: 0.5rem 1rem;
+    font-size: 5rem;
+    color: #00112B;
+  }
+}
+
+@media screen and (min-width: 280px) {
   .navigation-bar .nav-links-wrapper {
     display: none;
   }
@@ -89,6 +138,7 @@ main {
 @media screen and (min-width: 992px) {
   .navigation-bar .nav-links-wrapper {
     display: block;
+    margin-left: 1rem;
   }
 }
 
@@ -112,11 +162,11 @@ main {
 
 .navigation-bar ul li a::after {
   content: '';
-  width: 90%;
+  width: 100%;
   height: 5px;
   position: absolute;
   top: 100%;
-  left: 5%;
+  left: 0;
   background: #00112B;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
@@ -139,13 +189,55 @@ main {
           transform-origin: left;
 }
 
+@media screen and (min-width: 992px) {
+  .burger-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .burger-wrapper {
+    display: none;
+  }
+}
+
 .socials-wrapper {
+  margin-left: 1rem;
   border-top: 5px solid #00112B;
+}
+
+#burger-icon span {
+  display: block;
+  margin: 4px;
+  height: 9px;
+  width: 60px;
+  background: #F1F1E6;
+  border-radius: 9px;
+}
+
+#burger-menu:checked ~ #burger-icon span:nth-child(1) {
+  -webkit-transform: rotate(135deg) translate(21px, -13px);
+  transform: rotate(135deg) translate(21px, -13px);
+}
+
+#burger-menu:checked ~ #burger-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+#burger-menu:checked ~ #burger-icon span:nth-child(3) {
+  -webkit-transform: rotate(-135deg) translate(3px);
+  transform: rotate(-135deg) translate(3px);
+}
+
+input[type="checkbox"] {
+  display: none;
 }
 
 .hero-wrapper {
   height: 100vh;
+  width: auto;
   background-image: url(/img/hero-cube-1800x1012.jpg);
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   -o-object-fit: contain;
      object-fit: contain;
