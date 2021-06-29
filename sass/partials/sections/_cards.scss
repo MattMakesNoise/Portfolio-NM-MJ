@@ -5,9 +5,18 @@
 }
 
 .card {
-    width: 500px;
-    height: 350px;
-    border-radius: 2rem;
+    //Extra Small
+    @media screen and (min-width: $break-xs) {
+        width: 280px;
+        height: 150px;
+        margin: .25rem;
+    }
+    //large
+    @media screen and (min-width: $break-lg) {
+        width: 500px;
+        height: 350px;
+        border-radius: 2rem;
+    }
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     &:hover {
@@ -18,17 +27,24 @@
         color: $dark-blue;
     }
     .overlay {
+        //Extra Small
+        @media screen and (min-width: $break-xs) {
+            width: 100%;
+        }
+        //large
+        @media screen and (min-width: $break-lg) {
+            width: 500px;
+            height: 350px;
+            border-radius: 2rem;
+        }
         visibility: none;
         opacity: 0;
         transition: opacity 0.3s;
-        width: 500px;
-        height: 350px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         background-color: rgba(211,211,211,.9);
-        border-radius: 2rem;
         &:hover {
             visibility: visible;
             opacity: 1;
@@ -40,9 +56,18 @@
 }
 
 .row-one {
-    display: flex;
-    justify-content: space-around;
-    padding: 5rem 2rem 5rem 2rem;
+    //Extra Small
+    @media screen and (min-width: $break-xs) {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 260px;
+    }
+    //large
+    @media screen and (min-width: $break-lg) {
+        display: flex;
+        justify-content: space-around;
+        padding: 5rem 2rem 5rem 2rem;
+    }
     .html-css {
         background-image: url(/img/camerasilhouette600x400.jpg);
         background-size: 100% 100%;
@@ -76,9 +101,18 @@
 }
 
 .row-two {
-    display: flex;
-    justify-content: space-around;
-    padding: 0 2rem 2rem 2rem;
+    //Extra Small
+    @media screen and (min-width: $break-xs) {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 260px;
+    }
+    //large
+    @media screen and (min-width: $break-lg) {
+        display: flex;
+        justify-content: space-around;
+        padding: 5rem 2rem 5rem 2rem;
+    }
     .project-four {
         background-image: url(/img/web600x400.jpg);
         background-size: 100% 100%;

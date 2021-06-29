@@ -16,10 +16,17 @@ body {
 }
 
 main {
-    margin-left: 250px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    //Extra Small
+    @media screen and (min-width: $break-xs) {
+        
+    }
+    //large
+    @media screen and (min-width: $break-lg) {
+        margin-left: 250px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }   
 }
 
 //Extra Small

@@ -31,6 +31,9 @@
             display: block;
         }
     }
+    a {
+        text-decoration: none;
+    }
     .logo-wrapper {
         border-radius: 2rem;
         display: flex;
@@ -42,6 +45,7 @@
         //large
         @media screen and (min-width: $break-lg) {
             border: 5px solid $dark-blue;
+            margin-left: 1rem;
         }
         .logo {
             font-weight: 700;
@@ -118,11 +122,17 @@
 }
 
 .socials-wrapper {
-    margin-left: 1rem;
-    padding: 1rem .25rem 1rem 0;
-    border-top: 5px solid $dark-blue;
+    //Extra Small, Small and Medium
+    @media screen and (min-width: $break-xs) {
+    
+    }
+    //large
+    @media screen and (min-width: $break-lg) {
+        width: 100%;
+        padding: 1rem 1.25rem 1rem 0;
+        border-top: 5px solid $dark-blue;
+    }
     display: flex;
-    justify-content: space-between;
     a {
         text-decoration: none;
         .fa-github {
@@ -187,23 +197,15 @@
     background: $nearly-white;
     border-radius: 9px;
 }
-
-#burger-menu:checked ~ #burger-icon span:nth-child(1){
-    -webkit-transform: rotate(135deg) translate(21px,-13px);
-    -moz-transform: rotate(135deg) translate(21px,-13px);
-    -o-transform: rotate(135deg) translate(21px,-13px);
+#burger-menu:checked ~ #burger-icon span:nth-child(1) {
     transform: rotate(135deg) translate(21px,-13px);
-}
-  #burger-menu:checked ~ #burger-icon span:nth-child(2){
-     opacity: 0;
-}
-  #burger-menu:checked ~ #burger-icon span:nth-child(3){
-    -webkit-transform: rotate(-135deg) translate(3px);
-    -moz-transform: rotate(-135deg) translate(3px);
-    -o-transform: rotate(-135deg) translate(3px);
+    }
+#burger-menu:checked ~ #burger-icon span:nth-child(2) {
+    opacity: 0;
+    }
+#burger-menu:checked ~ #burger-icon span:nth-child(3) {
     transform: rotate(-135deg) translate(3px);
-}
-
+    }
 input[type="checkbox"]{
     display: none;
 }
