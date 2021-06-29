@@ -3,16 +3,15 @@
     display: flex;
     flex-direction: column;
 }
-
 .card {
-    //Extra Small
-    @media screen and (min-width: $break-xs) {
-        width: 280px;
-        height: 150px;
+    @media screen and (min-width: $break-xs) { //Extra Small
+        height: 200px;
         margin: .25rem;
     }
-    //large
-    @media screen and (min-width: $break-lg) {
+    @media screen and (min-width: $break-sm) { //Small
+        height: 350px;
+    }
+    @media screen and (min-width: $break-lg) { //large
         width: 500px;
         height: 350px;
         border-radius: 2rem;
@@ -27,12 +26,10 @@
         color: $dark-blue;
     }
     .overlay {
-        //Extra Small
-        @media screen and (min-width: $break-xs) {
+        @media screen and (min-width: $break-xs) { //Extra Small
             width: 100%;
         }
-        //large
-        @media screen and (min-width: $break-lg) {
+        @media screen and (min-width: $break-lg) { //large
             width: 500px;
             height: 350px;
             border-radius: 2rem;
@@ -56,15 +53,14 @@
 }
 
 .row-one {
-    //Extra Small
-    @media screen and (min-width: $break-xs) {
+    @media screen and (min-width: $break-xs) { //Extra Small
         display: flex;
         flex-direction: column;
         flex: 1 0 260px;
     }
-    //large
-    @media screen and (min-width: $break-lg) {
+    @media screen and (min-width: $break-lg) { //large
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
         padding: 5rem 2rem 5rem 2rem;
     }
@@ -75,7 +71,6 @@
         object-fit: contain;
         &:hover {
             opacity: 80%;
-            
         }
     }
     .axure {
@@ -85,7 +80,6 @@
         object-fit: contain;
         &:hover {
             opacity: 80%;
-            
         }
     }
     .project-three {
@@ -95,23 +89,21 @@
         object-fit: contain;
         &:hover {
             opacity: 80%;
-            
         }
     }
 }
 
 .row-two {
-    //Extra Small
-    @media screen and (min-width: $break-xs) {
+    @media screen and (min-width: $break-xs) { //Extra Small
         display: flex;
         flex-direction: column;
         flex: 1 0 260px;
     }
-    //large
-    @media screen and (min-width: $break-lg) {
+    @media screen and (min-width: $break-lg) { //large
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
-        padding: 5rem 2rem 5rem 2rem;
+        padding: 0rem 2rem 5rem 2rem;
     }
     .project-four {
         background-image: url(/img/web600x400.jpg);
@@ -120,7 +112,6 @@
         object-fit: contain;
         &:hover {
             opacity: 80%;
-            
         }
     }
     .project-five {
@@ -130,7 +121,6 @@
         object-fit: contain;
         &:hover {
             opacity: 80%;
-            
         }
     }
     .project-six {
@@ -140,7 +130,6 @@
         object-fit: contain;
         &:hover {
             opacity: 80%;
-            
         }
     }
 }

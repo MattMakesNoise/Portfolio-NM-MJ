@@ -1,8 +1,6 @@
 .hero-wrapper {
-    
-    //Extra Small
-    @media screen and (min-width: $break-xs) {
-        height: 75vh;
+    @media screen and (min-width: $break-xs) { //Extra Small
+        height: 50vh;
         width: 100vw;
         background-image: url(/img/hero-cube-1800x1012.jpg);
         background-size: 100% 100%;
@@ -12,8 +10,7 @@
         justify-content: center;
         align-items: flex-end;
     }
-    //large
-    @media screen and (min-width: $break-lg) {
+    @media screen and (min-width: $break-lg) { //large
         height: 100vh;
         width: auto;
         background-image: url(/img/hero-cube-1800x1012.jpg);
@@ -25,12 +22,10 @@
         align-items: flex-end;
     }
     .scroll-down {
-        //Extra Small
-        @media screen and (min-width: $break-xs) {
+        @media screen and (min-width: $break-xs) { //Extra Small
             visibility: hidden;
         }
-        //large
-        @media screen and (min-width: $break-lg) {
+        @media screen and (min-width: $break-lg) { //large
             visibility: visible;
             text-decoration: none;
             margin-bottom: 2rem;

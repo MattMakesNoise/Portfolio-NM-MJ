@@ -29,23 +29,19 @@ main {
     }   
 }
 
-//Extra Small
-@media screen and (min-width: $break-xs) {
+
+@media screen and (min-width: $break-xs) { //Extra Small
     
 }
-//Small
-@media screen and (min-width: $break-sm) {
+@media screen and (min-width: $break-sm) { //Small
     
 }
-//Medium
-@media screen and (min-width: $break-md) {
+@media screen and (min-width: $break-md) { //Medium
     
 }
-//large
-@media screen and (min-width: $break-lg) {
+@media screen and (min-width: $break-lg) { //large
     
 }
-//Extra large
-@media screen and (min-width: $break-xl) {
+@media screen and (min-width: $break-xl) { //Extra large
     
 }

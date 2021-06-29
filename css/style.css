@@ -41,6 +41,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 280px;
+            flex: 1 0 280px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -210,6 +213,12 @@ body {
   display: flex;
 }
 
+@media screen and (min-width: 280px) {
+  .socials-wrapper {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .socials-wrapper {
     width: 100%;
@@ -311,7 +320,7 @@ input[type="checkbox"] {
 
 @media screen and (min-width: 280px) {
   .hero-wrapper {
-    height: 75vh;
+    height: 50vh;
     width: 100vw;
     background-image: url(/img/hero-cube-1800x1012.jpg);
     background-size: 100% 100%;
@@ -412,9 +421,14 @@ input[type="checkbox"] {
 
 @media screen and (min-width: 280px) {
   .card {
-    width: 280px;
-    height: 150px;
+    height: 200px;
     margin: .25rem;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .card {
+    height: 350px;
   }
 }
 
@@ -500,6 +514,10 @@ input[type="checkbox"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     padding: 5rem 2rem 5rem 2rem;
@@ -562,9 +580,13 @@ input[type="checkbox"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    padding: 5rem 2rem 5rem 2rem;
+    padding: 0rem 2rem 5rem 2rem;
   }
 }
 
@@ -602,12 +624,6 @@ input[type="checkbox"] {
 
 .row-two .project-six:hover {
   opacity: 80%;
-}
-
-@media screen and (min-width: 280px) {
-  .contact-wrapper {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 992px) {
@@ -683,13 +699,24 @@ input[type="checkbox"] {
 }
 
 .email-form {
-  width: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (min-width: 280px) {
+  .email-form {
+    width: 260px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .email-form {
+    width: 800px;
+  }
 }
 
 .email-form input[type=text],
@@ -721,8 +748,16 @@ input[type="checkbox"] {
   color: #00112B;
 }
 
-.email-form label {
-  margin-left: 80px;
+@media screen and (min-width: 280px) {
+  .email-form label {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .email-form label {
+    margin-left: 80px;
+  }
 }
 
 .email-form input[type=submit] {
@@ -753,6 +788,18 @@ input[type="checkbox"] {
 .scroll-up {
   text-decoration: none;
   margin-top: 1rem;
+}
+
+@media screen and (min-width: 280px) {
+  .scroll-up {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .scroll-up {
+    display: block;
+  }
 }
 
 .scroll-up .scroll-up-wrapper {

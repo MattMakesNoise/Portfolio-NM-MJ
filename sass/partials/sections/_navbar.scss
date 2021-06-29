@@ -3,6 +3,7 @@
     @media screen and (min-width: $break-xs) {
         display: flex;
         flex-direction: row;
+        flex: 1 0 280px;
         justify-content: space-between;
         align-items: center;
         padding: 0.5rem 1rem;
@@ -124,7 +125,7 @@
 .socials-wrapper {
     //Extra Small, Small and Medium
     @media screen and (min-width: $break-xs) {
-    
+        display: none;
     }
     //large
     @media screen and (min-width: $break-lg) {
