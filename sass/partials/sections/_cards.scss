@@ -1,5 +1,10 @@
 .cards-wrapper {
-    height: 100vh;
+    @media screen and (min-width: $break-xs) { //Extra Small
+        
+    }
+    @media screen and (min-width: $break-lg) { //large
+        height: 100vh;
+    }
     display: flex;
     flex-direction: column;
 }
@@ -7,6 +12,10 @@
     @media screen and (min-width: $break-xs) { //Extra Small
         height: 200px;
         margin: .25rem;
+        border-radius: 1rem;
+    }
+    @media screen and (min-width: $break-400) {
+        height: 275px;
     }
     @media screen and (min-width: $break-sm) { //Small
         height: 350px;
@@ -28,23 +37,32 @@
     .overlay {
         @media screen and (min-width: $break-xs) { //Extra Small
             width: 100%;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            visibility: visible;
+            background-color: rgba(211,211,211,.7);
+            p {
+                text-align: center;
+            }
         }
         @media screen and (min-width: $break-lg) { //large
             width: 500px;
             height: 350px;
             border-radius: 2rem;
-        }
-        visibility: none;
-        opacity: 0;
-        transition: opacity 0.3s;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(211,211,211,.9);
-        &:hover {
-            visibility: visible;
-            opacity: 1;
+            visibility: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            background-color: rgba(211,211,211,.9);
+            &:hover {
+                visibility: visible;
+                opacity: 1;
+            }
+            p {
+                text-align: left;
+            }
         }
         h2 {
             text-transform: uppercase;

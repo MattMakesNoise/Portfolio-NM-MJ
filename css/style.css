@@ -402,7 +402,6 @@ input[type="checkbox"] {
 }
 
 .cards-wrapper {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -410,6 +409,12 @@ input[type="checkbox"] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media screen and (min-width: 992px) {
+  .cards-wrapper {
+    height: 100vh;
+  }
 }
 
 .card {
@@ -423,6 +428,13 @@ input[type="checkbox"] {
   .card {
     height: 200px;
     margin: .25rem;
+    border-radius: 1rem;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .card {
+    height: 275px;
   }
 }
 
@@ -450,30 +462,28 @@ input[type="checkbox"] {
   color: #00112B;
 }
 
-.card .overlay {
-  visibility: none;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: rgba(211, 211, 211, 0.9);
-}
-
 @media screen and (min-width: 280px) {
   .card .overlay {
     width: 100%;
+    border-radius: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    visibility: visible;
+    background-color: rgba(211, 211, 211, 0.7);
+  }
+  .card .overlay p {
+    text-align: center;
   }
 }
 
@@ -482,12 +492,19 @@ input[type="checkbox"] {
     width: 500px;
     height: 350px;
     border-radius: 2rem;
+    visibility: none;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    background-color: rgba(211, 211, 211, 0.9);
   }
-}
-
-.card .overlay:hover {
-  visibility: visible;
-  opacity: 1;
+  .card .overlay:hover {
+    visibility: visible;
+    opacity: 1;
+  }
+  .card .overlay p {
+    text-align: left;
+  }
 }
 
 .card .overlay h2 {
@@ -626,6 +643,24 @@ input[type="checkbox"] {
   opacity: 80%;
 }
 
+@media screen and (min-width: 280px) {
+  .contact-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .contact-wrapper {
     height: 100vh;
@@ -652,8 +687,6 @@ input[type="checkbox"] {
   background-color: rgba(241, 241, 230, 0.9);
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 60%;
-  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -668,10 +701,44 @@ input[type="checkbox"] {
   margin-top: 1rem;
 }
 
+@media screen and (min-width: 280px) {
+  .contact-form {
+    width: 98%;
+    padding-bottom: .75rem;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .contact-form {
+    width: 95%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .contact-form {
+    width: 60%;
+    height: 80%;
+  }
+}
+
 .contact-form h2,
 .contact-form p {
-  padding-bottom: 1rem;
   color: #00112B;
+}
+
+@media screen and (min-width: 280px) {
+  .contact-form h2,
+  .contact-form p {
+    text-align: center;
+    padding-bottom: .5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .contact-form h2,
+  .contact-form p {
+    padding-bottom: 1rem;
+  }
 }
 
 .contact-form h2::after {
@@ -687,8 +754,19 @@ input[type="checkbox"] {
   font-weight: 500;
 }
 
+@media screen and (min-width: 280px) {
+  .contact-form p {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .contact-form p {
+    text-align: left;
+  }
+}
+
 .contact-form form {
-  width: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -696,6 +774,24 @@ input[type="checkbox"] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media screen and (min-width: 280px) {
+  .contact-form form {
+    width: 260px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .contact-form form {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .contact-form form {
+    width: 800px;
+  }
 }
 
 .email-form {
@@ -713,6 +809,12 @@ input[type="checkbox"] {
   }
 }
 
+@media screen and (min-width: 400px) {
+  .email-form {
+    width: 360px;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .email-form {
     width: 800px;
@@ -721,31 +823,61 @@ input[type="checkbox"] {
 
 .email-form input[type=text],
 .email-form textarea {
-  width: 80%;
   padding: 0.75rem;
   border-radius: .25rem;
   border: 2px solid #00112B;
   margin: .25rem 0 1rem 80px;
 }
 
+@media screen and (min-width: 280px) {
+  .email-form input[type=text],
+  .email-form textarea {
+    margin: .25rem 0 .5rem 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .email-form input[type=text],
+  .email-form textarea {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .email-form input[type=text],
+  .email-form textarea {
+    margin-left: 80px;
+    width: 80%;
+  }
+}
+
 .email-form input[type=text]::-webkit-input-placeholder,
 .email-form textarea::-webkit-input-placeholder {
   color: #00112B;
+  font-size: .8rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 .email-form input[type=text]:-ms-input-placeholder,
 .email-form textarea:-ms-input-placeholder {
   color: #00112B;
+  font-size: .8rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 .email-form input[type=text]::-ms-input-placeholder,
 .email-form textarea::-ms-input-placeholder {
   color: #00112B;
+  font-size: .8rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 .email-form input[type=text]::placeholder,
 .email-form textarea::placeholder {
   color: #00112B;
+  font-size: .8rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 @media screen and (min-width: 280px) {
@@ -764,7 +896,6 @@ input[type="checkbox"] {
   background-color: #005189;
   color: #F1F1E6;
   text-transform: uppercase;
-  padding: 1rem;
   font-size: 1rem;
   font-weight: 700;
   width: 8rem;
@@ -772,7 +903,21 @@ input[type="checkbox"] {
   border: none;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin-left: 80px;
+}
+
+@media screen and (min-width: 280px) {
+  .email-form input[type=submit] {
+    margin-left: 0;
+    margin-bottom: 8px;
+    padding: .75rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .email-form input[type=submit] {
+    margin-left: 80px;
+    padding: 1rem;
+  }
 }
 
 .email-form input[type=submit]:hover {
