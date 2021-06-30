@@ -1,6 +1,5 @@
 .navigation-bar {
-    //Extra Small, Small and Medium
-    @media screen and (min-width: $break-xs) {
+    @media screen and (min-width: $break-xs) { //Extra Small, Small and Medium
         display: flex;
         flex-direction: row;
         flex: 1 0 280px;
@@ -14,23 +13,25 @@
             display: none;
         }
     }
-    //large
-    @media screen and (min-width: $break-lg) {
+    @media screen and (min-width: $break-lg) { //large
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        flex: 0 1 200px;
+        flex: 0 1 160px;
         position: fixed;
         top: 0px;
         padding: 20px 20px;
-        width: 250px;
+        width: 200px;
         min-height: 100%;
         background-color: $nearly-white;
         border-right: 2px solid $dark-blue;
         ul {
             display: block;
         }
+    }
+    @media screen and (min-width: $break-xl) { //Extra Large
+        flex: 0 1 200px;
     }
     a {
         text-decoration: none;
@@ -129,6 +130,14 @@
     }
     //large
     @media screen and (min-width: $break-lg) {
+        display: block;
+        width: 100%;
+        padding: 1rem 0 1rem 0;
+        border-top: 5px solid $dark-blue;
+    }
+    //Xlarge
+    @media screen and (min-width: $break-xl) {
+        display: block;
         width: 100%;
         padding: 1rem 1.25rem 1rem 0;
         border-top: 5px solid $dark-blue;
@@ -145,6 +154,12 @@
             }
             //large
             @media screen and (min-width: $break-lg) {
+                margin-right: .4rem;
+                color: $light-blue;
+                font-size: 1.75rem;
+            }
+            //Xlarge
+            @media screen and (min-width: $break-xl) {
                 margin-right: .5rem;
                 color: $light-blue;
                 font-size: 2rem;
@@ -162,6 +177,12 @@
             }
             //large
             @media screen and (min-width: $break-lg) {
+                margin-right: .4rem;
+                color: $light-blue;
+                font-size: 1.75rem;
+            }
+            //Xlarge
+            @media screen and (min-width: $break-xl) {
                 margin-right: .5rem;
                 color: $light-blue;
                 font-size: 2rem;
@@ -179,6 +200,12 @@
             }
             //large
             @media screen and (min-width: $break-lg) {
+                margin-right: .4rem;
+                color: $light-blue;
+                font-size: 1.75rem;
+            }
+            //Xlarge
+            @media screen and (min-width: $break-xl) {
                 margin-right: .5rem;
                 color: $light-blue;
                 font-size: 2rem;

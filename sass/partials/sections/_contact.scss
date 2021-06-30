@@ -5,9 +5,12 @@
         justify-content: center;
         align-items: center;
     }
-    @media screen and (min-width: $break-lg) { //large
+    @media screen and (min-width: $break-sm) { //Small
         height: 100vh;
         background-image: linear-gradient(to top right, $light-blue, $dark-blue);
+    }
+    @media screen and (min-width: $break-lg) { //large
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -23,7 +26,14 @@
     @media screen and (min-width: $break-400) {
         width: 95%;
     }   
+    @media screen and (min-width: $break-sm) { //Small
+        width: 90vw;
+    }   
     @media screen and (min-width: $break-lg) { //large
+        width: 90%;
+        height: 80%;
+    }
+    @media screen and (min-width: $break-xl) { //Xlarge
         width: 60%;
         height: 80%;
     }
@@ -82,7 +92,7 @@
     @media screen and (min-width: $break-xs) { //Extra Small
         width: 260px;
     }
-    @media screen and (min-width: $break-400) { //large
+    @media screen and (min-width: $break-400) {
         width: 360px;
     }
     @media screen and (min-width: $break-lg) { //large
@@ -118,7 +128,9 @@
             display: none;
         }
         @media screen and (min-width: $break-lg) { //large
+            display: block;
             margin-left: 80px;
+            padding-bottom: .4rem;
         }
     }
     input[type=submit] { //Style the submit button
@@ -126,6 +138,9 @@
             margin-left: 0;
             margin-bottom: 8px;
             padding: .75rem;
+        }
+        @media screen and (min-width: $break-sm) { //Small
+            padding: 1rem;
         }
         @media screen and (min-width: $break-lg) { //large
             margin-left: 80px;

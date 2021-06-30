@@ -1,6 +1,6 @@
 .hero-wrapper {
     @media screen and (min-width: $break-xs) { //Extra Small
-        height: 50vh;
+        height: 100vh;
         width: 100vw;
         background-image: url(/img/hero-cube-1800x1012.jpg);
         background-size: 100% 100%;
@@ -11,6 +11,9 @@
         align-items: flex-end;
     }
     @media screen and (min-width: $break-lg) { //large
+        width: 100%;
+    }
+    @media screen and (min-width: $break-xl) { //Xlarge
         height: 100vh;
         width: auto;
         background-image: url(/img/hero-cube-1800x1012.jpg);
