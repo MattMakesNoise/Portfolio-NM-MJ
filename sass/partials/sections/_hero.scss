@@ -9,10 +9,7 @@
         display: flex;
         justify-content: center;
     }
-    @media screen and (min-width: $break-lg) { //large
-        width: 100%;
-    }
-    @media screen and (min-width: $break-xl) { //Xlarge
+    @media screen and (min-width: $break-lg) {
         height: 100vh;
         width: 100%;
         background-image: url(/img/hero-cube-1800x1012.jpg);
@@ -57,14 +54,18 @@
 }
 .hero-text {
     position: absolute;
-    @media screen and (min-width: $break-xxs) { //Extra Small
+    @media screen and (min-width: $break-xxs) {
         margin-top: 10%;
-        padding-top: 5rem;
-        width: 90%;
+        padding-top: 4.5rem;
+        width: 80%;
     }
-    @media screen and (min-width: $break-xl) { //Extra Large
+    @media screen and (min-width: $break-md) { 
         margin-top: 10%;
-        width: 40%;
+        height: 100vh;
+    }
+    @media screen and (min-width: $break-lg) { 
+        margin-top: 2%;
+        padding-top: 1rem;
         height: 100vh;
     }
 }
@@ -76,10 +77,21 @@
     flex-wrap: nowrap;
 }
 .my-name {
-    font-size: 3rem;
-    margin-bottom: 3%;
-    padding-bottom: 1rem;
+    @media screen and (min-width: $break-xxs) { 
+        font-size: 1.75rem;
+        padding-bottom: 0.75rem;
+    }
+    @media screen and (min-width: $break-md) { 
+        font-size: 3rem;
+        margin-bottom: 3%;
+        padding-bottom: 1rem;
+    }
 }
 .web-dev {
-    font-size: 2rem;
+    @media screen and (min-width: $break-xxs) { 
+        font-size: 1rem;
+    }
+    @media screen and (min-width: $break-md) { 
+        font-size: 2rem;
+    }
 }

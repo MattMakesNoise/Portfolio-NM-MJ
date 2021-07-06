@@ -18,7 +18,7 @@
 }
 .card {
     @media screen and (min-width: $break-xxs) { //Extra-extra Small
-        flex: 1 0 250px;
+        // flex: 1 0 250px;
         height: 150px;
         margin: .25rem;
         border-radius: 1rem;
@@ -98,7 +98,8 @@
 // }
 
 .html-css {
-    flex: 1 0 250px;
+    width: 250px;
+    height: 150px;
     background-image: url(/img/camerasilhouette250x167.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -109,7 +110,8 @@
     }
 }
 .axure {
-    flex: 1 0 250px;
+    width: 250px;
+    height: 150px;
     background-image: url(/img/desk250x141.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -120,7 +122,8 @@
     }
 }
 .project-three {
-    flex: 1 0 250px;
+    width: 250px;
+    height: 150px;
     background-image: url(/img/keyboard250x167.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -152,7 +155,8 @@
 // }
 
 .project-four {
-    flex: 1 0 250px;
+    width: 250px;
+    height: 150px;
     background-image: url(/img/web250x166.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -163,7 +167,8 @@
     }
 }
 .project-five {
-    flex: 1 0 250px;
+    width: 250px;
+    height: 150px;
     background-image: url(/img/spookydude250x167.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -174,7 +179,8 @@
     }
 }
 .project-six {
-    flex: 1 0 250px;
+    width: 250px;
+    height: 150px;
     background-image: url(/img/devices250x167.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;

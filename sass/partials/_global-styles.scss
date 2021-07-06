@@ -9,7 +9,6 @@
 body {
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
-    // overflow-x: hidden;
 }
 
 .page-wrapper {
@@ -17,10 +16,6 @@ body {
 }
 
 main {
-    //Extra Small
-    @media screen and (min-width: $break-xs) {
-        
-    }
     @media screen and (min-width: $break-lg) { //large
         margin-left: 200px;
         width: calc(100% - 200px);
