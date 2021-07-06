@@ -13,12 +13,18 @@
     }
     @media screen and (min-width: $break-lg) { //large
         flex-direction: column;
+        height: 60vh;
+    }
+    @media screen and (min-width: $break-xl) {
         height: 100vh;
+        justify-content: space-evenly;
+    }
+    @media screen and (min-width: 1600px) {
+        height: 80vh;
     }
 }
 .card {
     @media screen and (min-width: $break-xxs) { //Extra-extra Small
-        // flex: 1 0 250px;
         height: 150px;
         margin: .25rem;
         border-radius: 1rem;
@@ -73,30 +79,6 @@
     }
 }
 
-// .row-one { //Groups cards into sets of three
-//     @media screen and (min-width: $break-xxs) { //Extra-extra Small
-//         display: flex;
-//         flex-direction: column;
-//     }
-//     @media screen and (min-width: $break-sm) { //Small
-//         margin: 0 auto;
-//         margin-top: 1rem;
-//         align-items: center;
-//     }
-//     @media screen and (min-width: $break-md) { //Medium
-//         margin: 0 auto;
-//         margin-top: 1rem;
-//         align-items: center;
-//     }
-//     @media screen and (min-width: $break-lg) { //large
-//         flex-direction: row;
-//     }
-//     @media screen and (min-width: $break-xl) { //Xlarge
-//         justify-content: space-around;
-//         padding: 4rem 2rem 0rem 2rem;
-//     }
-// }
-
 .html-css {
     width: 250px;
     height: 150px;
@@ -105,6 +87,14 @@
     background-repeat: no-repeat;
     object-fit: contain;
     order: 1;
+    @media screen and (min-width: $break-xl) { 
+        width: 450px;
+        height: 300px;
+        background-image: url(/img/camerasilhouette600x400.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        object-fit: contain;
+    }
     &:hover {
         opacity: 80%;
     }
@@ -117,6 +107,14 @@
     background-repeat: no-repeat;
     object-fit: contain;
     order: 2;
+    @media screen and (min-width: $break-xl) { 
+        width: 450px;
+        height: 300px;
+        background-image: url(/img/desk700x394.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        object-fit: contain;
+    }
     &:hover {
         opacity: 80%;
     }
@@ -129,30 +127,18 @@
     background-repeat: no-repeat;
     object-fit: contain;
     order: 3;
+    @media screen and (min-width: $break-xl) { 
+        width: 450px;
+        height: 300px;
+        background-image: url(/img/keyboard600x400.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        object-fit: contain;
+    }
     &:hover {
         opacity: 80%;
     }
 }
-
-// .row-two {
-//     @media screen and (min-width: $break-xxs) { //Extra-extra Small
-//         display: flex;
-//         flex-direction: column;
-//     }
-//     @media screen and (min-width: $break-sm) { //Small
-//         margin: 0 auto;
-//         margin-bottom: 1rem;
-//     }
-//     @media screen and (min-width: $break-lg) { //large
-//         flex-direction: row;
-//     }
-//     @media screen and (min-width: $break-xl) { //Xlarge
-//         display: flex;
-//         flex-direction: row;
-//         justify-content: space-around;
-//         padding: 1rem 2rem 5rem 2rem;
-//     }
-// }
 
 .project-four {
     width: 250px;
@@ -162,6 +148,14 @@
     background-repeat: no-repeat;
     object-fit: contain;
     order: 4;
+    @media screen and (min-width: $break-xl) { 
+        width: 450px;
+        height: 300px;
+        background-image: url(/img/web600x400.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        object-fit: contain;
+    }
     &:hover {
         opacity: 80%;
     }
@@ -174,6 +168,14 @@
     background-repeat: no-repeat;
     object-fit: contain;
     order: 5;
+    @media screen and (min-width: $break-xl) { 
+        width: 450px;
+        height: 300px;
+        background-image: url(/img/spookydude600x400.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        object-fit: contain;
+    }
     &:hover {
         opacity: 80%;
     }
@@ -186,6 +188,14 @@
     background-repeat: no-repeat;
     object-fit: contain;
     order: 6;
+    @media screen and (min-width: $break-xl) { 
+        width: 450px;
+        height: 300px;
+        background-image: url(/img/devices600x400.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        object-fit: contain;
+    }
     &:hover {
         opacity: 80%;
     }

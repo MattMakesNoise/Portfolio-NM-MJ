@@ -29,15 +29,15 @@
             margin-bottom: 2rem;
             align-self: flex-end;
             position: relative;
-            top: 1400px;
+            top: 700px;
             .scroll-wrapper {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 z-index: 2;
-                &:hover {
-                    transform: scale(1.25);
-                }
+                // &:hover {
+                //     transform: scale(1.25);
+                // }
                 h2 {
                     color: $nearly-white;
                     font-size: 1.5rem;
@@ -55,12 +55,12 @@
 .hero-text {
     position: absolute;
     @media screen and (min-width: $break-xxs) {
-        margin-top: 10%;
+        margin-top: 2rem;
         padding-top: 4.5rem;
         width: 80%;
     }
     @media screen and (min-width: $break-md) { 
-        margin-top: 10%;
+        margin-top: 0;
         height: 100vh;
     }
     @media screen and (min-width: $break-lg) { 
