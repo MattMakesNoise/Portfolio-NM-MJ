@@ -387,6 +387,9 @@ input[type="checkbox"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -427,6 +430,8 @@ input[type="checkbox"] {
     margin-bottom: 2rem;
     -ms-flex-item-align: end;
         align-self: flex-end;
+    position: relative;
+    top: 1400px;
   }
   .hero-wrapper .scroll-down .scroll-wrapper {
     display: -webkit-box;
@@ -445,7 +450,7 @@ input[type="checkbox"] {
     -webkit-transform: scale(1.25);
             transform: scale(1.25);
   }
-  .hero-wrapper .scroll-down .scroll-wrapper h1 {
+  .hero-wrapper .scroll-down .scroll-wrapper h2 {
     color: #F1F1E6;
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -458,9 +463,23 @@ input[type="checkbox"] {
 }
 
 .hero-text {
-  margin-top: 10%;
-  width: 40%;
-  height: 100vh;
+  position: absolute;
+}
+
+@media screen and (min-width: 280px) {
+  .hero-text {
+    margin-top: 10%;
+    padding-top: 5rem;
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-text {
+    margin-top: 10%;
+    width: 40%;
+    height: 100vh;
+  }
 }
 
 .my-name,
@@ -476,11 +495,11 @@ input[type="checkbox"] {
 .my-name {
   font-size: 3rem;
   margin-bottom: 3%;
+  padding-bottom: 1rem;
 }
 
 .web-dev {
   font-size: 2rem;
-  margin-bottom: 80%;
 }
 
 @media screen and (min-width: 280px) {
