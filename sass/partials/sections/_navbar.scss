@@ -1,5 +1,5 @@
 .navigation-bar {
-    @media screen and (min-width: $break-xs) { //Extra Small, Small and Medium
+    @media screen and (min-width: $break-xxs) { //Extra Small, Small and Medium
         display: flex;
         flex-direction: row;
         flex: 1 0 280px;
@@ -32,6 +32,7 @@
     }
     @media screen and (min-width: $break-xl) { //Extra Large
         flex: 0 1 200px;
+        width: 250px;
     }
     a {
         text-decoration: none;
@@ -41,23 +42,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        @media screen and (min-width: $break-xs) {
+        @media screen and (min-width: $break-xxs) {
             border: 5px solid $nearly-white;
         }
-        //large
-        @media screen and (min-width: $break-lg) {
+        @media screen and (min-width: $break-lg) { //large
             border: 5px solid $dark-blue;
             margin-left: 1rem;
         }
         .logo {
             font-weight: 700;
-            @media screen and (min-width: $break-xs) {
+            @media screen and (min-width: $break-xxs) {
                 font-size: 3.5rem;
                 padding: .25rem .5rem;
                 color: $nearly-white;
             }
-            //large
-            @media screen and (min-width: $break-lg) {
+            @media screen and (min-width: $break-lg) { //large
                 padding: 0.5rem 1rem;
                 font-size: 5rem;
                 color: $dark-blue;
@@ -65,12 +64,10 @@
         }
     }
     .nav-links-wrapper {
-        //Extra Small, Small and Medium
-        @media screen and (min-width: $break-xs) {
+        @media screen and (min-width: $break-xxs) { //Extra Small, Small and Medium
             display: none;
         }
-        //large
-        @media screen and (min-width: $break-lg) {
+        @media screen and (min-width: $break-lg) { //large
             display: block;
             margin-left: 1rem;
         }
@@ -113,30 +110,25 @@
 }
 
 .burger-wrapper {
-    //Extra Small
-    @media screen and (min-width: $break-xs) {
+    @media screen and (min-width: $break-xxs) { //Extra-extra Small
         
     }
-    //large
-    @media screen and (min-width: $break-lg) {
+    @media screen and (min-width: $break-lg) { //large
         display: none;
     }
 }
 
 .socials-wrapper {
-    //Extra Small, Small and Medium
-    @media screen and (min-width: $break-xs) {
+    @media screen and (min-width: $break-xxs) { //Extra-extra Small
         display: none;
     }
-    //large
-    @media screen and (min-width: $break-lg) {
+    @media screen and (min-width: $break-lg) { //large
         display: block;
         width: 100%;
         padding: 1rem 0 1rem 0;
         border-top: 5px solid $dark-blue;
     }
-    //Xlarge
-    @media screen and (min-width: $break-xl) {
+    @media screen and (min-width: $break-xl) { //Xlarge
         display: block;
         width: 100%;
         padding: 1rem 1.25rem 1rem 0;
@@ -146,20 +138,17 @@
     a {
         text-decoration: none;
         .fa-github {
-            //Extra Small, Small and Medium
-            @media screen and (min-width: $break-xs) {
+            @media screen and (min-width: $break-xxs) { //Extra-extra Small
                 margin: 1rem;
                 color: $nearly-white;
                 font-size: 2.5rem;
             }
-            //large
-            @media screen and (min-width: $break-lg) {
+            @media screen and (min-width: $break-lg) { //large
                 margin-right: .4rem;
                 color: $light-blue;
                 font-size: 1.75rem;
             }
-            //Xlarge
-            @media screen and (min-width: $break-xl) {
+            @media screen and (min-width: $break-xl) { //Xlarge
                 margin-right: .5rem;
                 color: $light-blue;
                 font-size: 2rem;
@@ -169,20 +158,17 @@
             }
         }
         .fa-twitter {
-            //Extra Small, Small and Medium
-            @media screen and (min-width: $break-xs) {
+            @media screen and (min-width: $break-xs) { //Extra-extra Small
                 margin: 1rem;
                 color: $nearly-white;
                 font-size: 2.5rem;
             }
-            //large
-            @media screen and (min-width: $break-lg) {
+            @media screen and (min-width: $break-lg) { //large
                 margin-right: .4rem;
                 color: $light-blue;
                 font-size: 1.75rem;
             }
-            //Xlarge
-            @media screen and (min-width: $break-xl) {
+            @media screen and (min-width: $break-xl) { //Xlarge
                 margin-right: .5rem;
                 color: $light-blue;
                 font-size: 2rem;
@@ -192,20 +178,17 @@
             }
         }
         .fa-linkedin-in {
-            //Extra Small, Small and Medium
-            @media screen and (min-width: $break-xs) {
+            @media screen and (min-width: $break-xs) { //Extra-extra Small
                 margin: 1rem;
                 color: $nearly-white;
                 font-size: 2.5rem;
             }
-            //large
-            @media screen and (min-width: $break-lg) {
+            @media screen and (min-width: $break-lg) { //large
                 margin-right: .4rem;
                 color: $light-blue;
                 font-size: 1.75rem;
             }
-            //Xlarge
-            @media screen and (min-width: $break-xl) {
+            @media screen and (min-width: $break-xl) { //Xlarge
                 margin-right: .5rem;
                 color: $light-blue;
                 font-size: 2rem;

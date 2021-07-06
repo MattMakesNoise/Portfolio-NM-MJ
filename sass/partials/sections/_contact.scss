@@ -1,5 +1,5 @@
 .contact-wrapper {
-    @media screen and (min-width: $break-xs) { //Extra Small
+    @media screen and (min-width: $break-xxs) { //Extra-extra Small
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -19,11 +19,11 @@
 }
 
 .contact-form {
-    @media screen and (min-width: $break-xs) { //Extra Small
+    @media screen and (min-width: $break-xxs) { //Extra-extra Small
         width: 98%;
         padding-bottom: .75rem;
     }
-    @media screen and (min-width: $break-400) {
+    @media screen and (min-width: $break-xs) { //Extra Small
         width: 95%;
     }   
     @media screen and (min-width: $break-sm) { //Small
@@ -48,7 +48,7 @@
     h2,
     p {
         color: $dark-blue;
-        @media screen and (min-width: $break-xs) { //Extra Small
+        @media screen and (min-width: $break-xxs) { //Extra-extra Small
             text-align: center;
             padding-bottom: .5rem;
         }
@@ -66,7 +66,7 @@
     }
     p {
         font-weight: 500;
-        @media screen and (min-width: $break-xs) { //Extra Small
+        @media screen and (min-width: $break-xxs) { //Extra-extra Small
             text-align: center;
         }
         @media screen and (min-width: $break-lg) { //large
@@ -74,10 +74,10 @@
         }
     }
     form {
-        @media screen and (min-width: $break-xs) { //Extra Small
+        @media screen and (min-width: $break-xxs) { //Extra-extra Small
             width: 260px;
         }
-        @media screen and (min-width: $break-400) { 
+        @media screen and (min-width: $break-xs) { //Extra Small
             width: 360px;
         }
         @media screen and (min-width: $break-lg) { //large
@@ -89,10 +89,10 @@
 }
 
 .email-form {
-    @media screen and (min-width: $break-xs) { //Extra Small
+    @media screen and (min-width: $break-xxs) { //Extra-extra Small
         width: 260px;
     }
-    @media screen and (min-width: $break-400) {
+    @media screen and (min-width: $break-xs) { //Extra Small
         width: 360px;
     }
     @media screen and (min-width: $break-lg) { //large
@@ -102,11 +102,11 @@
     justify-content: center;
     input[type=text], //style inputs with type text and text area
     textarea {
-        @media screen and (min-width: $break-xs) { //Extra Small
+        @media screen and (min-width: $break-xxs) { //Extra-extra Small
             margin: .25rem 0 .5rem 0;
             width: 100%;
         }
-        @media screen and (min-width: $break-400) {
+        @media screen and (min-width: $break-xs) { //Extra Small
             width: 100%;
         }
         @media screen and (min-width: $break-lg) { //large
@@ -124,7 +124,7 @@
         }
     }
     label {
-        @media screen and (min-width: $break-xs) { //Extra Small
+        @media screen and (min-width: $break-xxs) { //Extra-extra Small
             display: none;
         }
         @media screen and (min-width: $break-lg) { //large
@@ -134,7 +134,7 @@
         }
     }
     input[type=submit] { //Style the submit button
-        @media screen and (min-width: $break-xs) { //Extra Small
+        @media screen and (min-width: $break-xxs) { //Extra-extra Small
             margin-left: 0;
             margin-bottom: 8px;
             padding: .75rem;
@@ -167,7 +167,7 @@
 }
 
 .scroll-up {
-    @media screen and (min-width: $break-xs) { //Extra Small
+    @media screen and (min-width: $break-xxs) { //Extra-extra Small
         display: none;
     }
     @media screen and (min-width: $break-lg) { //large

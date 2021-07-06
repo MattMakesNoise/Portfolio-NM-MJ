@@ -9,7 +9,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 .page-wrapper {
@@ -36,6 +36,9 @@ main {
 }
 
 
+@media screen and (min-width: $break-xxs) { //Extra-extra Small
+    
+}
 @media screen and (min-width: $break-xs) { //Extra Small
     
 }
@@ -49,5 +52,8 @@ main {
     
 }
 @media screen and (min-width: $break-xl) { //Extra large
+    
+}
+@media screen and (min-width: $break-xxl) { //Extra-extra large
     
 }
