@@ -1,0 +1,10 @@
+.coding-examples-wrapper {
+    background-image: linear-gradient(to top right, $light-blue, $dark-blue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        color: $nearly-white;
+    }
+}
