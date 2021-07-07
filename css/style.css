@@ -1461,4 +1461,106 @@ input[type="checkbox"] {
     width: 90%;
   }
 }
+
+.scs-scheme-wrapper {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#005189), to(#00112B));
+  background-image: linear-gradient(to top right, #005189, #00112B);
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.scs-heading,
+.about-scs,
+.about-netmatters,
+.about-treehouse {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#005189), to(#00112B));
+  background-image: linear-gradient(to top right, #005189, #00112B);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 2rem 4rem;
+}
+
+.scs-heading {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0;
+}
+
+.scs-heading h1 {
+  color: #F1F1E6;
+}
+
+.about-scs {
+  width: 60%;
+  color: #F1F1E6;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin: 3rem;
+}
+
+.abouts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.abouts .about-netmatters {
+  width: 45%;
+  height: 100%;
+  color: #F1F1E6;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.abouts .about-netmatters p::before {
+  content: '. ';
+  width: 1rem;
+  margin-left: -1rem;
+  color: #F1F1E6;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.abouts .about-treehouse {
+  width: 45%;
+  height: 100%;
+  color: #F1F1E6;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.abouts .about-treehouse img {
+  width: 60%;
+  height: 40%;
+  margin-bottom: 1rem;
+}
 /*# sourceMappingURL=style.css.map */
