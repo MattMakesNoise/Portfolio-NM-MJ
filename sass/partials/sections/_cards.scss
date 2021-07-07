@@ -39,6 +39,13 @@
     transition: 0.3s;
     &:hover {
         box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
+        cursor: pointer;
+        .overlay,
+        h2,
+        p {
+            visibility: visible;
+            opacity: 1;
+        }
     }
     a {
         text-decoration: none;

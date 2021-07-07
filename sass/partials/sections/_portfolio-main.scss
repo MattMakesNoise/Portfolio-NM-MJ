@@ -1,7 +1,26 @@
-.portfolio-cards-wrapper { //Main wrapper for the cards section, decides how sections of 3 cards are laid out
+.portfolio-wrapper {
     background-image: linear-gradient(to top right, $light-blue, $dark-blue);
     height: 140vh;
     width: 100vw;
+    @media screen and (min-width: $break-md) { 
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    @media screen and (min-width: $break-lg) { 
+        padding: 0;
+        height: 140vh;
+        align-items: flex-start;
+        padding-top: 10%;
+    }
+    @media screen and (min-width: $break-xl) { 
+        padding-top: 5%;
+        width: calc(100vw - 250px);
+    }
+}
+
+.portfolio-cards-wrapper { //Main wrapper for the cards section, decides how sections of 3 cards are laid out
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,11 +29,15 @@
     @media screen and (min-width: $break-md) { 
         flex-direction: row;
         justify-content: space-evenly;
-        height: 100vh;
         flex-wrap: wrap;
     }
     @media screen and (min-width: $break-lg) { 
         padding: 0;
+        justify-content: space-evenly;
     }
-    
+    @media screen and (min-width: $break-xl) { 
+        padding-left: 5rem;
+        padding-right: 5rem;
+        width: 90%;
+    }
 }

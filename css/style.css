@@ -606,6 +606,14 @@ input[type="checkbox"] {
 .card:hover {
   -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.card:hover .overlay,
+.card:hover h2,
+.card:hover p {
+  visibility: visible;
+  opacity: 1;
 }
 
 .card a {
@@ -1366,11 +1374,47 @@ input[type="checkbox"] {
   border-radius: 50%;
 }
 
-.portfolio-cards-wrapper {
+.portfolio-wrapper {
   background-image: -webkit-gradient(linear, left bottom, right top, from(#005189), to(#00112B));
   background-image: linear-gradient(to top right, #005189, #00112B);
   height: 140vh;
   width: 100vw;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-wrapper {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .portfolio-wrapper {
+    padding: 0;
+    height: 140vh;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 10%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-wrapper {
+    padding-top: 5%;
+    width: calc(100vw - 250px);
+  }
+}
+
+.portfolio-cards-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1396,7 +1440,6 @@ input[type="checkbox"] {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    height: 100vh;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -1405,6 +1448,17 @@ input[type="checkbox"] {
 @media screen and (min-width: 992px) {
   .portfolio-cards-wrapper {
     padding: 0;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-cards-wrapper {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    width: 90%;
   }
 }
 /*# sourceMappingURL=style.css.map */
