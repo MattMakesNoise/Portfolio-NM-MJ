@@ -13,10 +13,10 @@
     }
     @media screen and (min-width: $break-lg) { //large
         flex-direction: column;
-        height: 60vh;
+        height: 50vh;
     }
     @media screen and (min-width: $break-xl) {
-        height: 100vh;
+        height: 120vh;
         justify-content: space-evenly;
     }
     @media screen and (min-width: 1600px) {
@@ -34,6 +34,7 @@
     }
     @media screen and (min-width: $break-lg) { //large
         border-radius: 2rem;
+        margin: .75rem;
     }
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;

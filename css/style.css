@@ -89,9 +89,6 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 160px;
-            flex: 0 1 160px;
     position: fixed;
     top: 0px;
     padding: 20px 20px;
@@ -107,9 +104,6 @@ body {
 
 @media screen and (min-width: 1200px) {
   .navigation-bar {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 200px;
-            flex: 0 1 200px;
     width: 250px;
   }
 }
@@ -426,7 +420,7 @@ input[type="checkbox"] {
     -ms-flex-item-align: end;
         align-self: flex-end;
     position: relative;
-    top: 700px;
+    top: 600px;
   }
   .hero-wrapper .scroll-down .scroll-wrapper {
     display: -webkit-box;
@@ -450,6 +444,18 @@ input[type="checkbox"] {
     color: #F1F1E6;
     font-size: 2.5rem;
     margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-wrapper .scroll-down {
+    top: 570px;
+  }
+}
+
+@media screen and (min-width: 1850px) {
+  .hero-wrapper .scroll-down {
+    top: 700px;
   }
 }
 
@@ -557,13 +563,13 @@ input[type="checkbox"] {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 60vh;
+    height: 50vh;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .cards-wrapper {
-    height: 100vh;
+    height: 120vh;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
@@ -600,6 +606,7 @@ input[type="checkbox"] {
 @media screen and (min-width: 992px) {
   .card {
     border-radius: 2rem;
+    margin: .75rem;
   }
 }
 
@@ -876,7 +883,7 @@ input[type="checkbox"] {
 
 @media screen and (min-width: 992px) {
   .contact-wrapper {
-    height: 100vh;
+    height: 110vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1241,6 +1248,12 @@ input[type="checkbox"] {
   }
 }
 
+@media screen and (min-width: 1850px) {
+  .about-wrapper .about-blurb {
+    margin-top: 15rem;
+  }
+}
+
 .about-wrapper h2,
 .about-wrapper h3,
 .about-wrapper h4,
@@ -1377,8 +1390,9 @@ input[type="checkbox"] {
 .portfolio-wrapper {
   background-image: -webkit-gradient(linear, left bottom, right top, from(#005189), to(#00112B));
   background-image: linear-gradient(to top right, #005189, #00112B);
-  height: 140vh;
+  height: 170vh;
   width: 100vw;
+  padding-top: 35px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1409,8 +1423,16 @@ input[type="checkbox"] {
 
 @media screen and (min-width: 1200px) {
   .portfolio-wrapper {
-    height: 100vh;
+    height: 200vh;
     padding-top: 5%;
+    width: calc(100vw - 250px);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .portfolio-wrapper {
+    height: 120vh;
+    padding-top: 1rem;
     width: calc(100vw - 250px);
   }
 }
@@ -1460,6 +1482,14 @@ input[type="checkbox"] {
     padding-left: 5rem;
     padding-right: 5rem;
     width: 90%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .portfolio-cards-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
   }
 }
 

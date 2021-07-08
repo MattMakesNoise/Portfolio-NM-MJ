@@ -10,7 +10,7 @@
         background-image: linear-gradient(to top right, $light-blue, $dark-blue);
     }
     @media screen and (min-width: $break-lg) { //large
-        height: 100vh;
+        height: 110vh;
         display: flex;
         flex-direction: column;
         justify-content: center;

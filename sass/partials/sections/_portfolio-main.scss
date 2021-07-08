@@ -1,7 +1,8 @@
 .portfolio-wrapper {
     background-image: linear-gradient(to top right, $light-blue, $dark-blue);
-    height: 140vh;
+    height: 170vh;
     width: 100vw;
+    padding-top: 35px;
     @media screen and (min-width: $break-md) { 
         height: 100vh;
         display: flex;
@@ -15,8 +16,13 @@
         padding-top: 10%;
     }
     @media screen and (min-width: $break-xl) { 
-        height: 100vh;
+        height: 200vh;
         padding-top: 5%;
+        width: calc(100vw - 250px);
+    }
+    @media screen and (min-width: $break-xxl) { 
+        height: 120vh;
+        padding-top: 1rem;
         width: calc(100vw - 250px);
     }
 }
@@ -40,5 +46,10 @@
         padding-left: 5rem;
         padding-right: 5rem;
         width: 90%;
+    }
+    @media screen and (min-width: $break-xxl) { 
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: 100%;
     }
 }
