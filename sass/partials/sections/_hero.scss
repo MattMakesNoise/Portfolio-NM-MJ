@@ -51,7 +51,10 @@
             top: 570px;
         }
         @media screen and (min-width: 1850px) {
-            top: 700px;
+            top: 680px;
+        }
+        @media screen and (min-width: 2560px) {
+            top: 800px;
         }
     }
 }
@@ -96,5 +99,27 @@
     }
     @media screen and (min-width: $break-md) { 
         font-size: 2rem;
+    }
+}
+
+//============================== INTERNET EXPLORER ONLY ==============================//
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
+    @media screen and (min-width: $break-xxs) { 
+        .hero-text {
+            top: 10%;
+            left: 15%;
+        }
+    }
+    @media screen and (min-width: $break-lg) { 
+        .hero-text {
+            top: 10%;
+            left: 22%;
+        }
+    }
+    @media screen and (min-width: $break-xxl) { 
+        .hero-text {
+            top: 6%;
+            left: 17%;
+        }
     }
 }

@@ -208,3 +208,33 @@
         opacity: 80%;
     }
 }
+
+//============================== INTERNET EXPLORER ONLY ==============================//
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
+    @media screen and (min-width: $break-xxs) {
+        .overlay {
+            height: 50%;
+            p {
+                width: 250px;
+            }
+            
+        }
+    }
+    @media screen and (min-width: $break-md) { //Medium
+        .cards-wrapper {
+            width: 98vw;
+        }
+        .overlay {
+            height: 50%;
+            p {
+                width: 250px;
+            }
+            
+        }
+    }
+    @media screen and (min-width: $break-lg) { 
+        .cards-wrapper {
+            width: 790px;
+        }
+    }
+}

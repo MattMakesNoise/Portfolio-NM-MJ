@@ -221,3 +221,18 @@
 input[type="checkbox"]{
     display: none;
 }
+
+//============================== INTERNET EXPLORER ONLY ==============================//
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
+    @media screen and (min-width: $break-lg) { 
+        .navigation-bar ul li a {
+            font-size: 1.1rem;
+        }
+    }
+    @media screen and (min-width: $break-xl) { 
+        .navigation-bar ul li a {
+            font-size: 1.25rem;
+        }
+    }
+    
+}

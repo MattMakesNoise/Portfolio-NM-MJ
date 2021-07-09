@@ -50,6 +50,7 @@
     @media screen and (min-width: $break-xl) {
         justify-content: space-evenly;
         width: 60%;
+        height: 100vh;
     }
     .about-netmatters {
         img {
@@ -75,7 +76,7 @@
             width: 100%;
             font-size: 1.25rem;
             img {
-                height: 30%;
+                height: 20%;
                 width: 90%;
             }
         }
@@ -100,6 +101,13 @@
         font-weight: 500;
         font-size: 1rem;
         line-height: 1.2;
+        @media screen and (min-width: $break-md) {
+            img {
+                width: 50%;
+                height: 30%;
+                margin-bottom: 1rem;
+            }
+        }
         @media screen and (min-width: $break-lg) {
             width: 100%;
             font-size: 1.1rem;
@@ -117,6 +125,42 @@
                 height: 40%;
                 margin-bottom: 1rem;
             }
+        }
+        @media screen and (min-width: $break-xxl) {
+            width: 100%;
+            font-size: 1.25rem;
+            height: 100%;
+            img {
+                width: 60%;
+                height: 60%;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+//============================== INTERNET EXPLORER ONLY ==============================//
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
+    .scs-scheme-wrapper {
+        width: 100vw;
+        @media screen and (min-width: $break-lg) { 
+            width: calc(100vw - 200px)
+        }
+    }
+    .about-scs,
+    .abouts {
+        width: 260px;
+        @media screen and (min-width: $break-xs) { //Extra Small
+            width: 320px;
+        }
+        @media screen and (min-width: $break-sm) { 
+            width: 400px;
+        }
+        @media screen and (min-width: $break-md) { 
+            width: 600px;
+        }
+        @media screen and (min-width: $break-xl) { 
+            width: 900px;
         }
     }
 }

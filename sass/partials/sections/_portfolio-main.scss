@@ -14,6 +14,7 @@
         height: 140vh;
         align-items: flex-start;
         padding-top: 10%;
+        width: calc(100vw - 200px);
     }
     @media screen and (min-width: $break-xl) { 
         height: 200vh;
@@ -52,4 +53,12 @@
         padding-right: 1rem;
         width: 100%;
     }
+    @media screen and (min-width: 1880px) { 
+        width: 1500px;
+    }
+}
+
+//============================== INTERNET EXPLORER ONLY ==============================//
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
+
 }
