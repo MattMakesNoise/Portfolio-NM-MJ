@@ -21,7 +21,7 @@ body {
 @media screen and (min-width: 992px) {
   main {
     margin-left: 200px;
-    width: calc(100% - 200px);
+    width: calc(100vw - 200px);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -35,7 +35,7 @@ body {
 @media screen and (min-width: 1200px) {
   main {
     margin-left: 250px;
-    width: 100%;
+    width: calc(100vw - 250px);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -382,116 +382,54 @@ input[type="checkbox"] {
   }
 }
 
-@media screen and (min-width: 280px) {
-  .hero-wrapper {
-    height: 100vh;
-    width: 100vw;
-    background-image: url(/img/hero-cube-portraite.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    -o-object-fit: contain;
-       object-fit: contain;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+.hero-wrapper {
+  height: 100vh;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-@media screen and (min-width: 992px) {
-  .hero-wrapper {
-    height: 100vh;
-    width: 100%;
-    background-image: url(/img/hero-cube-1800x1012.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    -o-object-fit: contain;
-       object-fit: contain;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media screen and (min-width: 280px) {
-  .hero-wrapper .scroll-down {
-    visibility: hidden;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .hero-wrapper .scroll-down {
-    visibility: visible;
-    text-decoration: none;
-    margin-bottom: 2rem;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    position: relative;
-    top: 600px;
-  }
-  .hero-wrapper .scroll-down .scroll-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    z-index: 2;
-  }
-  .hero-wrapper .scroll-down .scroll-wrapper h2 {
-    color: #F1F1E6;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  .hero-wrapper .scroll-down .scroll-wrapper i {
-    color: #F1F1E6;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .hero-wrapper .scroll-down {
-    top: 570px;
-  }
-}
-
-@media screen and (min-width: 1850px) {
-  .hero-wrapper .scroll-down {
-    top: 680px;
-  }
-}
-
-@media screen and (min-width: 2560px) {
-  .hero-wrapper .scroll-down {
-    top: 800px;
-  }
+.hero-img {
+  background-image: url(/img/hero-cube-1800x1012.jpg);
+  background-color: #00112B;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .hero-text {
-  position: absolute;
-}
-
-@media screen and (min-width: 280px) {
-  .hero-text {
-    margin-top: 2rem;
-    padding-top: 4.5rem;
-    width: 80%;
-  }
+  margin-top: 2rem;
+  padding-top: 4.5rem;
+  width: 80%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media screen and (min-width: 768px) {
   .hero-text {
     margin-top: 0;
+    width: 40%;
     height: 100vh;
   }
 }
@@ -504,25 +442,21 @@ input[type="checkbox"] {
   }
 }
 
-.my-name,
-.web-dev {
+.hero-text .my-name,
+.hero-text .web-dev {
   color: #F1F1E6;
   text-align: center;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
 }
 
 @media screen and (min-width: 280px) {
-  .my-name {
+  .hero-text .my-name {
     font-size: 1.75rem;
     padding-bottom: 0.75rem;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .my-name {
+  .hero-text .my-name {
     font-size: 3rem;
     margin-bottom: 3%;
     padding-bottom: 1rem;
@@ -530,14 +464,52 @@ input[type="checkbox"] {
 }
 
 @media screen and (min-width: 280px) {
-  .web-dev {
+  .hero-text .web-dev {
     font-size: 1rem;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .web-dev {
+  .hero-text .web-dev {
     font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 280px) {
+  .hero-text .scroll-down {
+    visibility: hidden;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero-text .scroll-down {
+    visibility: visible;
+    text-decoration: none;
+    margin-bottom: 5rem;
+    justify-items: flex-end;
+  }
+  .hero-text .scroll-down .scroll-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 2;
+  }
+  .hero-text .scroll-down .scroll-wrapper h2 {
+    color: #F1F1E6;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .hero-text .scroll-down .scroll-wrapper i {
+    color: #F1F1E6;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -1649,6 +1621,18 @@ input[type="checkbox"] {
       flex-wrap: nowrap;
 }
 
+@media screen and (min-width: 1200px) {
+  .scs-scheme-wrapper {
+    height: 160vh;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .scs-scheme-wrapper {
+    height: 120vh;
+  }
+}
+
 .scs-heading,
 .about-scs,
 .about-netmatters,
@@ -1721,7 +1705,17 @@ input[type="checkbox"] {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     width: 60%;
-    height: 100vh;
+    height: 150vh;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .abouts {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 60%;
+    height: 120vh;
   }
 }
 
@@ -1736,7 +1730,7 @@ input[type="checkbox"] {
 }
 
 .abouts .about-netmatters img {
-  height: 10%;
+  height: auto;
   width: 90%;
 }
 
@@ -1746,7 +1740,7 @@ input[type="checkbox"] {
     font-size: 1.1rem;
   }
   .abouts .about-netmatters img {
-    height: 25%;
+    height: auto;
     width: 90%;
   }
 }
@@ -1757,8 +1751,15 @@ input[type="checkbox"] {
     font-size: 1.25rem;
   }
   .abouts .about-netmatters img {
-    height: 20%;
+    height: auto;
     width: 90%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .abouts .about-netmatters img {
+    height: auto;
+    width: 70%;
   }
 }
 
@@ -1781,14 +1782,14 @@ input[type="checkbox"] {
 
 .abouts .about-treehouse img {
   width: 90%;
-  height: 20%;
+  height: auto;
   margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 768px) {
   .abouts .about-treehouse img {
     width: 50%;
-    height: 30%;
+    height: auto;
     margin-bottom: 1rem;
   }
 }
@@ -1800,7 +1801,7 @@ input[type="checkbox"] {
   }
   .abouts .about-treehouse img {
     width: 60%;
-    height: 40%;
+    height: auto;
     margin-bottom: 1rem;
   }
 }
@@ -1812,7 +1813,7 @@ input[type="checkbox"] {
   }
   .abouts .about-treehouse img {
     width: 60%;
-    height: 40%;
+    height: auto;
     margin-bottom: 1rem;
   }
 }
@@ -1825,7 +1826,7 @@ input[type="checkbox"] {
   }
   .abouts .about-treehouse img {
     width: 60%;
-    height: 60%;
+    height: auto;
     margin-bottom: 1rem;
   }
 }

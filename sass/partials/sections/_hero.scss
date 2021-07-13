@@ -1,23 +1,62 @@
 .hero-wrapper {
-    @media screen and (min-width: $break-xxs) { //Extra Small
         height: 100vh;
-        width: 100vw;
-        background-image: url(/img/hero-cube-portraite.jpg);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        object-fit: contain;
+        width: auto;
         display: flex;
         justify-content: center;
+}
+.hero-img {
+    background-image: url(/img/hero-cube-1800x1012.jpg);
+    background-color: $dark-blue; //Used if the image is unavailable
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-text {
+    margin-top: 2rem;
+    padding-top: 4.5rem;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media screen and (min-width: $break-md) { 
+        margin-top: 0;
+        width: 40%;
+        height: 100vh;
     }
-    @media screen and (min-width: $break-lg) {
+    @media screen and (min-width: $break-lg) { 
+        margin-top: 2%;
+        padding-top: 1rem;
         height: 100vh;
-        width: 100%;
-        background-image: url(/img/hero-cube-1800x1012.jpg);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        object-fit: contain;
-        display: flex;
-        justify-content: center;
+    }
+    .my-name,
+    .web-dev {
+        color: $nearly-white;
+        text-align: center;
+    }
+    .my-name {
+        @media screen and (min-width: $break-xxs) { 
+            font-size: 1.75rem;
+            padding-bottom: 0.75rem;
+        }
+        @media screen and (min-width: $break-md) { 
+            font-size: 3rem;
+            margin-bottom: 3%;
+            padding-bottom: 1rem;
+        }
+    }
+    .web-dev {
+        @media screen and (min-width: $break-xxs) { 
+            font-size: 1rem;
+        }
+        @media screen and (min-width: $break-md) { 
+            font-size: 2rem;
+        }
     }
     .scroll-down {
         @media screen and (min-width: $break-xxs) { //Extra Small
@@ -26,10 +65,8 @@
         @media screen and (min-width: $break-lg) { //large
             visibility: visible;
             text-decoration: none;
-            margin-bottom: 2rem;
-            align-self: flex-end;
-            position: relative;
-            top: 600px;
+            margin-bottom: 5rem;
+            justify-items: flex-end;
             .scroll-wrapper {
                 display: flex;
                 flex-direction: column;
@@ -47,60 +84,9 @@
                 }
             }
         }
-        @media screen and (min-width: $break-xl) {
-            top: 570px;
-        }
-        @media screen and (min-width: 1850px) {
-            top: 680px;
-        }
-        @media screen and (min-width: 2560px) {
-            top: 800px;
-        }
     }
 }
-.hero-text {
-    position: absolute;
-    @media screen and (min-width: $break-xxs) {
-        margin-top: 2rem;
-        padding-top: 4.5rem;
-        width: 80%;
-    }
-    @media screen and (min-width: $break-md) { 
-        margin-top: 0;
-        height: 100vh;
-    }
-    @media screen and (min-width: $break-lg) { 
-        margin-top: 2%;
-        padding-top: 1rem;
-        height: 100vh;
-    }
-}
-.my-name,
-.web-dev {
-    color: $nearly-white;
-    text-align: center;
-    align-self: flex-start;
-    flex-wrap: nowrap;
-}
-.my-name {
-    @media screen and (min-width: $break-xxs) { 
-        font-size: 1.75rem;
-        padding-bottom: 0.75rem;
-    }
-    @media screen and (min-width: $break-md) { 
-        font-size: 3rem;
-        margin-bottom: 3%;
-        padding-bottom: 1rem;
-    }
-}
-.web-dev {
-    @media screen and (min-width: $break-xxs) { 
-        font-size: 1rem;
-    }
-    @media screen and (min-width: $break-md) { 
-        font-size: 2rem;
-    }
-}
+
 
 //============================== INTERNET EXPLORER ONLY ==============================//
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
