@@ -17,27 +17,21 @@
 }
 
 .hero-text {
-    margin-top: 2rem;
-    padding-top: 4.5rem;
     width: 80%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     @media screen and (min-width: $break-md) { 
-        margin-top: 0;
         width: 40%;
-        height: 100vh;
     }
-    @media screen and (min-width: $break-lg) { 
-        margin-top: 2%;
-        padding-top: 1rem;
-        height: 100vh;
-    }
-    .my-name,
-    .web-dev {
+    .headings {
+        padding-top: 10rem;
         color: $nearly-white;
         text-align: center;
+        @media screen and (min-width: $break-md) { 
+            padding-top: 4rem;
+        }
     }
     .my-name {
         @media screen and (min-width: $break-xxs) { 

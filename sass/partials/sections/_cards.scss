@@ -1,15 +1,17 @@
 .cards-wrapper { //Main wrapper for the cards section, decides how sections of 3 cards are laid out
-    @media screen and (min-width: $break-xxs) { //Extra-extra Small
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
+        padding-top: 1rem;
     @media screen and (min-width: $break-sm) { //Small
         flex-direction: row;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
     }
     @media screen and (min-width: $break-md) { //Medium
         flex-wrap: wrap;
+        justify-content: space-evenly;
     }
     @media screen and (min-width: $break-lg) { //large
         flex-direction: column;
@@ -24,11 +26,9 @@
     }
 }
 .card {
-    @media screen and (min-width: $break-xxs) { //Extra-extra Small
         height: 150px;
         margin: .25rem;
         border-radius: 1rem;
-    }
     @media screen and (min-width: $break-md) { //Medium
         margin: 1rem;
     }

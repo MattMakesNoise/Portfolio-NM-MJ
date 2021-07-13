@@ -410,8 +410,6 @@ input[type="checkbox"] {
 }
 
 .hero-text {
-  margin-top: 2rem;
-  padding-top: 4.5rem;
   width: 80%;
   height: 100%;
   display: -webkit-box;
@@ -428,24 +426,20 @@ input[type="checkbox"] {
 
 @media screen and (min-width: 768px) {
   .hero-text {
-    margin-top: 0;
     width: 40%;
-    height: 100vh;
   }
 }
 
-@media screen and (min-width: 992px) {
-  .hero-text {
-    margin-top: 2%;
-    padding-top: 1rem;
-    height: 100vh;
-  }
-}
-
-.hero-text .my-name,
-.hero-text .web-dev {
+.hero-text .headings {
+  padding-top: 10rem;
   color: #F1F1E6;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-text .headings {
+    padding-top: 4rem;
+  }
 }
 
 @media screen and (min-width: 280px) {
@@ -534,19 +528,18 @@ input[type="checkbox"] {
   }
 }
 
-@media screen and (min-width: 280px) {
-  .cards-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+.cards-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1rem;
 }
 
 @media screen and (min-width: 576px) {
@@ -555,9 +548,12 @@ input[type="checkbox"] {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 
@@ -565,6 +561,9 @@ input[type="checkbox"] {
   .cards-wrapper {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 
@@ -594,18 +593,13 @@ input[type="checkbox"] {
 }
 
 .card {
+  height: 150px;
+  margin: .25rem;
+  border-radius: 1rem;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-
-@media screen and (min-width: 280px) {
-  .card {
-    height: 150px;
-    margin: .25rem;
-    border-radius: 1rem;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -893,22 +887,21 @@ input[type="checkbox"] {
   }
 }
 
-@media screen and (min-width: 280px) {
-  .contact-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+.contact-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
 @media screen and (min-width: 576px) {
@@ -979,14 +972,19 @@ input[type="checkbox"] {
 @media screen and (min-width: 992px) {
   .contact-form {
     width: 90%;
-    height: 80%;
+    height: 70%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .contact-form {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .contact-form {
     width: 60%;
-    height: 80%;
   }
 }
 
@@ -1193,6 +1191,14 @@ input[type="checkbox"] {
 @media screen and (min-width: 992px) {
   .email-form input[type=submit] {
     margin-left: 80px;
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .email-form input[type=submit] {
+    margin-left: 80px;
+    margin-top: 1rem;
     padding: 1rem;
   }
 }
