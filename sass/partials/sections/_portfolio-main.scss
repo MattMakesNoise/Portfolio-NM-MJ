@@ -4,16 +4,13 @@
     width: 100vw;
     padding-top: 35px;
     @media screen and (min-width: $break-md) { 
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding-top: 0;
+        height: 200vh;
     }
     @media screen and (min-width: $break-lg) { 
-        padding: 0;
-        height: 140vh;
+        height: 100vh;
         align-items: flex-start;
-        padding-top: 10%;
+        padding-top: 15%;
         width: calc(100vw - 200px);
     }
     @media screen and (min-width: $break-xl) { 
@@ -22,9 +19,13 @@
         width: calc(100vw - 250px);
     }
     @media screen and (min-width: $break-xxl) { 
-        height: 120vh;
         padding-top: 1rem;
+        height: 120vh;
         width: calc(100vw - 250px);
+    }
+    @media screen and (min-width: 1880px) { 
+        padding-top: 10%;
+        height: 100vh;
     }
 }
 
@@ -55,5 +56,6 @@
     }
     @media screen and (min-width: 1880px) { 
         width: 1500px;
+        margin: 0 auto;
     }
 }

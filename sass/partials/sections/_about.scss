@@ -4,20 +4,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 20%;
+    @media screen and (min-width: $break-sm) { 
+        padding-top: 2%;
+        height: 180vh;
+    }
+    @media screen and (min-width: $break-md) { 
+        padding-top: 2%;
+        height: 160vh;
+    }
+    @media screen and (min-width: $break-lg) { 
+        padding-top: 2%;
+        height: 100vh;
+    }
     .about-blurb {
-        margin: 4rem .25rem 1rem .25rem;
-        @media screen and (min-width: $break-sm) { 
-            margin-top: 11rem;
-        }
-        @media screen and (min-width: $break-md) { 
-            margin-top: 6rem;
-        }
-        @media screen and (min-width: $break-xl) {
-            margin-top: 11rem;
-        }
-        @media screen and (min-width: 1850px) {
-            margin-top: 15rem;
-        }
+        margin: 0 .25rem 1rem .25rem;
     }
     h2,
     h3,
@@ -87,17 +88,17 @@
 }
 
 .me-image-wrapper {
-    margin-top: 6rem;
     width: 50%;
-    height: 20%;
+    height: auto;
     border-radius: 50%;
+    @media screen and (min-width: $break-sm) { 
+        width: 40%;
+    }
     @media screen and (min-width: $break-md) { 
         width: 30%;
-        height: 20%;
     }
     @media screen and (min-width: $break-xl) { 
         width: 20%;
-        height: 20%;
     }
     img {
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
