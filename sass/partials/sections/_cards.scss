@@ -8,21 +8,25 @@
         flex-wrap: wrap;
         width: 100%;
         justify-content: space-evenly;
+        height: 190vh;
     }
     @media screen and (min-width: $break-md) { //Medium
         flex-wrap: wrap;
         justify-content: space-evenly;
+        height: 120vh;
     }
     @media screen and (min-width: $break-lg) { //large
         flex-direction: column;
-        height: 50vh;
+        height: 700px;
     }
     @media screen and (min-width: $break-xl) {
-        height: 120vh;
-        justify-content: space-evenly;
+        height: 1000px;
     }
-    @media screen and (min-width: 1600px) {
-        height: 80vh;
+    @media screen and (min-width: $break-xxl) {
+        height: 120vh;
+    }
+    @media screen and (min-width: 1800px) {
+        height: 100vh;
     }
 }
 .card {
@@ -35,6 +39,10 @@
     @media screen and (min-width: $break-lg) { //large
         border-radius: 2rem;
         margin: .75rem;
+    }
+    @media screen and (min-width: $break-xl) {
+        border-radius: 2rem;
+        margin: .75rem 0;
     }
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -53,7 +61,6 @@
         color: $dark-blue;
     }
     .overlay {
-        flex: 1 0 250px;
         @media screen and (min-width: $break-xxs) { //Extra-extra Small
             width: 100%;
             border-radius: 1rem;

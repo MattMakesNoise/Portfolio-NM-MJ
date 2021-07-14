@@ -1,8 +1,12 @@
 .portfolio-wrapper {
     background-image: linear-gradient(to top right, $light-blue, $dark-blue);
-    height: 170vh;
+    height: 190vh;
     width: 100vw;
     padding-top: 35px;
+    @media screen and (min-width: $break-xs) { 
+        padding-top: 0;
+        height: 320vh;
+    }
     @media screen and (min-width: $break-md) { 
         padding-top: 0;
         height: 200vh;
@@ -14,7 +18,7 @@
         width: calc(100vw - 200px);
     }
     @media screen and (min-width: $break-xl) { 
-        height: 200vh;
+        height: 250vh;
         padding-top: 5%;
         width: calc(100vw - 250px);
     }

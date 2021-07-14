@@ -5,6 +5,9 @@
     flex-direction: column;
     align-items: center;
     padding-top: 20%;
+    @media screen and (min-width: $break-xs) { 
+        height: 190vh;
+    }
     @media screen and (min-width: $break-sm) { 
         padding-top: 2%;
         height: 180vh;

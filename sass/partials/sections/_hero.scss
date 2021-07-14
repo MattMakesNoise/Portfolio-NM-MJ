@@ -26,7 +26,7 @@
         width: 40%;
     }
     .headings {
-        padding-top: 10rem;
+        padding-top: 6rem;
         color: $nearly-white;
         text-align: center;
         @media screen and (min-width: $break-md) { 
@@ -34,32 +34,26 @@
         }
     }
     .my-name {
-        @media screen and (min-width: $break-xxs) { 
-            font-size: 1.75rem;
-            padding-bottom: 0.75rem;
-        }
+        font-size: 1.75rem;
+        padding-bottom: 0.75rem;
         @media screen and (min-width: $break-md) { 
-            font-size: 3rem;
+            font-size: 2rem;
             margin-bottom: 3%;
             padding-bottom: 1rem;
         }
     }
     .web-dev {
-        @media screen and (min-width: $break-xxs) { 
-            font-size: 1rem;
-        }
+        font-size: 1rem;
         @media screen and (min-width: $break-md) { 
-            font-size: 2rem;
+            font-size: 1.25rem;
         }
     }
     .scroll-down {
-        @media screen and (min-width: $break-xxs) { //Extra Small
-            visibility: hidden;
-        }
+        visibility: hidden;
         @media screen and (min-width: $break-lg) { //large
             visibility: visible;
             text-decoration: none;
-            margin-bottom: 5rem;
+            margin-bottom: 1rem;
             justify-items: flex-end;
             &:hover {
                 transform: scale(1.25);
@@ -71,12 +65,12 @@
                 z-index: 2;
                 h2 {
                     color: $nearly-white;
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                     margin-bottom: 1rem;
                 }
                 i {
                     color: $nearly-white;
-                    font-size: 2.5rem;
+                    font-size: 2rem;
                     margin-bottom: 1rem;
                 }
             }
