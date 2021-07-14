@@ -81,11 +81,9 @@
 
 //============================== INTERNET EXPLORER ONLY ==============================//
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
-    @media screen and (min-width: $break-xxs) { 
-        .hero-text {
-            top: 10%;
-            left: 15%;
-        }
+    .hero-text {
+        top: 10%;
+        left: 15%;
     }
     @media screen and (min-width: $break-lg) { 
         .hero-text {

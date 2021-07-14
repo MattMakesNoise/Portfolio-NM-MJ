@@ -10,6 +10,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .page-wrapper {
@@ -497,7 +498,7 @@ input[type="checkbox"] {
   }
 }
 
-@media screen and (-ms-high-contrast: active) and (min-width: 280px), screen and (-ms-high-contrast: none) and (min-width: 280px) {
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .hero-text {
     top: 10%;
     left: 15%;
@@ -865,6 +866,15 @@ input[type="checkbox"] {
   }
 }
 
+@media screen and (-ms-high-contrast: active) and (min-width: 576px), screen and (-ms-high-contrast: none) and (min-width: 576px) {
+  .cards-wrapper {
+    width: 98vw;
+    height: 70vh;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 @media screen and (-ms-high-contrast: active) and (min-width: 768px), screen and (-ms-high-contrast: none) and (min-width: 768px) {
   .cards-wrapper {
     width: 98vw;
@@ -880,6 +890,22 @@ input[type="checkbox"] {
 @media screen and (-ms-high-contrast: active) and (min-width: 992px), screen and (-ms-high-contrast: none) and (min-width: 992px) {
   .cards-wrapper {
     width: 790px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 1200px), screen and (-ms-high-contrast: none) and (min-width: 1200px) {
+  .cards-wrapper {
+    width: 790px;
+    height: 130vh;
+    width: calc(100vw - 250px);
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 1440px), screen and (-ms-high-contrast: none) and (min-width: 1440px) {
+  .cards-wrapper {
+    width: 790px;
+    height: 80vh;
+    width: calc(100vw - 250px);
   }
 }
 
@@ -1470,10 +1496,22 @@ input[type="checkbox"] {
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .about-wrapper {
     width: 100vw;
+    height: 100vh;
   }
+  .me-image-wrapper {
+    height: 30%;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (min-width: 400px), screen and (-ms-high-contrast: none) and (min-width: 400px) {
+  .me-image-wrapper {
+    height: 40%;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .about-blurb {
     width: 250px;
-    margin-top: 125px;
   }
 }
 
@@ -1896,6 +1934,7 @@ input[type="checkbox"] {
 @media screen and (-ms-high-contrast: active) and (min-width: 992px), screen and (-ms-high-contrast: none) and (min-width: 992px) {
   .scs-scheme-wrapper {
     width: calc(100vw - 200px);
+    height: 130vh;
   }
 }
 

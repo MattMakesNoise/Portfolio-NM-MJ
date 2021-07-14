@@ -9,7 +9,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
-    // overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 .page-wrapper {
@@ -19,11 +19,11 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    @media screen and (min-width: $break-lg) { //large
+    @media screen and (min-width: $break-lg) {
         margin-left: 200px;
         width: calc(100vw - 200px);
     }   
-    @media screen and (min-width: $break-xl) { //Extra large
+    @media screen and (min-width: $break-xl) {
         margin-left: 250px;
         width: calc(100vw - 250px);
     }   

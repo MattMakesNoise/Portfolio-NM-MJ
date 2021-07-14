@@ -164,7 +164,8 @@
     .scs-scheme-wrapper {
         width: 100vw;
         @media screen and (min-width: $break-lg) { 
-            width: calc(100vw - 200px)
+            width: calc(100vw - 200px);
+            height: 130vh;
         }
     }
     .about-scs,

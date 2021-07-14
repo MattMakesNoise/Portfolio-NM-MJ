@@ -224,7 +224,13 @@
             p {
                 width: 250px;
             }
-            
+        }
+    }
+    @media screen and (min-width: $break-sm) {
+        .cards-wrapper {
+            width: 98vw;
+            height: 70vh;
+            justify-content: space-around;
         }
     }
     @media screen and (min-width: $break-md) { //Medium
@@ -236,12 +242,25 @@
             p {
                 width: 250px;
             }
-            
         }
     }
     @media screen and (min-width: $break-lg) { 
         .cards-wrapper {
             width: 790px;
+        }
+    }
+    @media screen and (min-width: $break-xl) { 
+        .cards-wrapper {
+            width: 790px;
+            height: 130vh;
+            width: calc(100vw - 250px);
+        }
+    }
+    @media screen and (min-width: $break-xxl) { 
+        .cards-wrapper {
+            width: 790px;
+            height: 80vh;
+            width: calc(100vw - 250px);
         }
     }
 }

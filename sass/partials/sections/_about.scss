@@ -117,10 +117,16 @@
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
     .about-wrapper {
         width: 100vw;
+        height: 100vh;
+    }
+    .me-image-wrapper {
+        height: 30%;
+        @media screen and (min-width: $break-xs){
+            height: 40%;
+        }
     }
     .about-blurb {
         width: 250px;
-        margin-top: 125px;
         @media screen and (min-width: $break-sm) { 
             width: 350px;
         }
@@ -135,4 +141,5 @@
             padding-top: 0;
         }
     }
+
 }
