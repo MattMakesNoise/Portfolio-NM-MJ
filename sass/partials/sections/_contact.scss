@@ -47,11 +47,11 @@
         height: 100vh;
     }
     @media screen and (min-width: $break-xxl) { 
-        width: 70%;
+        width: 75%;
         height: 80%;
     }
     @media screen and (min-width: 1800px) {
-        width: 40%;
+        width: 50%;
     }
     border-radius: 2rem;
     background-color: rgba(241,241,230,0.9);
@@ -64,11 +64,7 @@
     h2,
     p {
         color: $dark-blue;
-        @media screen and (min-width: $break-xxs) { //Extra-extra Small
-            text-align: center;
-            padding-bottom: .5rem;
-        }
-        @media screen and (min-width: $break-lg) { //large
+        @media screen and (min-width: $break-xxs) {
             padding-bottom: 1rem;
         }
     }
@@ -82,21 +78,21 @@
     }
     p {
         font-weight: 500;
-        @media screen and (min-width: $break-xxs) { //Extra-extra Small
+        @media screen and (min-width: $break-xxs) {
             text-align: center;
         }
-        @media screen and (min-width: $break-lg) { //large
+        @media screen and (min-width: $break-lg) {
             text-align: left;
         }
     }
     form {
-        @media screen and (min-width: $break-xxs) { //Extra-extra Small
+        @media screen and (min-width: $break-xxs) {
             width: 260px;
         }
-        @media screen and (min-width: $break-xs) { //Extra Small
+        @media screen and (min-width: $break-xs) {
             width: 360px;
         }
-        @media screen and (min-width: $break-lg) { //large
+        @media screen and (min-width: $break-lg) {
             width: 800px;
         }
         display: flex;
@@ -105,27 +101,27 @@
 }
 
 .email-form {
-    @media screen and (min-width: $break-xxs) { //Extra-extra Small
+    @media screen and (min-width: $break-xxs) { 
         width: 260px;
     }
-    @media screen and (min-width: $break-xs) { //Extra Small
+    @media screen and (min-width: $break-xs) { 
         width: 360px;
     }
-    @media screen and (min-width: $break-lg) { //large
+    @media screen and (min-width: $break-lg) { 
         width: 800px;
     }
     display: flex;
     justify-content: center;
     input[type=text], //style inputs with type text and text area
     textarea {
-        @media screen and (min-width: $break-xxs) { //Extra-extra Small
+        @media screen and (min-width: $break-xxs) { 
             margin: .25rem 0 .5rem 0;
             width: 100%;
         }
-        @media screen and (min-width: $break-xs) { //Extra Small
+        @media screen and (min-width: $break-xs) { 
             width: 100%;
         }
-        @media screen and (min-width: $break-lg) { //large
+        @media screen and (min-width: $break-lg) { 
             margin-left: 80px;
             width: 80%;
         }
@@ -140,29 +136,29 @@
         }
     }
     label {
-        @media screen and (min-width: $break-xxs) { //Extra-extra Small
+        @media screen and (min-width: $break-xxs) { 
             display: none;
         }
-        @media screen and (min-width: $break-lg) { //large
+        @media screen and (min-width: $break-lg) {
             display: block;
             margin-left: 80px;
             padding-bottom: .4rem;
         }
     }
     input[type=submit] { //Style the submit button
-        @media screen and (min-width: $break-xxs) { //Extra-extra Small
+        @media screen and (min-width: $break-xxs) {
             margin-left: 0;
             margin-bottom: 8px;
             padding: .75rem;
         }
-        @media screen and (min-width: $break-sm) { //Small
+        @media screen and (min-width: $break-sm) { 
             padding: 1rem;
         }
-        @media screen and (min-width: $break-lg) { //large
+        @media screen and (min-width: $break-lg) { 
             margin-left: 80px;
             padding: 1rem;
         }
-        @media screen and (min-width: $break-xl) { //large
+        @media screen and (min-width: $break-xl) { 
             margin-left: 80px;
             margin-top: 1rem;
             padding: 1rem;
@@ -188,10 +184,10 @@
 }
 
 .scroll-up {
-    @media screen and (min-width: $break-xxs) { //Extra-extra Small
+    @media screen and (min-width: $break-xxs) { 
         display: none;
     }
-    @media screen and (min-width: $break-lg) { //large
+    @media screen and (min-width: $break-lg) { 
         display: block;
     }
     text-decoration: none;
