@@ -1,0 +1,53 @@
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.page-wrapper {
+    display: flex;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $break-lg) {
+        margin-left: 200px;
+        width: calc(100vw - 200px);
+    }   
+    @media screen and (min-width: $break-xl) {
+        margin-left: 250px;
+        width: calc(100vw - 250px);
+    }   
+}
+
+
+@media screen and (min-width: $break-xxs) { //Extra-extra Small
+    
+}
+@media screen and (min-width: $break-xs) { //Extra Small
+    
+}
+@media screen and (min-width: $break-sm) { //Small
+    
+}
+@media screen and (min-width: $break-md) { //Medium
+    
+}
+@media screen and (min-width: $break-lg) { //large
+    
+}
+@media screen and (min-width: $break-xl) { //Extra large
+    
+}
+@media screen and (min-width: $break-xxl) { //Extra-extra large
+    
+}

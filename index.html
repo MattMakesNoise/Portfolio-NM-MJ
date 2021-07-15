@@ -10,27 +10,142 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/8ac16a56cb.js" crossorigin="anonymous"> </script>
     <title>Matt Jones - Web Developer</title>
 </head>
 <body>
     <div class="page-wrapper">
-
-            <section class="glass">
-
-                <nav class="navigation-bar">
+        <!-- <section class="glass"> -->
+            <!-- NAVIGATION BAR -->
+            <nav class="navigation-bar">
+                <a href="/index.html">
                     <div class="logo-wrapper">
-                        <h1>M</h1>
+                        <h1 class="logo">M</h1>
                     </div>
+                </a>
+                <div class="nav-links-wrapper">
                     <ul>
-                        <li>About</li>
-                        <li>Portfolio</li>
-                        <li>Coding Examples</li>
-                        <li>SCS Scheme</li>
-                        <li>Contact</li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/portfolio.html">Portfolio</a></li>
+                        <li><a href="/coding-examples.html">Coding Examples</a></li>
+                        <li><a href="/scs-scheme.html">SCS Scheme</a></li>
+                        <li><a href="/index.html#contact">Contact</a></li>
                     </ul>
-                </nav>
-            </section>
-    
+                </div>
+                <div class="socials-wrapper">
+                    <span><a href="https://github.com/MattMakesNoise" target="_blank"><i class="fab fa-github"></i></a></span> 
+                    <span><a href="https://twitter.com/Me_Write_Code" target="_blank"><i class="fab fa-twitter"></i></a></span>
+                    <span><a href="https://www.linkedin.com/in/matthewjones81/" target="_blank"><i class="fab fa-linkedin-in"></i></a></span>
+                </div>
+                <div class="burger-wrapper">
+                    <input type="checkbox" id="burger-menu">
+                    <label id="burger-icon" for="burger-menu">
+                        <span></span> 
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+            </nav>
+            <!-- /NAVIGATION BAR END -->
+
+            <!-- CONTENT -->
+            <main>
+                <div class="hero-wrapper"> <!-- HERO SECTION -->
+                    <div class="hero-img">                    
+                        <div class="hero-text">
+                            <div class="headings">
+                                <h2 class="my-name">Hi! My name's Matt.</h2>
+                                <h3 class="web-dev">I'm a Web Developer.</h3>
+                            </div>
+                            <a href="#cards" class="scroll-down">
+                                <div class="scroll-wrapper"><h2>Scroll Down</h2><i class="fas fa-angle-down"></i></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-wrapper" id="cards"> <!-- CARDS SECTION -->
+                    <div class="card html-css">
+                        <a href="#">
+                            <div class="overlay overlay-one">
+                                <h2>Project One</h2>
+                                <p>Fantastic project, learned a lot.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card axure">
+                        <a href="#">
+                            <div class="overlay overlay-two">
+                                <h2>Project Two</h2>
+                                <p>Developed my skills with this one.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card project-three">
+                        <a href="#">
+                            <div class="overlay overlay-three">
+                                <h2>Project Three</h2>
+                                <p>Typed stuff on one of these.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card project-four">
+                        <a href="#">
+                            <div class="overlay overlay-four">
+                                <h2>Project Four</h2>
+                                <p>World Wide Web innit.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card project-five">
+                        <a href="#">
+                            <div class="overlay overlay-five">
+                                <h2>Project Five</h2>
+                                <p>Wouldn't want to meet this guy in a dark alley!</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card project-six">
+                        <a href="#">
+                            <div class="overlay overlay-six">
+                                <h2>Project Six</h2>
+                                <p>Made stuff you can view on these.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-wrapper" id="contact"> <!-- CONTACT SECTION -->
+                    <div class="contact-form">
+                        <h2>Get In Touch</h2>
+                        <p>Do you have a question or want to work together?</p>
+                        <div class="email-form">
+                            <form action="">
+                                <label for="fname"><span class="make-maroon">*</span> First Name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Your name...">
+
+                                <label for="lname"><span class="make-maroon">*</span> Last Name</label>
+                                <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+
+                                <label for="email"><span class="make-maroon">*</span> Email</label>
+                                <input type="text" id="email" name="email" placeholder="Your email...">
+
+                                <label for="subject"><span class="make-maroon">*</span> Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Email subject..."></input>
+                                
+                                <label for="message"><span class="make-maroon">*</span> Message</label>
+                                <textarea id="message" name="message" placeholder="Your message..." style="height:200px"></textarea>
+
+                                <input type="submit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                    <a href="#" class="scroll-up">
+                        <div class="scroll-up-wrapper"><i class="fas fa-angle-up"></i><h1>Scroll Up</h1></div>
+                    </a>
+                </div>
+            </main>
+            <!-- /CONTENT END -->
+        <!-- </section> -->
     </div>
 </body>
 </html>

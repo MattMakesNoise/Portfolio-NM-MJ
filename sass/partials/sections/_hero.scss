@@ -1,0 +1,100 @@
+.hero-wrapper {
+        height: 100vh;
+        width: auto;
+        display: flex;
+        justify-content: center;
+}
+.hero-img {
+    background-image: url(/img/hero-cube-1800x1012.jpg);
+    background-color: $dark-blue; //Used if the image is unavailable
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-text {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media screen and (min-width: $break-md) { 
+        width: 40%;
+    }
+    .headings {
+        padding-top: 6rem;
+        color: $nearly-white;
+        text-align: center;
+        @media screen and (min-width: $break-md) { 
+            padding-top: 4rem;
+        }
+    }
+    .my-name {
+        font-size: 1.75rem;
+        padding-bottom: 0.75rem;
+        @media screen and (min-width: $break-md) { 
+            font-size: 2rem;
+            margin-bottom: 3%;
+            padding-bottom: 1rem;
+        }
+    }
+    .web-dev {
+        font-size: 1rem;
+        @media screen and (min-width: $break-md) { 
+            font-size: 1.25rem;
+        }
+    }
+    .scroll-down {
+        visibility: hidden;
+        @media screen and (min-width: $break-lg) { //large
+            visibility: visible;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            justify-items: flex-end;
+            &:hover {
+                transform: scale(1.25);
+            }
+            .scroll-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                z-index: 2;
+                h2 {
+                    color: $nearly-white;
+                    font-size: 1rem;
+                    margin-bottom: 1rem;
+                }
+                i {
+                    color: $nearly-white;
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+//============================== INTERNET EXPLORER ONLY ==============================//
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
+    .hero-text {
+        top: 10%;
+        left: 15%;
+    }
+    @media screen and (min-width: $break-lg) { 
+        .hero-text {
+            top: 10%;
+            left: 22%;
+        }
+    }
+    @media screen and (min-width: $break-xxl) { 
+        .hero-text {
+            top: 6%;
+            left: 17%;
+        }
+    }
+}

@@ -1,0 +1,179 @@
+.scs-scheme-wrapper {
+    background-image: linear-gradient(to top right, $light-blue, $dark-blue);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.scs-heading,
+.about-scs,
+.about-netmatters,
+.about-treehouse {
+    background-image: linear-gradient(to top right, $light-blue, $dark-blue);
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 2rem 2rem;
+    @media screen and (min-width: $break-xl) {
+        padding: 2rem 4rem;
+    }
+}
+
+.about-scs {
+    color: $nearly-white;
+    font-weight: 500;
+    margin: 100px .5rem 1rem .5rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    @media screen and (min-width: $break-lg) {
+        width: 90%;
+        margin: 3rem;
+        font-size: 1.1rem;
+    }
+    @media screen and (min-width: $break-xl) {
+        width: 60%;
+        margin: 3rem;
+        font-size: 1.25rem;
+    }
+}
+
+.abouts { //Wraps the netmatters and treehouse sections
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    @media screen and (min-width: $break-lg) {
+        width: 90%;
+    }
+    @media screen and (min-width: $break-xl) {
+        justify-content: space-evenly;
+        width: 60%;
+        height: 150vh;
+    }
+    @media screen and (min-width: $break-xl) {
+        justify-content: space-evenly;
+        width: 60%;
+        height: 120vh;
+    }
+    .about-netmatters {
+        img {
+            height: auto;
+            width: 90%;
+        }
+        width: 95%;
+        height: 100%;
+        color: $nearly-white;   
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+        @media screen and (min-width: $break-lg) { 
+            width: 100%;
+            font-size: 1.1rem;
+            img {
+                height: auto;
+                width: 90%;
+            }
+        }
+        @media screen and (min-width: $break-xl) { 
+            width: 100%;
+            font-size: 1.25rem;
+            img {
+                height: auto;
+                width: 90%;
+            }
+        }
+        @media screen and (min-width: $break-xl) { 
+            img {
+                height: auto;
+                width: 70%;
+            }
+        }
+        p::before {
+            content: '. ';
+            width: 1rem;
+            margin-left: -1rem;
+            color: $nearly-white;
+            font-weight: 900;
+            font-size: 2rem;
+        }
+    }
+    
+    .about-treehouse {
+        img {
+            width: 90%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+        width: 95%;
+        color: $nearly-white;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.2;
+        @media screen and (min-width: $break-md) {
+            img {
+                width: 50%;
+                height: auto;
+                margin-bottom: 1rem;
+            }
+        }
+        @media screen and (min-width: $break-lg) {
+            width: 100%;
+            font-size: 1.1rem;
+            img {
+                width: 60%;
+                height: auto;
+                margin-bottom: 1rem;
+            }
+        }
+        @media screen and (min-width: $break-xl) {
+            width: 100%;
+            font-size: 1.25rem;
+            img {
+                width: 60%;
+                height: auto;
+                margin-bottom: 1rem;
+            }
+        }
+        @media screen and (min-width: $break-xxl) {
+            width: 100%;
+            font-size: 1.25rem;
+            height: 100%;
+            img {
+                width: 60%;
+                height: auto;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+//============================== INTERNET EXPLORER ONLY ==============================//
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
+    .scs-scheme-wrapper {
+        width: 100vw;
+        @media screen and (min-width: $break-lg) { 
+            width: calc(100vw - 200px);
+            height: 130vh;
+        }
+    }
+    .about-scs,
+    .abouts {
+        width: 260px;
+        @media screen and (min-width: $break-xs) { //Extra Small
+            width: 320px;
+        }
+        @media screen and (min-width: $break-sm) { 
+            width: 400px;
+        }
+        @media screen and (min-width: $break-md) { 
+            width: 600px;
+        }
+        @media screen and (min-width: $break-xl) { 
+            width: 900px;
+        }
+    }
+}
+

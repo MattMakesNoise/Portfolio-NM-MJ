@@ -1,0 +1,269 @@
+.cards-wrapper { //Main wrapper for the cards section, decides how sections of 3 cards are laid out
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;
+    @media screen and (min-width: 518px) {
+        height: 100vh;
+    }
+    @media screen and (min-width: $break-sm) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
+        height: 100vh;
+    }
+    @media screen and (min-width: $break-md) {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: 600px;
+    }
+    @media screen and (min-width: $break-lg) {
+        flex-direction: column;
+        height: 700px;
+    }
+    @media screen and (min-width: $break-xl) {
+        height: 1000px;
+    }
+    @media screen and (min-width: $break-xxl) {
+        height: 120vh;
+    }
+    @media screen and (min-width: 1800px) {
+        height: 800px;
+    }
+}
+.card {
+        height: 150px;
+        margin: .25rem;
+        border-radius: 1rem;
+    @media screen and (min-width: $break-md) {
+        margin: 1rem;
+    }
+    @media screen and (min-width: $break-lg) {
+        border-radius: 2rem;
+        margin: .75rem;
+    }
+    @media screen and (min-width: $break-xl) {
+        border-radius: 2rem;
+        margin: .75rem 0;
+    }
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    &:hover {
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
+        cursor: pointer;
+        .overlay,
+        h2,
+        p {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $dark-blue;
+    }
+    .overlay {
+        @media screen and (min-width: $break-xxs) {
+            width: 100%;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            visibility: visible;
+            background-color: rgba(211,211,211,.7);
+            p {
+                text-align: center;
+            }
+        }
+        @media screen and (min-width: $break-lg) {
+            border-radius: 2rem;
+            visibility: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            background-color: rgba(211,211,211,.9);
+            &:hover {
+                visibility: visible;
+                opacity: 1;
+            }
+            p {
+                text-align: left;
+            }
+        }
+        h2 {
+            text-transform: uppercase;
+        }
+    }
+}
+
+.html-css {
+    width: 250px;
+    height: 150px;
+    background-image: url(/img/camerasilhouette250x167.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    order: 1;
+    @media screen and (min-width: $break-xl) { 
+        width: 450px;
+        height: 300px;
+        background-image: url(/img/camerasilhouette600x400.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        object-fit: contain;
+    }
+    &:hover {
+        opacity: 80%;
+    }
+}
+.axure {
+    width: 250px;
+    height: 150px;
+    background-image: url(/img/desk250x141.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    order: 2;
+    @media screen and (min-width: $break-xl) { 
+        width: 450px;
+        height: 300px;
+        background-image: url(/img/desk700x394.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        object-fit: contain;
+    }
+    &:hover {
+        opacity: 80%;
+    }
+}
+.project-three {
+    width: 250px;
+    height: 150px;
+    background-image: url(/img/keyboard250x167.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    order: 3;
+    @media screen and (min-width: $break-xl) { 
+        width: 450px;
+        height: 300px;
+        background-image: url(/img/keyboard600x400.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        object-fit: contain;
+    }
+    &:hover {
+        opacity: 80%;
+    }
+}
+
+.project-four {
+    width: 250px;
+    height: 150px;
+    background-image: url(/img/web250x166.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    order: 4;
+    @media screen and (min-width: $break-xl) { 
+        width: 450px;
+        height: 300px;
+        background-image: url(/img/web600x400.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        object-fit: contain;
+    }
+    &:hover {
+        opacity: 80%;
+    }
+}
+.project-five {
+    width: 250px;
+    height: 150px;
+    background-image: url(/img/spookydude250x167.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    order: 5;
+    @media screen and (min-width: $break-xl) { 
+        width: 450px;
+        height: 300px;
+        background-image: url(/img/spookydude600x400.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        object-fit: contain;
+    }
+    &:hover {
+        opacity: 80%;
+    }
+}
+.project-six {
+    width: 250px;
+    height: 150px;
+    background-image: url(/img/devices250x167.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    order: 6;
+    @media screen and (min-width: $break-xl) { 
+        width: 450px;
+        height: 300px;
+        background-image: url(/img/devices600x400.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        object-fit: contain;
+    }
+    &:hover {
+        opacity: 80%;
+    }
+}
+
+//============================== INTERNET EXPLORER ONLY ==============================//
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
+    @media screen and (min-width: $break-xxs) {
+        .overlay {
+            height: 50%;
+            p {
+                width: 250px;
+            }
+        }
+    }
+    @media screen and (min-width: $break-sm) {
+        .cards-wrapper {
+            width: 98vw;
+            height: 70vh;
+            justify-content: space-around;
+        }
+    }
+    @media screen and (min-width: $break-md) { //Medium
+        .cards-wrapper {
+            width: 98vw;
+        }
+        .overlay {
+            height: 50%;
+            p {
+                width: 250px;
+            }
+        }
+    }
+    @media screen and (min-width: $break-lg) { 
+        .cards-wrapper {
+            width: 790px;
+        }
+    }
+    @media screen and (min-width: $break-xl) { 
+        .cards-wrapper {
+            width: 790px;
+            height: 130vh;
+            width: calc(100vw - 250px);
+        }
+    }
+    @media screen and (min-width: $break-xxl) { 
+        .cards-wrapper {
+            width: 790px;
+            height: 80vh;
+            width: calc(100vw - 250px);
+        }
+    }
+}
