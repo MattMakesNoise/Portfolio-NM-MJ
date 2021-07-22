@@ -44,10 +44,21 @@
     }
     .web-dev {
         font-size: 1rem;
+        font-family: monospace;
         @media screen and (min-width: $break-md) { 
             font-size: 1.25rem;
         }
     }
+    @keyframes blink {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      .cursor::after {
+        content: "|";
+        font-size: 1.5em;
+        font-weight: bold;
+        animation: blink infinite 0.5s;
+      }
     .scroll-down {
         visibility: hidden;
         @media screen and (min-width: $break-lg) { //large

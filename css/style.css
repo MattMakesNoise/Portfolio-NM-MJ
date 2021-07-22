@@ -460,12 +460,39 @@ input[type="checkbox"] {
 
 .hero-text .web-dev {
   font-size: 1rem;
+  font-family: monospace;
 }
 
 @media screen and (min-width: 768px) {
   .hero-text .web-dev {
     font-size: 1.25rem;
   }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-text .cursor::after {
+  content: "|";
+  font-size: 1.5em;
+  font-weight: bold;
+  -webkit-animation: blink infinite 0.5s;
+          animation: blink infinite 0.5s;
 }
 
 .hero-text .scroll-down {
