@@ -62,19 +62,24 @@
     a {
         text-decoration: none;
         color: $dark-blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .overlay {
         @media screen and (min-width: $break-xxs) {
             width: 100%;
             border-radius: 1rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             visibility: visible;
             background-color: rgba(211,211,211,.7);
+            h2 {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
             p {
                 text-align: center;
+                padding: 0 .25rem;
             }
         }
         @media screen and (min-width: $break-lg) {
@@ -94,13 +99,21 @@
         h2 {
             text-transform: uppercase;
         }
+        .project-link {
+            margin: 1rem auto;
+            background-color: red;
+            color: $nearly-white;
+            padding: .5rem;
+            border-radius: 2rem;
+            width: 25%;
+        }
     }
 }
 
 .html-css {
     width: 250px;
     height: 150px;
-    background-image: url(/img/camerasilhouette250x167.jpg);
+    background-image: url(/img/homepage-reflection.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     object-fit: contain;
@@ -108,7 +121,7 @@
     @media screen and (min-width: $break-xl) { 
         width: 450px;
         height: 300px;
-        background-image: url(/img/camerasilhouette600x400.jpg);
+        background-image: url(/img/homepage-reflection.png);
         background-size: 100% 100%;
         background-repeat: no-repeat;
         object-fit: contain;
