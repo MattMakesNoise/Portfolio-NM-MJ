@@ -1,8 +1,9 @@
 .cards-wrapper { //Main wrapper for the cards section, decides how sections of 3 cards are laid out
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     @media screen and (min-width: 518px) {
         height: 100vh;
     }
@@ -16,22 +17,48 @@
     @media screen and (min-width: $break-md) {
         flex-wrap: wrap;
         justify-content: space-evenly;
-        height: 600px;
+        height: 750px;
     }
     @media screen and (min-width: $break-lg) {
         flex-direction: column;
-        height: 700px;
+        height: 500px;
     }
     @media screen and (min-width: $break-xl) {
         height: 1000px;
+        flex-direction: row;
     }
     @media screen and (min-width: $break-xxl) {
-        height: 120vh;
+        height: 150vh;
     }
     @media screen and (min-width: 1800px) {
-        height: 800px;
+        height: 1000px;
+        width: 1600px;
+        margin: 0 auto;
     }
 }
+#projOne, //The main containers for each card
+#projTwo,
+#projThree,
+#projFour,
+#projFive,
+#projSix {
+    margin-bottom: 1rem;
+}
+
+.card-link { //The links that wrap each card, after the proj div.
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    h2 {
+        color: $dark-blue;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
 .card {
         height: 150px;
         margin: .25rem;
@@ -53,33 +80,24 @@
         box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
         cursor: pointer;
         .overlay,
-        h2,
         p {
             visibility: visible;
             opacity: 1;
         }
     }
-    a {
-        text-decoration: none;
-        color: $dark-blue;
+    .overlay {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-    }
-    .overlay {
         @media screen and (min-width: $break-xxs) {
             width: 100%;
             border-radius: 1rem;
             visibility: visible;
             background-color: rgba(211,211,211,.7);
-            h2 {
-                font-size: 1.2rem;
-                margin-bottom: 1rem;
-            }
             p {
+                color: $dark-blue;
                 text-align: center;
-                padding: 0 .25rem;
+                padding: 1rem .25rem;
             }
         }
         @media screen and (min-width: $break-lg) {
@@ -94,18 +112,8 @@
             }
             p {
                 text-align: left;
+                padding: 1rem;
             }
-        }
-        h2 {
-            text-transform: uppercase;
-        }
-        .project-link {
-            margin: 1rem auto;
-            background-color: red;
-            color: $nearly-white;
-            padding: .5rem;
-            border-radius: 2rem;
-            width: 25%;
         }
     }
 }
@@ -231,7 +239,6 @@
         opacity: 80%;
     }
 }
-
 //============================== INTERNET EXPLORER ONLY ==============================//
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
     @media screen and (min-width: $break-xxs) {

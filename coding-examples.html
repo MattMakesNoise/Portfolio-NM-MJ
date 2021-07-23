@@ -27,7 +27,7 @@
                 <div class="nav-links-wrapper">
                     <ul>
                         <li><a href="/about.html">About</a></li>
-                        <li><a href="/portfolio.html">Portfolio</a></li>
+                        <li><a href="/index.html#cards">Portfolio</a></li>
                         <li><a href="/coding-examples.html">Coding Examples</a></li>
                         <li><a href="/scs-scheme.html">SCS Scheme</a></li>
                         <li><a href="/index.html#contact">Contact</a></li>
@@ -52,7 +52,51 @@
             <!-- CONTENT -->
             <main>
                 <div class="coding-examples-wrapper">
-                    <h1>Coding Examples. Coming soon...</h1>
+                    <h1>Coding Examples</h1>
+                    <div class="code-wrapper">
+                        <div class="code-block">
+                            <code>
+                                <p class="code-line" id="lineOne"><span class="code-cyan">@mixin</span><span class="code-blue"> tooltip-main</span><span class="code-yellow"> {</span></p>
+                                    <p class="code-line" id="lineTwo"><span class="code-greyblue">background-color</span><span class="code-cyan">:</span> $dark-blue<span class="code-cyan">;</span></p>
+                                    <p class="code-line" id="lineThree"><span class="code-greyblue">color</span><span class="code-cyan">:</span> $white<span class="code-cyan">;</span></p>
+                                    <p class="code-line" id="lineFour"><span class="code-greyblue">position</span><span class="code-cyan">:</span> absolute<span class="code-cyan">;</span></p>
+                                    <p class="code-line" id="lineFive"><span class="code-greyblue">display</span><span class="code-cyan">:</span> none<span class="code-cyan">;</span></p>
+                                    <p class="code-line" id="lineSix"><span class="code-greyblue">max-width</span><span class="code-cyan">:</span> <span class="code-orange">260px</span><span class="code-cyan">;</span></p>
+                                    <p class="code-line" id="lineSeven"><span class="code-greyblue">text-align</span><span class="code-cyan">:</span> center<span class="code-cyan">;</span></p>
+                                <p class="code-line" id="lineEight"><span class="code-yellow">}</span></p>
+                                        <br>
+                                <p class="code-line" id="lineNine"><span class="code-cyan">.</span><span class="code-yellow">show {</span></p>
+                                    <p class="code-line" id="lineTen"><span class="code-cyan">.</span><span class="code-yellow">tooltip</span> <span class="code-purple">{</span></p>
+                                        <p class="code-line" id="lineEleven"><span class="code-cyan">@include</span> <span class="code-blue">tooltip-main</span><span class="code-cyan">;</span></p>
+                                        <p class="code-line" id="lineTwelve"><span class="code-greyblue">padding</span><span class="code-cyan">:</span> <span class="code-orange">20px</span><span class="code-cyan">;</span></p>
+                                    <p class="code-line" id="lineThirteen"><span class="code-yellow">p </span><span class="code-cyan">{</span></p>
+                                        <p class="code-line" id="lineFourteen"><span class="code-greyblue">margin-top</span><span class="code-cyan">:</span> <span class="code-orange">1rem</span><span class="code-cyan">;</span></p>
+                                        <p class="code-line" id="lineFifteen"><span class="code-greyblue">font-size</span><span class="code-cyan">:</span> <span class="code-orange">0.875rem</span><span class="code-cyan">;</span></p>
+                                        <p class="code-line" id="lineSixteen"><span class="code-greyblue">font-weight</span><span class="code-cyan">:</span> $light<span class="code-cyan">;</span></p>
+                                    <p class="code-line" id="lineSeventeen"><span class="code-cyan">}</span></p>
+                                    <p class="code-line" id="lineEighteen"><span class="code-yellow">&</span><span class="code-cyan">::</span><span class="code-purple">after</span><span class="code-cyan"> { </span><span class="code-grey">//Creates the dropdown arrow</span></p>
+                                    <p class="code-line" id="lineNineteen"><span class="code-greyblue">content</span><span class="code-cyan">: '';</span></p>
+                                    <p class="code-line" id="lineTwenty"><span class="code-greyblue">border-left</span><span class="code-cyan">:</span> solid transparent <span class="code-orange">30px</span><span class="code-cyan">;</span></p>
+                                    <p class="code-line" id="lineTwentyone"><span class="code-greyblue">border-right</span><span class="code-cyan">:</span> solid transparent <span class="code-orange">30px</span><span class="code-cyan">;</span></p>
+                                    <p class="code-line" id="lineTwentytwo"><span class="code-greyblue">border-top</span><span class="code-cyan">:</span> solid $dark-blue <span class="code-orange">30px</span><span class="code-cyan">;</span></p>
+                                    <p class="code-line" id="lineTwentythree"><span class="code-greyblue">bottom</span><span class="code-cyan">:</span> <span class="code-orange">-29px</span><span class="code-cyan">;</span> <span class="code-grey">//Makes it sit flush with the bottom of the element</span></p>
+                                    <p class="code-line" id="lineTwentyfour"><span class="code-greyblue">height</span><span class="code-cyan">:</span> <span class="code-orange">0</span><span class="code-cyan">;</span></p>
+                                    <p class="code-line" id="lineTwentyfive"><span class="code-greyblue">left</span><span class="code-cyan">:</span> <span class="code-orange">37.5%</span><span class="code-cyan">;</span> <span class="code-grey">//Centers the arrow</span></p>
+                                    <p class="code-line" id="lineTwentysix"><span class="code-greyblue">position</span><span class="code-cyan">:</span> absolute<span class="code-cyan">;</span> <span class="code-grey">//Makes it appear below</span></p>
+                                    <p class="code-line" id="lineTwentyseven"><span class="code-greyblue">margin-left</span><span class="code-cyan">:</span> <span class="code-orange">0px</span><span class="code-cyan">;</span></p>
+                                    <p class="code-line" id="lineTwentyeight"><span class="code-cyan">}</span></p>
+                                    <p class="code-line" id="lineTwentynine"><span class="code-purple">}</span></p>
+                                    <p class="code-line" id="lineThirty"><span class="code-yellow">&</span><span class="code-cyan">:</span><span class="code-purple">hover</span> <span class="code-cyan">.</span><span class="code-yellow">tooltip</span><span class="code-purple"> {</span></p>
+                                    <p class="code-line" id="lineThirtyone"><span class="code-greyblue">display</span><span class="code-cyan">:</span> block<span class="code-cyan">;</span></p>
+                                    <p class="code-line" id="lineThirtytwo"><span class="code-greyblue">pointer-events</span><span class="code-cyan">:</span> auto<span class="code-cyan">;</span></p>
+                                    <p class="code-line" id="lineThirtythree"><span class="code-purple">}</span></p>
+                                    <p class="code-line" id="lineThirtyfour"><span class="code-yellow">}</span></p>
+                            </code>
+                        </div>
+                        <div class="explain-block">
+                            <p>Here's where I explain what the fuck you're looking at!</p>
+                        </div>
+                    </div>
                 </div>
             </main>
             <!-- /CONTENT END -->

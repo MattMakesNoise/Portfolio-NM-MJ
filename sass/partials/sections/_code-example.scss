@@ -3,18 +3,121 @@
     height: 100vh;
     width: 100vw;
     display: flex;
-    align-items: center;
-    padding: 1rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: .75rem;
     @media screen and (min-width: $break-md) { 
         height: 120vh;
         width: 100vw;
     }
     @media screen and (min-width: $break-lg) { 
         height: 120vh;
-        justify-content: center;
     }
     h1 {
         color: $nearly-white;
         width: 80%;
+        margin-bottom: 1rem;
     }
+}
+.code-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    @media screen and (min-width: $break-xxl){
+        flex-direction: row;
+    }
+    .code-block {
+        background-color: #212121;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        padding: .75rem;
+        border-radius: 1rem;
+        width: 260px;
+        @media screen and (min-width: $break-md){
+            width: 500px;
+        }
+        @media screen and (min-width: $break-lg){
+            width: 550px;
+        }
+    }
+    .explain-block {
+        background-color: $nearly-white;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        padding: .75rem;
+        border-radius: 1rem;
+        width: 260px;
+        @media screen and (min-width: $break-md){
+            width: 500px;
+        }
+        @media screen and (min-width: $break-lg){
+            width: 550px;
+        }
+    }
+}
+
+
+
+#lineTwo,
+#lineThree,
+#lineFour,
+#lineFive,
+#lineSix,
+#lineSeven,
+#lineTen,
+#lineTwentynine,
+#lineThirty,
+#lineThirtythree {
+    margin-left: 1rem;
+}
+#lineEleven,
+#lineTwelve,
+#lineThirteen,
+#lineFourteen,
+#lineFifteen,
+#lineSixteen,
+#lineSeventeen,
+#lineEighteen,
+#lineTwentyeight,
+#lineThirtyone,
+#lineThirtytwo {
+    margin-left: 2rem;
+}
+#lineNineteen,
+#lineTwenty,
+#lineTwentyone,
+#lineTwentytwo,
+#lineTwentythree,
+#lineTwentyfour,
+#lineTwentyfive,
+#lineTwentysix,
+#lineTwentyseven {
+    margin-left: 3rem;
+}
+//========================= VS CODE STYLE COLOR PALETTE =========================//
+code {
+    color: #EEFFFF;
+}
+.code-orange {
+    color: #F78C6C;
+}
+.code-yellow {
+    color: #FFCB6B;
+}
+.code-blue {
+    color: #82AAFF;
+}
+.code-greyblue {
+    color: #6EB3CE;
+}
+.code-cyan {
+    color: #89DDFF;
+}
+.code-purple {
+    color: #C792EA;
+}
+.code-green {
+    color: #C3E88D;
+}
+
+.code-grey {
+    color: #616161;
 }

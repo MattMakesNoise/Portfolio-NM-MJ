@@ -568,6 +568,7 @@ input[type="checkbox"] {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 @media screen and (min-width: 518px) {
@@ -599,7 +600,7 @@ input[type="checkbox"] {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    height: 600px;
+    height: 750px;
   }
 }
 
@@ -609,26 +610,65 @@ input[type="checkbox"] {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 700px;
+    height: 500px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .cards-wrapper {
     height: 1000px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .cards-wrapper {
-    height: 120vh;
+    height: 150vh;
   }
 }
 
 @media screen and (min-width: 1800px) {
   .cards-wrapper {
-    height: 800px;
+    height: 1000px;
+    width: 1600px;
+    margin: 0 auto;
   }
+}
+
+#projOne,
+#projTwo,
+#projThree,
+#projFour,
+#projFive,
+#projSix {
+  margin-bottom: 1rem;
+}
+
+.card-link {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-link h2 {
+  color: #00112B;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .card {
@@ -668,15 +708,12 @@ input[type="checkbox"] {
 }
 
 .card:hover .overlay,
-.card:hover h2,
 .card:hover p {
   visibility: visible;
   opacity: 1;
 }
 
-.card a {
-  text-decoration: none;
-  color: #00112B;
+.card .overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -684,9 +721,6 @@ input[type="checkbox"] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -699,13 +733,10 @@ input[type="checkbox"] {
     visibility: visible;
     background-color: rgba(211, 211, 211, 0.7);
   }
-  .card .overlay h2 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
   .card .overlay p {
+    color: #00112B;
     text-align: center;
-    padding: 0 .25rem;
+    padding: 1rem .25rem;
   }
 }
 
@@ -724,20 +755,8 @@ input[type="checkbox"] {
   }
   .card .overlay p {
     text-align: left;
+    padding: 1rem;
   }
-}
-
-.card .overlay h2 {
-  text-transform: uppercase;
-}
-
-.card .overlay .project-link {
-  margin: 1rem auto;
-  background-color: red;
-  color: #F1F1E6;
-  padding: .5rem;
-  border-radius: 2rem;
-  width: 25%;
 }
 
 .html-css {
@@ -1724,10 +1743,14 @@ input[type="checkbox"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: .75rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -1740,15 +1763,152 @@ input[type="checkbox"] {
 @media screen and (min-width: 992px) {
   .coding-examples-wrapper {
     height: 120vh;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
 .coding-examples-wrapper h1 {
   color: #F1F1E6;
   width: 80%;
+  margin-bottom: 1rem;
+}
+
+.code-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media screen and (min-width: 1440px) {
+  .code-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.code-wrapper .code-block {
+  background-color: #212121;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: .75rem;
+  border-radius: 1rem;
+  width: 260px;
+}
+
+@media screen and (min-width: 768px) {
+  .code-wrapper .code-block {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .code-wrapper .code-block {
+    width: 550px;
+  }
+}
+
+.code-wrapper .explain-block {
+  background-color: #F1F1E6;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: .75rem;
+  border-radius: 1rem;
+  width: 260px;
+}
+
+@media screen and (min-width: 768px) {
+  .code-wrapper .explain-block {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .code-wrapper .explain-block {
+    width: 550px;
+  }
+}
+
+#lineTwo,
+#lineThree,
+#lineFour,
+#lineFive,
+#lineSix,
+#lineSeven,
+#lineTen,
+#lineTwentynine,
+#lineThirty,
+#lineThirtythree {
+  margin-left: 1rem;
+}
+
+#lineEleven,
+#lineTwelve,
+#lineThirteen,
+#lineFourteen,
+#lineFifteen,
+#lineSixteen,
+#lineSeventeen,
+#lineEighteen,
+#lineTwentyeight,
+#lineThirtyone,
+#lineThirtytwo {
+  margin-left: 2rem;
+}
+
+#lineNineteen,
+#lineTwenty,
+#lineTwentyone,
+#lineTwentytwo,
+#lineTwentythree,
+#lineTwentyfour,
+#lineTwentyfive,
+#lineTwentysix,
+#lineTwentyseven {
+  margin-left: 3rem;
+}
+
+code {
+  color: #EEFFFF;
+}
+
+.code-orange {
+  color: #F78C6C;
+}
+
+.code-yellow {
+  color: #FFCB6B;
+}
+
+.code-blue {
+  color: #82AAFF;
+}
+
+.code-greyblue {
+  color: #6EB3CE;
+}
+
+.code-cyan {
+  color: #89DDFF;
+}
+
+.code-purple {
+  color: #C792EA;
+}
+
+.code-green {
+  color: #C3E88D;
+}
+
+.code-grey {
+  color: #616161;
 }
 
 .scs-scheme-wrapper {
