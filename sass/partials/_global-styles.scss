@@ -19,6 +19,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
+    width: 100%;
     @media screen and (min-width: $break-lg) {
         margin-left: 200px;
         width: calc(100vw - 200px);
