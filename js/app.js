@@ -61,7 +61,6 @@ const heroSectionObserver = new IntersectionObserver(function(entries, heroSecti
             burgerOne.classList.add('burger-dark');
             burgerTwo.classList.add('burger-dark');
             burgerThree.classList.add('burger-dark');
-            console.log("Colurs should change!");
         } else {
             logoBorder.classList.remove('logo-wrapper-dark');
             logo.classList.remove('logo-dark');
@@ -69,17 +68,10 @@ const heroSectionObserver = new IntersectionObserver(function(entries, heroSecti
             burgerTwo.classList.remove('burger-dark');
             burgerThree.classList.remove('burger-dark');
         }
-        console.log(entry);
     });
 }, heroSectionOptions);
 
 heroSectionObserver.observe(heroSection);
-
-
-
-
-
-
 
 //=======================================================================//
 //=======================================================================//
@@ -87,7 +79,33 @@ heroSectionObserver.observe(heroSection);
 //=======================================================================//
 //=======================================================================//
 
+const fadeIn = document.querySelectorAll('.fade-in'); //faders in tutorial
+const slideIn = document.querySelectorAll('.slide-in'); //sliders in tutorial
 
+const appearOnScrollOptions = {
+    root: null, //it is the viewport
+    threshold: 0,
+    rootMargin: "-100px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+        if(!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('appear');
+            appearOnScroll.unobserve(entry.target);
+        }
+    })
+}, appearOnScrollOptions);
+
+fadeIn.forEach(fadeIn => {
+    appearOnScroll.observe(fadeIn);
+});
+
+slideIn.forEach(slideIn => {
+    appearOnScroll.observe(slideIn);
+});
 
 
 //=======================================================================//

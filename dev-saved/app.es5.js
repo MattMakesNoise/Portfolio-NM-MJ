@@ -63,7 +63,6 @@ var heroSectionObserver = new IntersectionObserver(function (entries, heroSectio
       burgerOne.classList.add('burger-dark');
       burgerTwo.classList.add('burger-dark');
       burgerThree.classList.add('burger-dark');
-      console.log("Colurs should change!");
     } else {
       logoBorder.classList.remove('logo-wrapper-dark');
       logo.classList.remove('logo-dark');
@@ -71,8 +70,6 @@ var heroSectionObserver = new IntersectionObserver(function (entries, heroSectio
       burgerTwo.classList.remove('burger-dark');
       burgerThree.classList.remove('burger-dark');
     }
-
-    console.log(entry);
   });
 }, heroSectionOptions);
 heroSectionObserver.observe(heroSection); //=======================================================================//
@@ -80,7 +77,33 @@ heroSectionObserver.observe(heroSection); //====================================
 //===== BRING CARDS IN FROM THE SIDE AS THE PAGE IS SCROLLED ============//
 //=======================================================================//
 //=======================================================================//
-//=======================================================================//
+
+var fadeIn = document.querySelectorAll('.fade-in'); //faders in tutorial
+
+var slideIn = document.querySelectorAll('.slide-in'); //sliders in tutorial
+
+var appearOnScrollOptions = {
+  root: null,
+  //it is the viewport
+  threshold: 0,
+  rootMargin: "-100px"
+};
+var appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add('appear');
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+}, appearOnScrollOptions);
+fadeIn.forEach(function (fadeIn) {
+  appearOnScroll.observe(fadeIn);
+});
+slideIn.forEach(function (slideIn) {
+  appearOnScroll.observe(slideIn);
+}); //=======================================================================//
 //=======================================================================//
 //===== CONTACT FORM VALIDATION =========================================//
 //=======================================================================//

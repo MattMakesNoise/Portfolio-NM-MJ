@@ -501,6 +501,9 @@ input[type=checkbox] {
 #projFour,
 #projFive,
 #projSix {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
@@ -516,6 +519,9 @@ input[type=checkbox] {
   text-transform: uppercase;
   font-size: 1.2rem;
   text-align: center;
+}
+.card-link p {
+  text-decoration: none;
 }
 
 .card {
@@ -555,10 +561,11 @@ input[type=checkbox] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 50vw;
 }
 @media screen and (min-width: 280px) {
   .card .overlay {
-    width: 100%;
+    width: 50vw;
     border-radius: 1rem;
     visibility: visible;
     background-color: rgba(211, 211, 211, 0.7);
@@ -587,8 +594,37 @@ input[type=checkbox] {
   }
 }
 
+.fade-in {
+  opacity: 0;
+  transition: opacity 750ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.from-left {
+  transform: translateX(-50%);
+}
+
+.from-right {
+  transform: translateX(50%);
+}
+
+.from-left,
+.from-right {
+  transition: opacity 250ms ease-in, transform 750ms ease-in;
+  opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 .html-css {
-  width: 250px;
+  width: 50vw;
   height: 150px;
   background-image: url(/img/homepage-reflection.png);
   background-size: 100% 100%;
