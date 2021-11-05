@@ -217,6 +217,16 @@ input[type="checkbox"]{
     display: none;
 }
 
+.logo-wrapper-dark {
+    border: 5px solid $dark-blue !important;
+}
+.logo-dark {
+    color: $dark-blue !important;
+}
+.burger-dark {
+    background: $dark-blue !important;
+}
+
 //============================== INTERNET EXPLORER ONLY ==============================//
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
     @media screen and (min-width: $break-lg) { 

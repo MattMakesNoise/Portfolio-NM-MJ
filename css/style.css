@@ -296,6 +296,18 @@ input[type=checkbox] {
   display: none;
 }
 
+.logo-wrapper-dark {
+  border: 5px solid #00112B !important;
+}
+
+.logo-dark {
+  color: #00112B !important;
+}
+
+.burger-dark {
+  background: #00112B !important;
+}
+
 @media screen and (-ms-high-contrast: active) and (min-width: 992px), screen and (-ms-high-contrast: none) and (min-width: 992px) {
   .navigation-bar ul li a {
     font-size: 1.1rem;
@@ -1717,23 +1729,23 @@ code {
     width: 900px;
   }
 }
-.logo-wrapper {
+.logo-wrapper-side {
   border-radius: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 5px solid #005189;
 }
-.logo-wrapper:hover {
+.logo-wrapper-side:hover {
   border: 5px solid #00112B;
 }
-.logo-wrapper .logo {
+.logo-wrapper-side .logo-side {
   font-weight: 700;
   font-size: 3.5rem;
   padding: 0.25rem 0.5rem;
   color: #005189;
 }
-.logo-wrapper .logo:hover {
+.logo-wrapper-side .logo-side:hover {
   color: #00112B;
 }
 
