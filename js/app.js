@@ -21,7 +21,9 @@ function type() {
         a++;
     }
     //reached end of list then start over 
-    if (a == text.length) {
+    if (a == text.length) { setTimeout(() => {
         a = 0;
+    }, 5000);
+        
     } 
 };
