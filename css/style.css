@@ -81,6 +81,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 5;
 }
 @media screen and (min-width: 280px) {
   .navigation-bar .logo-wrapper {
@@ -98,7 +99,7 @@ main {
 }
 @media screen and (min-width: 280px) {
   .navigation-bar .logo-wrapper .logo {
-    font-size: 3.5rem;
+    font-size: 2rem;
     padding: 0.25rem 0.5rem;
     color: #F1F1E6;
   }
@@ -275,9 +276,14 @@ main {
   display: block;
   margin: 4px;
   height: 9px;
-  width: 60px;
+  width: 54px;
   background: #F1F1E6;
   border-radius: 9px;
+}
+@media screen and (min-width: 992px) {
+  #burger-icon span {
+    width: 60px;
+  }
 }
 
 #burger-menu:checked ~ #burger-icon span:nth-child(1) {
@@ -446,8 +452,15 @@ input[type=checkbox] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 1rem;
+  padding-top: 2rem;
   padding-bottom: 1rem;
+  max-width: 150px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 375px) {
+  .cards-wrapper {
+    max-width: 200px;
+  }
 }
 @media screen and (min-width: 518px) {
   .cards-wrapper {
@@ -467,29 +480,24 @@ input[type=checkbox] {
   .cards-wrapper {
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 750px;
+    height: 900px;
   }
 }
 @media screen and (min-width: 992px) {
   .cards-wrapper {
     flex-direction: column;
-    height: 500px;
+    height: 1100px;
   }
 }
 @media screen and (min-width: 1200px) {
   .cards-wrapper {
-    height: 1100px;
     flex-direction: row;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .cards-wrapper {
     height: 150vh;
   }
 }
 @media screen and (min-width: 1800px) {
   .cards-wrapper {
-    height: 1000px;
+    height: 1600px;
     width: 1600px;
     margin: 0 auto;
   }
@@ -502,96 +510,90 @@ input[type=checkbox] {
 #projFive,
 #projSix {
   text-decoration: none;
-  display: flex;
-  align-items: center;
   margin-bottom: 1rem;
 }
 
-.card-link {
-  text-decoration: none;
+.card {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
-}
-.card-link h2 {
-  color: #00112B;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  text-align: center;
-}
-.card-link p {
-  text-decoration: none;
-}
-
-.card {
-  height: 150px;
+  justify-content: space-between;
+  width: 80%;
   margin: 0.25rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
 @media screen and (min-width: 768px) {
   .card {
-    margin: 1rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .card {
-    border-radius: 2rem;
-    margin: 0.75rem;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .card {
-    border-radius: 2rem;
-    margin: 0.75rem 0;
+    flex-direction: row;
   }
 }
 .card:hover {
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-.card:hover .overlay,
-.card:hover p {
-  visibility: visible;
-  opacity: 1;
+.card .card-pic {
+  width: 150px;
+  height: 90px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  border-radius: 1rem;
 }
-.card .overlay {
+@media screen and (min-width: 375px) {
+  .card .card-pic {
+    width: 200px;
+    height: 120px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card .card-pic {
+    width: 250px;
+    height: 150px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card .card-pic {
+    width: 450px;
+    height: 300px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    object-fit: contain;
+  }
+}
+.card .card-pic:hover {
+  opacity: 80%;
+}
+.card .blurb {
+  width: 150px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 50vw;
+  justify-content: space-evenly;
+  margin-top: 1rem;
 }
-@media screen and (min-width: 280px) {
-  .card .overlay {
-    width: 50vw;
-    border-radius: 1rem;
-    visibility: visible;
-    background-color: rgba(211, 211, 211, 0.7);
-  }
-  .card .overlay p {
-    color: #00112B;
-    text-align: center;
-    padding: 1rem 0.25rem;
+@media screen and (min-width: 375px) {
+  .card .blurb {
+    width: 200px;
   }
 }
-@media screen and (min-width: 992px) {
-  .card .overlay {
-    border-radius: 2rem;
-    visibility: none;
-    opacity: 0;
-    transition: opacity 0.3s;
-    background-color: rgba(211, 211, 211, 0.9);
+@media screen and (min-width: 768px) {
+  .card .blurb {
+    width: 250px;
+    height: 150px;
   }
-  .card .overlay:hover {
-    visibility: visible;
-    opacity: 1;
+}
+@media screen and (min-width: 1200px) {
+  .card .blurb {
+    max-width: 450px;
   }
-  .card .overlay p {
-    text-align: left;
-    padding: 1rem;
-  }
+}
+.card .blurb h2 {
+  text-transform: uppercase;
+}
+.card .blurb h2,
+.card .blurb p,
+.card .blurb a {
+  color: #00112B;
+  margin-bottom: 0.5rem;
 }
 
 .fade-in {
@@ -623,96 +625,86 @@ input[type=checkbox] {
   opacity: 1;
 }
 
-.html-css {
-  width: 50vw;
-  height: 150px;
+#projOne .html-css {
   background-image: url(/img/homepage-reflection.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  object-fit: contain;
+  order: 1;
+}
+@media screen and (min-width: 768px) {
+  #projOne .html-css {
+    order: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #projOne .html-css {
+    background-image: url(/img/homepage-reflection.png);
+  }
+}
+#projOne .html-css-blurb {
+  order: 2;
+}
+@media screen and (min-width: 768px) {
+  #projOne .html-css-blurb {
+    order: 1;
+  }
+}
+
+#projTwo .pairs {
+  background-image: url(/img/desk250x141.jpg);
   order: 1;
 }
 @media screen and (min-width: 1200px) {
-  .html-css {
-    width: 450px;
-    height: 300px;
-    background-image: url(/img/homepage-reflection.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    object-fit: contain;
+  #projTwo .pairs {
+    background-image: url(/img/desk700x394.jpg);
   }
 }
-.html-css:hover {
-  opacity: 80%;
-}
-
-.axure {
-  width: 250px;
-  height: 150px;
-  background-image: url(/img/desk250x141.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  object-fit: contain;
+#projTwo .pairs-blurb {
   order: 2;
 }
-@media screen and (min-width: 1200px) {
-  .axure {
-    width: 450px;
-    height: 300px;
-    background-image: url(/img/desk700x394.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    object-fit: contain;
+@media screen and (min-width: 768px) {
+  #projTwo .pairs-blurb {
+    text-align: end;
   }
 }
-.axure:hover {
-  opacity: 80%;
-}
 
-.project-three {
-  width: 250px;
-  height: 150px;
+#projThree .link-n-image {
   background-image: url(/img/keyboard250x167.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  order: 3;
+  order: 1;
 }
-@media screen and (min-width: 1200px) {
-  .project-three {
-    width: 450px;
-    height: 300px;
-    background-image: url(/img/keyboard600x400.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    object-fit: contain;
+@media screen and (min-width: 768px) {
+  #projThree .link-n-image {
+    order: 2;
   }
 }
-.project-three:hover {
-  opacity: 80%;
+@media screen and (min-width: 1200px) {
+  #projThree .link-n-image {
+    background-image: url(/img/keyboard600x400.jpg);
+  }
+}
+#projThree .link-n-image-blurb {
+  order: 2;
+}
+@media screen and (min-width: 768px) {
+  #projThree .link-n-image-blurb {
+    order: 1;
+  }
 }
 
-.project-four {
-  width: 250px;
-  height: 150px;
+#projFour .wordpress {
   background-image: url(/img/web250x166.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  order: 4;
+  order: 1;
 }
 @media screen and (min-width: 1200px) {
-  .project-four {
-    width: 450px;
-    height: 300px;
+  #projFour .wordpress {
     background-image: url(/img/web600x400.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    object-fit: contain;
   }
 }
-.project-four:hover {
-  opacity: 80%;
+#projFour .wordpress-blurb {
+  order: 2;
+}
+@media screen and (min-width: 768px) {
+  #projFour .wordpress-blurb {
+    text-align: end;
+  }
 }
 
 .project-five {

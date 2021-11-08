@@ -2,8 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: 2rem;
     padding-bottom: 1rem;
+    max-width: 150px;
+    margin: 0 auto;
+    @media screen and (min-width: 375px) {
+        max-width: 200px;
+    }
     @media screen and (min-width: 518px) {
         height: 100vh;
     }
@@ -17,21 +22,18 @@
     @media screen and (min-width: $break-md) {
         flex-wrap: wrap;
         justify-content: space-evenly;
-        height: 750px;
+        height: 900px;
     }
     @media screen and (min-width: $break-lg) {
         flex-direction: column;
-        height: 500px;
+        height: 1100px;
     }
     @media screen and (min-width: $break-xl) {
-        height: 1100px;
         flex-direction: row;
-    }
-    @media screen and (min-width: $break-xxl) {
         height: 150vh;
     }
     @media screen and (min-width: 1800px) {
-        height: 1000px;
+        height: 1600px;
         width: 1600px;
         margin: 0 auto;
     }
@@ -43,88 +45,79 @@
 #projFive,
 #projSix {
     text-decoration: none;
-    display: flex;
-    // justify-content: space-evenly;
-    align-items: center;
     margin-bottom: 1rem;
 }
 
-.card-link { //The links that wrap each card, after the proj div.
-    text-decoration: none;
+.card {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    h2 {
-        color: $dark-blue;
-        text-transform: uppercase;
-        font-size: 1.2rem;
-        text-align: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: .25rem;
+    border-radius: 1rem;
+    transition: 0.3s;
+    @media screen and (min-width: $break-md) {
+        flex-direction: row;
     }
-    p {
-        text-decoration: none;
+    &:hover {
+        cursor: pointer;
+    }
+    .card-pic {
+        width: 150px;
+        height: 90px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        object-fit: contain;
+        border-radius: 1rem;
+        @media screen and (min-width: 375px) {
+            width: 200px;
+            height: 120px;
+        }
+        @media screen and (min-width: $break-md) { 
+            width: 250px;
+            height: 150px;
+        }
+        @media screen and (min-width: $break-xl) { 
+            width: 450px;
+            height: 300px;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            object-fit: contain;
+        }
+        &:hover {
+            opacity: 80%;
+        }
+    }
+    .blurb {
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: 1rem;
+        @media screen and (min-width: 375px) {
+            width: 200px;
+        }
+        @media screen and (min-width: $break-md) { 
+            width: 250px;
+            height: 150px;
+        }
+        @media screen and (min-width: $break-xl) { 
+            max-width: 450px;
+        }
+        h2 {
+            text-transform: uppercase;
+        }
+        h2,
+        p,
+        a {
+            color: $dark-blue;
+            margin-bottom: .5rem;
+        }
     }
 }
 
-.card {
-        height: 150px;
-        margin: .25rem;
-        border-radius: 1rem;
-    @media screen and (min-width: $break-md) {
-        margin: 1rem;
-    }
-    @media screen and (min-width: $break-lg) {
-        border-radius: 2rem;
-        margin: .75rem;
-    }
-    @media screen and (min-width: $break-xl) {
-        border-radius: 2rem;
-        margin: .75rem 0;
-    }
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    &:hover {
-        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
-        cursor: pointer;
-        .overlay,
-        p {
-            visibility: visible;
-            opacity: 1;
-        }
-    }
-    .overlay {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 50vw;
-        @media screen and (min-width: $break-xxs) {
-            width: 50vw;
-            border-radius: 1rem;
-            visibility: visible;
-            background-color: rgba(211,211,211,.7);
-            p {
-                color: $dark-blue;
-                text-align: center;
-                padding: 1rem .25rem;
-            }
-        }
-        @media screen and (min-width: $break-lg) {
-            border-radius: 2rem;
-            visibility: none;
-            opacity: 0;
-            transition: opacity 0.3s;
-            background-color: rgba(211,211,211,.9);
-            &:hover {
-                visibility: visible;
-                opacity: 1;
-            }
-            p {
-                text-align: left;
-                padding: 1rem;
-            }
-        }
-    }
-}
+
 
 .fade-in {
     opacity: 0;
@@ -154,88 +147,77 @@
     transform: translateX(0);
     opacity: 1;
 }
-
-.html-css {
-    width: 50vw;
-    height: 150px;
-    background-image: url(/img/homepage-reflection.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    object-fit: contain;
-    order: 1;
-    @media screen and (min-width: $break-xl) { 
-        width: 450px;
-        height: 300px;
+#projOne {
+    .html-css {
         background-image: url(/img/homepage-reflection.png);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        object-fit: contain;
+        order: 1;
+        @media screen and (min-width: $break-md) { 
+            order: 2;
+        }
+        @media screen and (min-width: $break-xl) { 
+            background-image: url(/img/homepage-reflection.png);
+        }
     }
-    &:hover {
-        opacity: 80%;
-    }
-}
-.axure {
-    width: 250px;
-    height: 150px;
-    background-image: url(/img/desk250x141.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    object-fit: contain;
-    order: 2;
-    @media screen and (min-width: $break-xl) { 
-        width: 450px;
-        height: 300px;
-        background-image: url(/img/desk700x394.jpg);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        object-fit: contain;
-    }
-    &:hover {
-        opacity: 80%;
-    }
-}
-.project-three {
-    width: 250px;
-    height: 150px;
-    background-image: url(/img/keyboard250x167.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    object-fit: contain;
-    order: 3;
-    @media screen and (min-width: $break-xl) { 
-        width: 450px;
-        height: 300px;
-        background-image: url(/img/keyboard600x400.jpg);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        object-fit: contain;
-    }
-    &:hover {
-        opacity: 80%;
+    .html-css-blurb {
+        order: 2;
+        @media screen and (min-width: $break-md) { 
+            order: 1;
+        }
     }
 }
 
-.project-four {
-    width: 250px;
-    height: 150px;
-    background-image: url(/img/web250x166.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    object-fit: contain;
-    order: 4;
-    @media screen and (min-width: $break-xl) { 
-        width: 450px;
-        height: 300px;
-        background-image: url(/img/web600x400.jpg);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        object-fit: contain;
+#projTwo {
+    .pairs {
+        background-image: url(/img/desk250x141.jpg);
+        order: 1;
+        @media screen and (min-width: $break-xl) { 
+            background-image: url(/img/desk700x394.jpg);
+        }
     }
-    &:hover {
-        opacity: 80%;
+    .pairs-blurb {
+        order: 2;
+        @media screen and (min-width: $break-md) { 
+            text-align: end;
+        }
     }
 }
+
+#projThree {
+    .link-n-image {
+        background-image: url(/img/keyboard250x167.jpg);
+        order: 1;
+        @media screen and (min-width: $break-md) { 
+            order: 2;
+        }
+        @media screen and (min-width: $break-xl) { 
+            background-image: url(/img/keyboard600x400.jpg);
+        }
+    }
+    .link-n-image-blurb {
+        order: 2;
+        @media screen and (min-width: $break-md) { 
+            order: 1;
+        }
+    }
+}
+
+#projFour {
+    .wordpress {
+        background-image: url(/img/web250x166.jpg);
+        order: 1;
+        @media screen and (min-width: $break-xl) { 
+            background-image: url(/img/web600x400.jpg);
+        }
+    }
+    .wordpress-blurb {
+        order: 2;
+        @media screen and (min-width: $break-md) { 
+            text-align: end;
+        }
+    }
+}
+
+
 .project-five {
     width: 250px;
     height: 150px;
