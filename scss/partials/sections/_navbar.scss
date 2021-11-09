@@ -52,6 +52,10 @@
                 padding: .25rem .5rem;
                 color: $nearly-white;
             }
+            @media screen and (min-width: $break-md) {
+                padding: 0.5rem 1rem;
+                font-size: 3rem;
+            }
             @media screen and (min-width: $break-lg) {
                 padding: 0.5rem 1rem;
                 font-size: 5rem;
@@ -204,22 +208,22 @@
     width: 54px;
     background: $nearly-white;
     border-radius: 9px;
-    @media screen and (min-width: $break-lg) {
+    @media screen and (min-width: $break-md) {
         width: 60px;
     }
 }
-#burger-menu:checked ~ #burger-icon span:nth-child(1) {
-    transform: rotate(135deg) translate(21px,-13px);
-    }
-#burger-menu:checked ~ #burger-icon span:nth-child(2) {
-    opacity: 0;
-    }
-#burger-menu:checked ~ #burger-icon span:nth-child(3) {
-    transform: rotate(-135deg) translate(3px);
-    }
-input[type="checkbox"]{
-    display: none;
-}
+// #burger-menu:checked ~ #burger-icon span:nth-child(1) {
+//     transform: rotate(135deg) translate(21px,-13px);
+//     }
+// #burger-menu:checked ~ #burger-icon span:nth-child(2) {
+//     opacity: 0;
+//     }
+// #burger-menu:checked ~ #burger-icon span:nth-child(3) {
+//     transform: rotate(-135deg) translate(3px);
+//     }
+// input[type="checkbox"]{
+//     display: none;
+// }
 
 .logo-wrapper-dark {
     border: 5px solid $dark-blue !important;

@@ -104,6 +104,12 @@ main {
     color: #F1F1E6;
   }
 }
+@media screen and (min-width: 768px) {
+  .navigation-bar .logo-wrapper .logo {
+    padding: 0.5rem 1rem;
+    font-size: 3rem;
+  }
+}
 @media screen and (min-width: 992px) {
   .navigation-bar .logo-wrapper .logo {
     padding: 0.5rem 1rem;
@@ -280,26 +286,10 @@ main {
   background: #F1F1E6;
   border-radius: 9px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   #burger-icon span {
     width: 60px;
   }
-}
-
-#burger-menu:checked ~ #burger-icon span:nth-child(1) {
-  transform: rotate(135deg) translate(21px, -13px);
-}
-
-#burger-menu:checked ~ #burger-icon span:nth-child(2) {
-  opacity: 0;
-}
-
-#burger-menu:checked ~ #burger-icon span:nth-child(3) {
-  transform: rotate(-135deg) translate(3px);
-}
-
-input[type=checkbox] {
-  display: none;
 }
 
 .logo-wrapper-dark {
@@ -454,12 +444,12 @@ input[type=checkbox] {
   align-items: center;
   padding-top: 2rem;
   padding-bottom: 1rem;
-  max-width: 150px;
+  width: 150px;
   margin: 0 auto;
 }
 @media screen and (min-width: 375px) {
   .cards-wrapper {
-    max-width: 200px;
+    width: 200px;
   }
 }
 @media screen and (min-width: 518px) {
@@ -471,34 +461,34 @@ input[type=checkbox] {
   .cards-wrapper {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
     justify-content: space-evenly;
     height: 100vh;
   }
 }
 @media screen and (min-width: 768px) {
   .cards-wrapper {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
     height: 900px;
+    width: 650px;
   }
 }
 @media screen and (min-width: 992px) {
   .cards-wrapper {
     flex-direction: column;
     height: 1100px;
+    width: 800px;
   }
 }
 @media screen and (min-width: 1200px) {
   .cards-wrapper {
     flex-direction: row;
     height: 150vh;
+    width: 1100px;
   }
 }
 @media screen and (min-width: 1800px) {
   .cards-wrapper {
-    height: 1600px;
-    width: 1600px;
+    height: 1400px;
+    width: 1200px;
     margin: 0 auto;
   }
 }
@@ -583,7 +573,7 @@ input[type=checkbox] {
 }
 @media screen and (min-width: 1200px) {
   .card .blurb {
-    max-width: 450px;
+    width: 450px;
   }
 }
 .card .blurb h2 {
@@ -649,12 +639,12 @@ input[type=checkbox] {
 }
 
 #projTwo .pairs {
-  background-image: url(/img/desk250x141.jpg);
+  background-image: url(/img/pairs.png);
   order: 1;
 }
 @media screen and (min-width: 1200px) {
   #projTwo .pairs {
-    background-image: url(/img/desk700x394.jpg);
+    background-image: url(/img/pairs.png);
   }
 }
 #projTwo .pairs-blurb {
@@ -690,12 +680,12 @@ input[type=checkbox] {
 }
 
 #projFour .wordpress {
-  background-image: url(/img/web250x166.jpg);
+  background-image: url(/img/wordpress.png);
   order: 1;
 }
 @media screen and (min-width: 1200px) {
   #projFour .wordpress {
-    background-image: url(/img/web600x400.jpg);
+    background-image: url(/img/wordpress.png);
   }
 }
 #projFour .wordpress-blurb {
