@@ -216,48 +216,6 @@
         }
     }
 }
-
-
-.project-five {
-    width: 250px;
-    height: 150px;
-    background-image: url(/img/spookydude250x167.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    object-fit: contain;
-    order: 5;
-    @media screen and (min-width: $break-xl) { 
-        width: 450px;
-        height: 300px;
-        background-image: url(/img/spookydude600x400.jpg);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        object-fit: contain;
-    }
-    &:hover {
-        opacity: 80%;
-    }
-}
-.project-six {
-    width: 250px;
-    height: 150px;
-    background-image: url(/img/devices250x167.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    object-fit: contain;
-    order: 6;
-    @media screen and (min-width: $break-xl) { 
-        width: 450px;
-        height: 300px;
-        background-image: url(/img/devices600x400.jpg);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        object-fit: contain;
-    }
-    &:hover {
-        opacity: 80%;
-    }
-}
 //============================== INTERNET EXPLORER ONLY ==============================//
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
     @media screen and (min-width: $break-xxs) {

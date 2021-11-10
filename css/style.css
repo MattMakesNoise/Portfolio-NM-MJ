@@ -697,52 +697,6 @@ main {
   }
 }
 
-.project-five {
-  width: 250px;
-  height: 150px;
-  background-image: url(/img/spookydude250x167.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  order: 5;
-}
-@media screen and (min-width: 1200px) {
-  .project-five {
-    width: 450px;
-    height: 300px;
-    background-image: url(/img/spookydude600x400.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    object-fit: contain;
-  }
-}
-.project-five:hover {
-  opacity: 80%;
-}
-
-.project-six {
-  width: 250px;
-  height: 150px;
-  background-image: url(/img/devices250x167.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  order: 6;
-}
-@media screen and (min-width: 1200px) {
-  .project-six {
-    width: 450px;
-    height: 300px;
-    background-image: url(/img/devices600x400.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    object-fit: contain;
-  }
-}
-.project-six:hover {
-  opacity: 80%;
-}
-
 @media screen and (-ms-high-contrast: active) and (min-width: 280px), screen and (-ms-high-contrast: none) and (min-width: 280px) {
   .overlay {
     height: 50%;
@@ -1378,6 +1332,7 @@ main {
   }
 }
 .coding-examples-wrapper h1 {
+  text-transform: uppercase;
   color: #F1F1E6;
   margin-top: 6rem;
   margin-bottom: 1rem;
