@@ -18,7 +18,7 @@
 </head>
 <body>
     <!-- Pushy Menu -->
-    <nav class="pushy pushy-right">
+    <nav class="pushy pushy-left">
         <a href="/index.html">
             <div class="logo-wrapper">
                 <h1 class="logo">M</h1>
@@ -55,7 +55,7 @@
                 <div class="nav-links-wrapper">
                     <ul>
                         <li><a href="/about.html">About</a></li>
-                        <li><a href="/index.html#cards">Portfolio</a></li>
+                        <li><a href="#cards">Portfolio</a></li>
                         <li><a href="/coding-examples.html">Coding Examples</a></li>
                         <li><a href="/scs-scheme.html">SCS Scheme</a></li>
                         <li><a href="/index.html#contact">Contact</a></li>
@@ -66,16 +66,16 @@
                     <span><a href="https://twitter.com/Me_Write_Code" target="_blank"><i class="fab fa-twitter"></i></a></span>
                     <span><a href="https://www.linkedin.com/in/matthewjones81/" target="_blank"><i class="fab fa-linkedin-in"></i></a></span>
                 </div>
-                <div class="burger-wrapper menu-btn">
-                    <!-- <input type="checkbox" id="burger-menu">
-                    <label id="burger-icon" for="burger-menu"> -->
-                    <div id="burger-icon" for="burger-menu">
-                        <span></span> 
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
             </nav>
+            <div class="burger-wrapper menu-btn">
+                <!-- <input type="checkbox" id="burger-menu"> -->
+                <!-- <label id="burger-icon" for="burger-menu"> -->
+                <div id="burger-icon" for="burger-menu">
+                    <span class="burger-lineOne"></span> 
+                    <span class="burger-lineTwo"></span>
+                    <span class="burger-lineThree"></span>
+                </div>
+            </div>
             <!-- /NAVIGATION BAR END -->
 
             <!-- CONTENT -->
@@ -86,70 +86,109 @@
                     <div class="code-wrapper">
                         <div class="code-block">
                             <code>
-                                <p class="code-line" id="lineOne"><span class="code-cyan">SELECT</span></p>
-                                    <p class="code-line" id="lineTwo"><span class="code-blue">mov_title </span><span class="code-cyan">AS</span><span class="code-yellow"> "</span>Movie Title<span><span class="code-yellow">"</span></span></p>
-                                    <p class="code-line" id="lineThree"><span class="code-blue">mov_year </span><span class="code-cyan">AS</span><span class="code-yellow"> "</span>Year Released<span><span class="code-yellow">"</span></span></p>
-                                    <p class="code-line" id="lineFour"><span class="code-blue">mov_time </span><span class="code-cyan">AS</span><span class="code-yellow"> "</span>Running Time<span><span class="code-yellow">"</span></span></p>
-                                    <p class="code-line" id="lineFive"><span class="code-blue">mov_lang </span><span class="code-cyan">AS</span><span class="code-yellow"> "</span>Language<span><span class="code-yellow">"</span></span></p>
-                                    <p class="code-line" id="lineSix"><span class="code-blue">rating.rev_stars </span><span class="code-cyan">AS</span><span class="code-yellow"> "</span>Rating<span><span class="code-yellow">"</span></span></p>
-                                <p class="code-line" id="lineSeven"><span class="code-cyan">FROM</span><span class="code-yellow"> movie</span></p>
-                                <p class="code-line" id="lineEight"><span class="code-cyan">JOIN</span><span class="code-blue"> rating</span><span class="code-cyan"> ON</span><span class="code-blue"> rating.mov_id = movie.mov_id</span></p>
-                                <p class="code-line" id="lineNine"><span class="code-cyan">WHERE</span><span class="code-blue"> rating.rev_stars > 8</span></p>
-                                <p class="code-line" id="lineTen"><span class="code-cyan">AND</span></p>
-                                    <p class="code-line" id="lineTwo"><span class="code-blue">mov_year </span><span class="code-cyan">BETWEEN</span><span class="code-orange"> 1950</span><span class="code-cyan"> AND</span><span class="code-orange"> 2000</span></p>
-                                <p class="code-line" id="lineTwelve"><span class="code-cyan">AND</span></p>
-                                    <p class="code-line" id="lineTwo"><span class="code-blue">mov_time </span><span class="code-cyan">> </span><span class="code-orange"> 120</span></p>
-                                <p class="code-line" id="lineTwo"><span class="code-cyan">ORDER BY </span><span class="code-cyan">> </span><span class="code-orange"> 120</span></p>
+                                <p class="code-line"><span class="code-cyan">SELECT</span></p>
+                                    <p class="code-line tab-one"><span class="code-blue">mov_title </span><span class="code-cyan">AS</span><span class="code-yellow"> "</span>Movie Title<span><span class="code-yellow">"</span></span></p>
+                                    <p class="code-line tab-one"><span class="code-blue">mov_year </span><span class="code-cyan">AS</span><span class="code-yellow"> "</span>Year Released<span><span class="code-yellow">"</span></span></p>
+                                    <p class="code-line tab-one"><span class="code-blue">mov_time </span><span class="code-cyan">AS</span><span class="code-yellow"> "</span>Running Time<span><span class="code-yellow">"</span></span></p>
+                                    <p class="code-line tab-one"><span class="code-blue">mov_lang </span><span class="code-cyan">AS</span><span class="code-yellow"> "</span>Language<span><span class="code-yellow">"</span></span></p>
+                                    <p class="code-line tab-one"><span class="code-blue">rating.rev_stars </span><span class="code-cyan">AS</span><span class="code-yellow"> "</span>Rating<span><span class="code-yellow">"</span></span></p>
+                                <p class="code-line"><span class="code-cyan">FROM</span><span class="code-yellow"> movie</span></p>
+                                <p class="code-line"><span class="code-cyan">JOIN</span><span class="code-yellow"> rating</span><span class="code-cyan"> ON</span><span class="code-blue"> rating.mov_id = movie.mov_id</span></p>
+                                <p class="code-line"><span class="code-cyan">WHERE</span><span class="code-blue"> rating.rev_stars > 8</span></p>
+                                <p class="code-line"><span class="code-cyan">AND</span></p>
+                                    <p class="code-line tab-one"><span class="code-blue">mov_year </span><span class="code-cyan">BETWEEN</span><span class="code-orange"> 1950</span><span class="code-cyan"> AND</span><span class="code-orange"> 2000</span></p>
+                                <p class="code-line"><span class="code-cyan">AND</span></p>
+                                    <p class="code-line tab-one"><span class="code-blue">mov_time </span><span class="code-cyan">> </span><span class="code-orange"> 120</span></p>
+                                <p class="code-line"><span class="code-cyan">ORDER BY </span><span class="code-blue">mov_year </span><span class="code-orange"> ASC</span></p>
 
                             </code>
                         </div>
                         <div class="explain-block">
-                            <p>This is an example of using SASS and CSS to create a tooltip that appears when you hover over a clients logo.</p>
-                            <p>The top section is an example of a mixin, which is a re-useable block of code which helps to reduce time.</p>
-                            <p>There are also examples of variables, in this case for colors used within the site. This is helpful because if at any point there is to be a change to a sites color scheme, the variables can be changed rather than every instance of the color being implemented.</p>
-                            <p>The second block contains an example of using psuedo elements, in this case using transparent borders to create an arrow shape that protrudes out of the elements container.</p>
-                            <p>It also demonstrates the use of nesting code within SASS and commenting code which is useful when you come back to a project and have no idea what anything does anymore!</p>
+                            <p>This challenge was to test my SQL skills by querying a movies database using a sub-query</p>
+                            <p>My query retrieves all films with a rating of more than 8, that where made between 1950 and 2000 and running time of over 2 hours. </p>
+                            <p>To do this I joined the the movie table with the rating table using their matching primary key.</p>
+                            <p>Below you can see an example of the table structure and the result.</p>
+                        </div>
+                    </div>
+                    <div class="table-structure"></div>
+                    <div class="resp-table">
+                        <div class="resp-table-header">
+                            <div class="table-header-cell rounded-top-left">Movie Title</div>
+                            <div class="table-header-cell">Year Released</div>
+                            <div class="table-header-cell">Running Time</div>
+                            <div class="table-header-cell">Language</div>
+                            <div class="table-header-cell rounded-top-right">Rating</div>
+                        </div>
+                        <div class="resp-table-body">
+                            <div class="resp-table-row">
+                                <div class="table-body-cell">Vertigo</div>
+                                <div class="table-body-cell grey-cell">1958</div>
+                                <div class="table-body-cell">128</div>
+                                <div class="table-body-cell grey-cell">English</div>
+                                <div class="table-body-cell">8.4</div>
+                            </div>
+                            <div class="resp-table-row">
+                                <div class="table-body-cell grey-cell">Lawrence of Arabia</div>
+                                <div class="table-body-cell">1962</div>
+                                <div class="table-body-cell grey-cell">216</div>
+                                <div class="table-body-cell">English</div>
+                                <div class="table-body-cell grey-cell">8.3</div>
+                            </div>
+                            <div class="resp-table-row">
+                                <div class="table-body-cell">Aliens</div>
+                                <div class="table-body-cell grey-cell">1986</div>
+                                <div class="table-body-cell">137</div>
+                                <div class="table-body-cell grey-cell">English</div>
+                                <div class="table-body-cell">8.4</div>
+                            </div>
+                            <div class="resp-table-row">
+                                <div class="table-body-cell grey-cell rounded-bottom-left">Princess Mononoke</div>
+                                <div class="table-body-cell">1997</div>
+                                <div class="table-body-cell grey-cell">134</div>
+                                <div class="table-body-cell">Japanese</div>
+                                <div class="table-body-cell grey-cell rounded-bottom-right">8.4</div>
+                            </div>
                         </div>
                     </div>
                     <h3>Homepage Reflection</h3>
                     <div class="code-wrapper">
                         <div class="code-block">
                             <code>
-                                <p class="code-line" id="lineOne"><span class="code-cyan">@mixin</span><span class="code-blue"> tooltip-main</span><span class="code-yellow"> {</span></p>
-                                    <p class="code-line" id="lineTwo"><span class="code-greyblue">background-color</span><span class="code-cyan">:</span> $dark-blue<span class="code-cyan">;</span></p>
-                                    <p class="code-line" id="lineThree"><span class="code-greyblue">color</span><span class="code-cyan">:</span> $white<span class="code-cyan">;</span></p>
-                                    <p class="code-line" id="lineFour"><span class="code-greyblue">position</span><span class="code-cyan">:</span> absolute<span class="code-cyan">;</span></p>
-                                    <p class="code-line" id="lineFive"><span class="code-greyblue">display</span><span class="code-cyan">:</span> none<span class="code-cyan">;</span></p>
-                                    <p class="code-line" id="lineSix"><span class="code-greyblue">max-width</span><span class="code-cyan">:</span> <span class="code-orange">260px</span><span class="code-cyan">;</span></p>
-                                    <p class="code-line" id="lineSeven"><span class="code-greyblue">text-align</span><span class="code-cyan">:</span> center<span class="code-cyan">;</span></p>
-                                <p class="code-line" id="lineEight"><span class="code-yellow">}</span></p>
+                                <p class="code-line"><span class="code-cyan">@mixin</span><span class="code-blue"> tooltip-main</span><span class="code-yellow"> {</span></p>
+                                    <p class="code-line tab-one"><span class="code-greyblue">background-color</span><span class="code-cyan">:</span> $dark-blue<span class="code-cyan">;</span></p>
+                                    <p class="code-line tab-one"><span class="code-greyblue">color</span><span class="code-cyan">:</span> $white<span class="code-cyan">;</span></p>
+                                    <p class="code-line tab-one"><span class="code-greyblue">position</span><span class="code-cyan">:</span> absolute<span class="code-cyan">;</span></p>
+                                    <p class="code-line tab-one"><span class="code-greyblue">display</span><span class="code-cyan">:</span> none<span class="code-cyan">;</span></p>
+                                    <p class="code-line tab-one"><span class="code-greyblue">max-width</span><span class="code-cyan">:</span> <span class="code-orange">260px</span><span class="code-cyan">;</span></p>
+                                    <p class="code-line tab-one"><span class="code-greyblue">text-align</span><span class="code-cyan">:</span> center<span class="code-cyan">;</span></p>
+                                <p class="code-line"><span class="code-yellow">}</span></p>
                                         <br>
-                                <p class="code-line" id="lineNine"><span class="code-cyan">.</span><span class="code-yellow">show {</span></p>
-                                    <p class="code-line" id="lineTen"><span class="code-cyan">.</span><span class="code-yellow">tooltip</span> <span class="code-purple">{</span></p>
-                                        <p class="code-line" id="lineEleven"><span class="code-cyan">@include</span> <span class="code-blue">tooltip-main</span><span class="code-cyan">;</span></p>
-                                        <p class="code-line" id="lineTwelve"><span class="code-greyblue">padding</span><span class="code-cyan">:</span> <span class="code-orange">20px</span><span class="code-cyan">;</span></p>
-                                    <p class="code-line" id="lineThirteen"><span class="code-yellow">p </span><span class="code-cyan">{</span></p>
-                                        <p class="code-line" id="lineFourteen"><span class="code-greyblue">margin-top</span><span class="code-cyan">:</span> <span class="code-orange">1rem</span><span class="code-cyan">;</span></p>
-                                        <p class="code-line" id="lineFifteen"><span class="code-greyblue">font-size</span><span class="code-cyan">:</span> <span class="code-orange">0.875rem</span><span class="code-cyan">;</span></p>
-                                        <p class="code-line" id="lineSixteen"><span class="code-greyblue">font-weight</span><span class="code-cyan">:</span> $light<span class="code-cyan">;</span></p>
-                                    <p class="code-line" id="lineSeventeen"><span class="code-cyan">}</span></p>
-                                    <p class="code-line" id="lineEighteen"><span class="code-yellow">&</span><span class="code-cyan">::</span><span class="code-purple">after</span><span class="code-cyan"> { </span><span class="code-grey">//Creates the dropdown arrow</span></p>
-                                    <p class="code-line" id="lineNineteen"><span class="code-greyblue">content</span><span class="code-cyan">: '';</span></p>
-                                    <p class="code-line" id="lineTwenty"><span class="code-greyblue">border-left</span><span class="code-cyan">:</span> solid transparent <span class="code-orange">30px</span><span class="code-cyan">;</span></p>
-                                    <p class="code-line" id="lineTwentyone"><span class="code-greyblue">border-right</span><span class="code-cyan">:</span> solid transparent <span class="code-orange">30px</span><span class="code-cyan">;</span></p>
-                                    <p class="code-line" id="lineTwentytwo"><span class="code-greyblue">border-top</span><span class="code-cyan">:</span> solid $dark-blue <span class="code-orange">30px</span><span class="code-cyan">;</span></p>
-                                    <p class="code-line" id="lineTwentythree"><span class="code-greyblue">bottom</span><span class="code-cyan">:</span> <span class="code-orange">-29px</span><span class="code-cyan">;</span> <span class="code-grey">//Makes it sit flush with the bottom of the element</span></p>
-                                    <p class="code-line" id="lineTwentyfour"><span class="code-greyblue">height</span><span class="code-cyan">:</span> <span class="code-orange">0</span><span class="code-cyan">;</span></p>
-                                    <p class="code-line" id="lineTwentyfive"><span class="code-greyblue">left</span><span class="code-cyan">:</span> <span class="code-orange">37.5%</span><span class="code-cyan">;</span> <span class="code-grey">//Centers the arrow</span></p>
-                                    <p class="code-line" id="lineTwentysix"><span class="code-greyblue">position</span><span class="code-cyan">:</span> absolute<span class="code-cyan">;</span> <span class="code-grey">//Makes it appear below</span></p>
-                                    <p class="code-line" id="lineTwentyseven"><span class="code-greyblue">margin-left</span><span class="code-cyan">:</span> <span class="code-orange">0px</span><span class="code-cyan">;</span></p>
-                                    <p class="code-line" id="lineTwentyeight"><span class="code-cyan">}</span></p>
-                                    <p class="code-line" id="lineTwentynine"><span class="code-purple">}</span></p>
-                                    <p class="code-line" id="lineThirty"><span class="code-yellow">&</span><span class="code-cyan">:</span><span class="code-purple">hover</span> <span class="code-cyan">.</span><span class="code-yellow">tooltip</span><span class="code-purple"> {</span></p>
-                                    <p class="code-line" id="lineThirtyone"><span class="code-greyblue">display</span><span class="code-cyan">:</span> block<span class="code-cyan">;</span></p>
-                                    <p class="code-line" id="lineThirtytwo"><span class="code-greyblue">pointer-events</span><span class="code-cyan">:</span> auto<span class="code-cyan">;</span></p>
-                                    <p class="code-line" id="lineThirtythree"><span class="code-purple">}</span></p>
-                                    <p class="code-line" id="lineThirtyfour"><span class="code-yellow">}</span></p>
+                                <p class="code-line"><span class="code-cyan">.</span><span class="code-yellow">show {</span></p>
+                                    <p class="code-line tab-one"><span class="code-cyan">.</span><span class="code-yellow">tooltip</span> <span class="code-purple">{</span></p>
+                                        <p class="code-line tab-two"><span class="code-cyan">@include</span> <span class="code-blue">tooltip-main</span><span class="code-cyan">;</span></p>
+                                        <p class="code-line tab-two"><span class="code-greyblue">padding</span><span class="code-cyan">:</span> <span class="code-orange">20px</span><span class="code-cyan">;</span></p>
+                                        <p class="code-line tab-two"><span class="code-yellow">p </span><span class="code-cyan">{</span></p>
+                                            <p class="code-line tab-three"><span class="code-greyblue">margin-top</span><span class="code-cyan">:</span> <span class="code-orange">1rem</span><span class="code-cyan">;</span></p>
+                                            <p class="code-line tab-three"><span class="code-greyblue">font-size</span><span class="code-cyan">:</span> <span class="code-orange">0.875rem</span><span class="code-cyan">;</span></p>
+                                            <p class="code-line tab-three"><span class="code-greyblue">font-weight</span><span class="code-cyan">:</span> $light<span class="code-cyan">;</span></p>
+                                        <p class="code-line tab-two"><span class="code-cyan">}</span></p>
+                                        <p class="code-line tab-two"><span class="code-yellow">&</span><span class="code-cyan">::</span><span class="code-purple">after</span><span class="code-cyan"> { </span><span class="code-grey">//Creates the dropdown arrow</span></p>
+                                            <p class="code-line tab-three"><span class="code-greyblue">content</span><span class="code-cyan">: '';</span></p>
+                                            <p class="code-line tab-three"><span class="code-greyblue">border-left</span><span class="code-cyan">:</span> solid transparent <span class="code-orange">30px</span><span class="code-cyan">;</span></p>
+                                            <p class="code-line tab-three"><span class="code-greyblue">border-right</span><span class="code-cyan">:</span> solid transparent <span class="code-orange">30px</span><span class="code-cyan">;</span></p>
+                                            <p class="code-line tab-three"><span class="code-greyblue">border-top</span><span class="code-cyan">:</span> solid $dark-blue <span class="code-orange">30px</span><span class="code-cyan">;</span></p>
+                                            <p class="code-line tab-three"><span class="code-greyblue">bottom</span><span class="code-cyan">:</span> <span class="code-orange">-29px</span><span class="code-cyan">;</span> <span class="code-grey">//Makes it sit flush with the bottom of the element</span></p>
+                                            <p class="code-line tab-three"><span class="code-greyblue">height</span><span class="code-cyan">:</span> <span class="code-orange">0</span><span class="code-cyan">;</span></p>
+                                            <p class="code-line tab-three"><span class="code-greyblue">left</span><span class="code-cyan">:</span> <span class="code-orange">37.5%</span><span class="code-cyan">;</span> <span class="code-grey">//Centers the arrow</span></p>
+                                            <p class="code-line tab-three"><span class="code-greyblue">position</span><span class="code-cyan">:</span> absolute<span class="code-cyan">;</span> <span class="code-grey">//Makes it appear below</span></p>
+                                            <p class="code-line tab-three"><span class="code-greyblue">margin-left</span><span class="code-cyan">:</span> <span class="code-orange">0px</span><span class="code-cyan">;</span></p>
+                                        <p class="code-line tab-two"><span class="code-cyan">}</span></p>
+                                    <p class="code-line tab-one"><span class="code-purple">}</span></p>
+                                    <p class="code-line tab-one"><span class="code-yellow">&</span><span class="code-cyan">:</span><span class="code-purple">hover</span> <span class="code-cyan">.</span><span class="code-yellow">tooltip</span><span class="code-purple"> {</span></p>
+                                        <p class="code-line tab-two"><span class="code-greyblue">display</span><span class="code-cyan">:</span> block<span class="code-cyan">;</span></p>
+                                        <p class="code-line tab-two"><span class="code-greyblue">pointer-events</span><span class="code-cyan">:</span> auto<span class="code-cyan">;</span></p>
+                                    <p class="code-line tab-one"><span class="code-purple">}</span></p>
+                                    <p class="code-line"><span class="code-yellow">}</span></p>
                             </code>
                         </div>
                         <div class="explain-block">

@@ -40,38 +40,39 @@ function type() {
 //=======================================================================//
 //=======================================================================//
 
-const logo = document.querySelector('.logo');
-const logoBorder = document.querySelector('.logo-wrapper');
-const burgerOne = document.querySelector('.burger-lineOne');
-const burgerTwo = document.querySelector('.burger-lineTwo');
-const burgerThree = document.querySelector('.burger-lineThree');
-const heroSection = document.querySelector('.hero-wrapper');
+// const burgerWrapper = document.querySelector('.burger-wrapper');
+// const burgerOne = document.querySelector('.burger-lineOne');
+// const burgerTwo = document.querySelector('.burger-lineTwo');
+// const burgerThree = document.querySelector('.burger-lineThree');
+// const heroSection = document.querySelector('.hero-wrapper');
+// const cardsSection = document.querySelector('.cards-wrapper');
+// const contactSection = document.querySelector('.contact-wrapper');
 
-const heroSectionOptions = {
-    root: null, //it is the viewport
-    threshold: 0,
-    rootMargin: "0px"
-};
+// const heroSectionOptions = {
+//     root: null, //it is the viewport
+//     threshold: 0,
+//     rootMargin: "0px"
+// };
 
-const heroSectionObserver = new IntersectionObserver(function(entries, heroSectionObserver) {
-    entries.forEach(entry => {
-        if(!entry.isIntersecting) {
-            logoBorder.classList.add('logo-wrapper-dark');
-            logo.classList.add('logo-dark');
-            burgerOne.classList.add('burger-dark');
-            burgerTwo.classList.add('burger-dark');
-            burgerThree.classList.add('burger-dark');
-        } else {
-            logoBorder.classList.remove('logo-wrapper-dark');
-            logo.classList.remove('logo-dark');
-            burgerOne.classList.remove('burger-dark');
-            burgerTwo.classList.remove('burger-dark');
-            burgerThree.classList.remove('burger-dark');
-        }
-    });
-}, heroSectionOptions);
+// const heroSectionObserver = new IntersectionObserver(function(entries, heroSectionObserver) {
+//     entries.forEach(entry => {
+//         if(!entry.isIntersecting) {
+//             // logoBorder.classList.add('logo-wrapper-dark');
+//             // logo.classList.add('logo-dark');
+//             burgerOne.classList.add('burger-dark');
+//             burgerTwo.classList.add('burger-dark');
+//             burgerThree.classList.add('burger-dark');
+//         } else {
+//             // logoBorder.classList.remove('logo-wrapper-dark');
+//             // logo.classList.remove('logo-dark');
+//             burgerOne.classList.remove('burger-dark');
+//             burgerTwo.classList.remove('burger-dark');
+//             burgerThree.classList.remove('burger-dark');
+//         }
+//     });
+// }, heroSectionOptions);
 
-heroSectionObserver.observe(heroSection);
+// heroSectionObserver.observe(heroSection);
 
 //=======================================================================//
 //=======================================================================//

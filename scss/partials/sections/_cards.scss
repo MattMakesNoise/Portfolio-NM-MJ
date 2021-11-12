@@ -10,13 +10,12 @@
         width: 200px;
     }
     @media screen and (min-width: 518px) {
-        height: 100vh;
+        height: 1300px;
     }
     @media screen and (min-width: $break-sm) {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        height: 100vh;
     }
     @media screen and (min-width: $break-md) {
         height: 900px;

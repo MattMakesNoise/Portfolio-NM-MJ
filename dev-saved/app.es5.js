@@ -42,37 +42,37 @@ function type() {
 //===== CHANGE COLOUR OF LOGO AND BURGER DEPENDING ON PAGE BACKROUND ====//
 //=======================================================================//
 //=======================================================================//
-
-var logo = document.querySelector('.logo');
-var logoBorder = document.querySelector('.logo-wrapper');
-var burgerOne = document.querySelector('.burger-lineOne');
-var burgerTwo = document.querySelector('.burger-lineTwo');
-var burgerThree = document.querySelector('.burger-lineThree');
-var heroSection = document.querySelector('.hero-wrapper');
-var heroSectionOptions = {
-  root: null,
-  //it is the viewport
-  threshold: 0,
-  rootMargin: "0px"
-};
-var heroSectionObserver = new IntersectionObserver(function (entries, heroSectionObserver) {
-  entries.forEach(function (entry) {
-    if (!entry.isIntersecting) {
-      logoBorder.classList.add('logo-wrapper-dark');
-      logo.classList.add('logo-dark');
-      burgerOne.classList.add('burger-dark');
-      burgerTwo.classList.add('burger-dark');
-      burgerThree.classList.add('burger-dark');
-    } else {
-      logoBorder.classList.remove('logo-wrapper-dark');
-      logo.classList.remove('logo-dark');
-      burgerOne.classList.remove('burger-dark');
-      burgerTwo.classList.remove('burger-dark');
-      burgerThree.classList.remove('burger-dark');
-    }
-  });
-}, heroSectionOptions);
-heroSectionObserver.observe(heroSection); //=======================================================================//
+// const burgerWrapper = document.querySelector('.burger-wrapper');
+// const burgerOne = document.querySelector('.burger-lineOne');
+// const burgerTwo = document.querySelector('.burger-lineTwo');
+// const burgerThree = document.querySelector('.burger-lineThree');
+// const heroSection = document.querySelector('.hero-wrapper');
+// const cardsSection = document.querySelector('.cards-wrapper');
+// const contactSection = document.querySelector('.contact-wrapper');
+// const heroSectionOptions = {
+//     root: null, //it is the viewport
+//     threshold: 0,
+//     rootMargin: "0px"
+// };
+// const heroSectionObserver = new IntersectionObserver(function(entries, heroSectionObserver) {
+//     entries.forEach(entry => {
+//         if(!entry.isIntersecting) {
+//             // logoBorder.classList.add('logo-wrapper-dark');
+//             // logo.classList.add('logo-dark');
+//             burgerOne.classList.add('burger-dark');
+//             burgerTwo.classList.add('burger-dark');
+//             burgerThree.classList.add('burger-dark');
+//         } else {
+//             // logoBorder.classList.remove('logo-wrapper-dark');
+//             // logo.classList.remove('logo-dark');
+//             burgerOne.classList.remove('burger-dark');
+//             burgerTwo.classList.remove('burger-dark');
+//             burgerThree.classList.remove('burger-dark');
+//         }
+//     });
+// }, heroSectionOptions);
+// heroSectionObserver.observe(heroSection);
+//=======================================================================//
 //=======================================================================//
 //===== BRING CARDS IN FROM THE SIDE AS THE PAGE IS SCROLLED ============//
 //=======================================================================//
