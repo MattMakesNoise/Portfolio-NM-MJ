@@ -183,13 +183,13 @@
 
 #projThree {
     .link-n-image {
-        background-image: url(/img/keyboard250x167.jpg);
+        background-image: url(/img/link-n-image.png);
         order: 1;
         @media screen and (min-width: $break-md) { 
             order: 2;
         }
         @media screen and (min-width: $break-xl) { 
-            background-image: url(/img/keyboard600x400.jpg);
+            background-image: url(/img/link-n-image.png);
         }
     }
     .link-n-image-blurb {

@@ -101,7 +101,7 @@
                         <div class="html-css-blurb blurb fade-in from-left slide-in">
                             <h2>Homepage Reflection</h2>
                             <p class="card-blurb">My first project on the SCS scheme, recreating the companies homepage using HTML, CSS and SASS</p>
-                            <a class="more">Find out more...</a>
+                            <a href="https://netmatters.matthew-jones.netmatters-scs.co.uk/" target="_blank" class="more">Find out more...</a>
                         </div>
                     </div>
                     <!-- Project Two -->
@@ -111,7 +111,7 @@
                         <div class="pairs-blurb blurb fade-in from-right slide-in">
                             <h2>Pairs Project</h2>
                             <p class="card-blurb">A collaborative project with a fellow course member, creating a site for a fictional construction firm.</p>
-                            <a class="more">Find out more...</a>
+                            <a href="http://pairs.matthew-jones.netmatters-scs.co.uk/" target="_blank" class="more">Find out more...</a>
                         </div>
                     </div>
                     <!-- Project Three -->
@@ -120,7 +120,7 @@
                         </div>
                         <div class="link-n-image-blurb blurb fade-in from-left slide-in">
                             <h2>Link-n-image</h2>
-                            <p class="card-blurb">A JavaScript project pulling a random image from an API and attaching it to an email.</p>
+                            <p class="card-blurb">A JavaScript project pulling a random image from an API and attaching it to an email address.</p>
                             <a class="more">Find out more...</a>
                         </div>
                     </div>
@@ -131,33 +131,59 @@
                         <div class="wordpress-blurb blurb fade-in from-right slide-in">
                             <h2>Wordpress Project</h2>
                             <p class="card-blurb">A collaborative project with a fellow course member, creating a site for a fictional construction firm.</p>
-                            <a class="more">Find out more...</a>
+                            <a href="http://wordpress.matthew-jones.netmatters-scs.co.uk/" target="_blank" class="more">Find out more...</a>
                         </div>
                     </div>
                 </div>
                 <div class="contact-wrapper" id="contact"> <!-- CONTACT SECTION -->
                     <div class="contact-form">
-                        <h2>Get In Touch</h2>
-                        <p>Do you have a question or want to work together?</p>
-                        <div class="email-form">
-                            <form action="">
+                        <div class="form-header">
+                            <h2>Get In Touch</h2>
+                            <p>Do you have a question or want to work together?</p>
+                        </div>
+                        <form class="form" id="form">
+                            <div class="form-control">
                                 <label for="fname"><span class="make-maroon">*</span> First Name</label>
-                                <input type="text" id="fname" name="firstname" placeholder="Your name...">
-
+                                <input type="text" id="fname" name="firstname" placeholder="Your first name...">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>   
+                                <small class="error-message">Error</small>
+                            </div>
+                            <div class="form-control">
                                 <label for="lname"><span class="make-maroon">*</span> Last Name</label>
                                 <input type="text" id="lname" name="lastname" placeholder="Your last name...">
-
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error-message">Error</small>
+                            </div>
+                            <div class="form-control">
                                 <label for="email"><span class="make-maroon">*</span> Email</label>
-                                <input type="text" id="email" name="email" placeholder="Your email...">
-
+                                <input type="email" id="email" name="email" placeholder="Your email...">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error-message">Error</small>
+                            </div>
+                            <div class="form-control">
                                 <label for="subject"><span class="make-maroon">*</span> Subject</label>
                                 <input type="text" id="subject" name="subject" placeholder="Email subject..."></input>
-                                
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error-message">Error</small>
+                            </div>
+                            <div class="form-control">
                                 <label for="message"><span class="make-maroon">*</span> Message</label>
-                                <textarea id="message" name="message" placeholder="Your message..." style="height:200px"></textarea>
-
-                                <input type="submit" value="Submit">
-                            </form>
+                                <textarea id="text" name="message" placeholder="Your message..." style="height:200px"></textarea>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error-message">Error</small>
+                            </div>
+                            <div class="form-submit">
+                                <input type="submit" id="submit" value="Submit">
+                            </div>
+                        </form>
+                        <div class="success-popup">
+                            <h2 class="success-popup-header">Contratulations</h2>
+                            <p class="success-popup-blurb">Your form has been successfully submitted!</p>
                         </div>
                     </div>
                     <a href="#" class="scroll-up">
