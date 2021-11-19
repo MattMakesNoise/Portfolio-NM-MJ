@@ -1,64 +1,34 @@
 //============================== MAIN WRAPPER FOR WHOLE SECTION ======================//
 .contact-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    @media screen and (min-width: $break-sm) {
-        height: 700px;
-        background-image: linear-gradient(to top right, $light-blue, $dark-blue);
-    }
-    @media screen and (min-width: $break-md) {
-        height: 700px;
-    }
-    @media screen and (min-width: $break-lg) { 
-        height: 1100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    @media screen and (min-width: $break-xl) {
-        height: 1100px;
-    }
-    @media screen and (min-width: $break-xxl) {
-        height: 1100px;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top right, $light-blue, $dark-blue);
 }
 //============================== FORM WRAPPER AND HEADER =============================//
 .contact-form {
-    width: 98%;
-    padding-bottom: .75rem;
+    width: 90vw;
+    padding: 1rem 1rem 0 1rem;
     border-radius: 2rem;
     background-color: rgba(241,241,230,0.9);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 1rem;
-    margin-top: 1rem;
-    position: relative;
-    @media screen and (min-width: $break-xs) { 
-        width: 95%;
-    }   
-    @media screen and (min-width: $break-sm) {
-        width: 90vw;
-    }   
+    margin: 1rem 0 1rem 0;
+    position: relative;   
     @media screen and (min-width: $break-md) {
         width: 80vw;
     }   
     @media screen and (min-width: $break-lg) { 
         width: 90%;
-        // height: 80%;
     }
     @media screen and (min-width: $break-xl) { 
         width: 70%;
-        // height: 100vh;
     }
     @media screen and (min-width: $break-xxl) { 
         width: 75%;
-        // height: 80%;
     }
     @media screen and (min-width: 1800px) {
         width: 50%;
@@ -122,9 +92,12 @@
         }
         i {
             position: absolute;
-            top: 47px;
+            top: 14px;
             right: 10px;
             visibility: hidden;
+            @media screen and (min-width: $break-lg) { 
+                top: 48px;
+            }
         }
         small {
             visibility: hidden;
@@ -223,14 +196,14 @@
 
 //============================== SCROLL UP BUTTON ====================================//
 .scroll-up {
+    text-decoration: none;
+    margin: 1rem 0;
     @media screen and (min-width: $break-xxs) { 
         display: none;
     }
     @media screen and (min-width: $break-lg) { 
         display: block;
     }
-    text-decoration: none;
-    margin-top: 1rem;
     .scroll-up-wrapper {
         display: flex;
         flex-direction: column;

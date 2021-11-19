@@ -375,6 +375,11 @@ main {
   color: #F1F1E6;
   text-align: center;
 }
+@media screen and (min-width: 500px) {
+  .hero-text .headings {
+    padding-top: 1.75rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .hero-text .headings {
     padding-top: 4rem;
@@ -467,19 +472,13 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   width: 150px;
   margin: 0 auto;
 }
 @media screen and (min-width: 375px) {
   .cards-wrapper {
     width: 200px;
-  }
-}
-@media screen and (min-width: 518px) {
-  .cards-wrapper {
-    height: 1300px;
   }
 }
 @media screen and (min-width: 576px) {
@@ -491,27 +490,22 @@ main {
 }
 @media screen and (min-width: 768px) {
   .cards-wrapper {
-    height: 900px;
     width: 650px;
   }
 }
 @media screen and (min-width: 992px) {
   .cards-wrapper {
     flex-direction: column;
-    height: 1100px;
-    width: 800px;
+    width: 750px;
   }
 }
 @media screen and (min-width: 1200px) {
   .cards-wrapper {
     flex-direction: row;
-    height: 150vh;
-    width: 1100px;
   }
 }
 @media screen and (min-width: 1800px) {
   .cards-wrapper {
-    height: 1400px;
     width: 1200px;
     margin: 0 auto;
   }
@@ -532,8 +526,8 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 80%;
   margin: 0.25rem;
+  padding: 1rem;
   border-radius: 1rem;
   transition: 0.3s;
 }
@@ -548,10 +542,12 @@ main {
 .card .card-pic {
   width: 150px;
   height: 90px;
+  margin: 0 1rem;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   object-fit: contain;
   border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 @media screen and (min-width: 375px) {
   .card .card-pic {
@@ -567,11 +563,14 @@ main {
 }
 @media screen and (min-width: 1200px) {
   .card .card-pic {
+    width: 350px;
+    height: 240px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .card .card-pic {
     width: 450px;
     height: 300px;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    object-fit: contain;
   }
 }
 .card .card-pic:hover {
@@ -582,7 +581,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-top: 1rem;
+  margin: 1rem;
 }
 @media screen and (min-width: 375px) {
   .card .blurb {
@@ -595,7 +594,7 @@ main {
     height: 150px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
   .card .blurb {
     width: 450px;
   }
@@ -608,6 +607,33 @@ main {
 .card .blurb a {
   color: #00112B;
   margin-bottom: 0.5rem;
+}
+.card .more {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  border: 2px solid #00112B;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  width: 150px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.card .more:hover {
+  background-color: #00112B;
+  color: #F1F1E6;
+  transform: scale(1.05);
+}
+.card .more:active {
+  transform: scale(0.98);
+}
+.card .more-left {
+  align-self: flex-start;
+}
+.card .more-right {
+  align-self: flex-end;
 }
 
 .fade-in {
@@ -772,61 +798,20 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-}
-@media screen and (min-width: 576px) {
-  .contact-wrapper {
-    height: 700px;
-    background-image: linear-gradient(to top right, #005189, #00112B);
-  }
-}
-@media screen and (min-width: 768px) {
-  .contact-wrapper {
-    height: 700px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .contact-wrapper {
-    height: 1100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .contact-wrapper {
-    height: 1100px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .contact-wrapper {
-    height: 1100px;
-  }
+  background-image: linear-gradient(to top right, #005189, #00112B);
 }
 
 .contact-form {
-  width: 98%;
-  padding-bottom: 0.75rem;
+  width: 90vw;
+  padding: 1rem 1rem 0 1rem;
   border-radius: 2rem;
   background-color: rgba(241, 241, 230, 0.9);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 1rem;
-  margin-top: 1rem;
+  margin: 1rem 0 1rem 0;
   position: relative;
-}
-@media screen and (min-width: 400px) {
-  .contact-form {
-    width: 95%;
-  }
-}
-@media screen and (min-width: 576px) {
-  .contact-form {
-    width: 90vw;
-  }
 }
 @media screen and (min-width: 768px) {
   .contact-form {
@@ -926,9 +911,14 @@ main {
 }
 .form .form-control i {
   position: absolute;
-  top: 47px;
+  top: 14px;
   right: 10px;
   visibility: hidden;
+}
+@media screen and (min-width: 992px) {
+  .form .form-control i {
+    top: 48px;
+  }
 }
 .form .form-control small {
   visibility: hidden;
@@ -1029,7 +1019,7 @@ input[type=submit]:active {
 
 .scroll-up {
   text-decoration: none;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 @media screen and (min-width: 280px) {
   .scroll-up {
