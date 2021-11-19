@@ -1,13 +1,5 @@
 .navigation-bar {
-        // background-color: $nearly-white;
         display: none;
-        // flex-direction: row;
-        // justify-content: space-between;
-        // align-items: center;
-        // padding: 0.5rem 1rem;
-        // position: fixed;
-        // width: 100%;
-        // top: 0;
         ul {
             display: none;
         }
@@ -32,40 +24,6 @@
     }
     a {
         text-decoration: none;
-    }
-    .logo-wrapper {
-        display: none;
-        border-radius: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 5;
-        @media screen and (min-width: $break-xxs) {
-            border: 5px solid $dark-blue;
-        }
-        @media screen and (min-width: $break-lg) {
-            border: 5px solid $dark-blue;
-            margin-left: 1rem;
-        }
-        .logo {
-            font-weight: 700;
-            display: none;
-            @media screen and (min-width: $break-xxs) {
-                font-size: 2rem;
-                padding: .25rem .5rem;
-                color: $dark-blue;
-            }
-            @media screen and (min-width: $break-md) {
-                padding: 0.5rem 1rem;
-                font-size: 3rem;
-            }
-            @media screen and (min-width: $break-lg) {
-                display: block;
-                padding: 0.5rem 1rem;
-                font-size: 5rem;
-                color: $dark-blue;
-            }
-        }
     }
     .nav-links-wrapper {
         margin-bottom: 1.5rem;
@@ -117,12 +75,68 @@
     }
 }
 
+.logo-wrapper {
+    display: none;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    border: 5px solid $dark-blue;
+    @media screen and (min-width: $break-lg) {
+        margin-left: 1rem;
+    }
+    .logo {
+        font-weight: 700;
+        display: none;
+        @media screen and (min-width: $break-xxs) {
+            font-size: 2rem;
+            padding: .25rem .5rem;
+            color: $dark-blue;
+        }
+        @media screen and (min-width: $break-md) {
+            padding: 0.5rem 1rem;
+            font-size: 3rem;
+        }
+        @media screen and (min-width: $break-lg) {
+            display: block;
+            padding: 0.5rem 1rem;
+            font-size: 5rem;
+            color: $dark-blue;
+        }
+    }
+}
+.logo-wrapper-side {
+    display: block;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    border: 5px solid $dark-blue;
+    @media screen and (min-width: $break-lg) {
+        margin-left: 1rem;
+    }
+    .logo-side {
+        font-weight: 700;
+        display: block;
+        font-size: 2rem;
+        padding: .25rem .5rem;
+        color: $dark-blue;
+        @media screen and (min-width: $break-md) {
+            padding: 0.5rem 1rem;
+            font-size: 3rem;
+        }
+    }
+}
+
 .burger-wrapper {
     position: fixed;
     bottom: 10px;
     left: 10px;
     width: 66px;
     height: 66px;
+    z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,12 +243,6 @@
     }
 }
 
-// .logo-wrapper-dark {
-//     border: 5px solid $dark-blue !important;
-// }
-// .logo-dark {
-//     color: $dark-blue !important;
-// }
 .burger-dark {
     background: $dark-blue !important;
 }

@@ -69,50 +69,6 @@ main {
 .navigation-bar a {
   text-decoration: none;
 }
-.navigation-bar .logo-wrapper {
-  display: none;
-  border-radius: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 5;
-}
-@media screen and (min-width: 280px) {
-  .navigation-bar .logo-wrapper {
-    border: 5px solid #00112B;
-  }
-}
-@media screen and (min-width: 992px) {
-  .navigation-bar .logo-wrapper {
-    border: 5px solid #00112B;
-    margin-left: 1rem;
-  }
-}
-.navigation-bar .logo-wrapper .logo {
-  font-weight: 700;
-  display: none;
-}
-@media screen and (min-width: 280px) {
-  .navigation-bar .logo-wrapper .logo {
-    font-size: 2rem;
-    padding: 0.25rem 0.5rem;
-    color: #00112B;
-  }
-}
-@media screen and (min-width: 768px) {
-  .navigation-bar .logo-wrapper .logo {
-    padding: 0.5rem 1rem;
-    font-size: 3rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .navigation-bar .logo-wrapper .logo {
-    display: block;
-    padding: 0.5rem 1rem;
-    font-size: 5rem;
-    color: #00112B;
-  }
-}
 .navigation-bar .nav-links-wrapper {
   margin-bottom: 1.5rem;
 }
@@ -168,12 +124,81 @@ main {
   transform-origin: left;
 }
 
+.logo-wrapper {
+  display: none;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  border: 5px solid #00112B;
+}
+@media screen and (min-width: 992px) {
+  .logo-wrapper {
+    margin-left: 1rem;
+  }
+}
+.logo-wrapper .logo {
+  font-weight: 700;
+  display: none;
+}
+@media screen and (min-width: 280px) {
+  .logo-wrapper .logo {
+    font-size: 2rem;
+    padding: 0.25rem 0.5rem;
+    color: #00112B;
+  }
+}
+@media screen and (min-width: 768px) {
+  .logo-wrapper .logo {
+    padding: 0.5rem 1rem;
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .logo-wrapper .logo {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 5rem;
+    color: #00112B;
+  }
+}
+
+.logo-wrapper-side {
+  display: block;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  border: 5px solid #00112B;
+}
+@media screen and (min-width: 992px) {
+  .logo-wrapper-side {
+    margin-left: 1rem;
+  }
+}
+.logo-wrapper-side .logo-side {
+  font-weight: 700;
+  display: block;
+  font-size: 2rem;
+  padding: 0.25rem 0.5rem;
+  color: #00112B;
+}
+@media screen and (min-width: 768px) {
+  .logo-wrapper-side .logo-side {
+    padding: 0.5rem 1rem;
+    font-size: 3rem;
+  }
+}
+
 .burger-wrapper {
   position: fixed;
   bottom: 10px;
   left: 10px;
   width: 66px;
   height: 66px;
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;

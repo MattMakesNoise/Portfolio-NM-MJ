@@ -5,33 +5,39 @@
 //===== TYPEWRITER EFFECT ON HERO BANNER ================================//
 //=======================================================================//
 //=======================================================================//
-//array to hold the text to be typed
-// let text = ["human..." , "legend..." , "web developer!"];
-// let a = 0;
-// let b = 1;
-// let reverse = false;
-// let interval = setInterval(type, 150);
-// function type() {
-//     let nowText = text[a];
-//     document.getElementById("typewriter").innerText = nowText.substring(0 , b);
-//     //reverse direction (delete) if end of string reached
-//     if (b == nowText.length + 5) { //+5 makes it stall for a moment before typing
-//         reverse = true;
-//     }
-//     b += reverse ? -2 : 1;
-//     //reset b and go forward again
-//     if (b <= 0) {
-//         b = 1;
-//         reverse = false;
-//         a++;
-//     }
-//     //reached end of list then start over 
-//     if (a == text.length) { setTimeout(() => {
-//         a = 0;
-//     }, 5000);
-//     } 
-// };
-//=======================================================================//
+// array to hold the text to be typed
+var typing = ["human...", "legend...", "web developer!"];
+var a = 0;
+var b = 1;
+var reverse = false;
+var interval = setInterval(type, 150);
+
+function type() {
+  var nowText = typing[a];
+  document.getElementById("typewriter").innerText = nowText.substring(0, b); //reverse direction (delete) if end of string reached
+
+  if (b == nowText.length + 5) {
+    //+5 makes it stall for a moment before typing
+    reverse = true;
+  }
+
+  b += reverse ? -2 : 1; //reset b and go forward again
+
+  if (b <= 0) {
+    b = 1;
+    reverse = false;
+    a++;
+  } //reached end of list then start over 
+
+
+  if (a == typing.length) {
+    setTimeout(function () {
+      a = 0;
+    }, 5000);
+  }
+}
+
+; //=======================================================================//
 //=======================================================================//
 //===== CHANGE COLOUR OF LOGO AND BURGER DEPENDING ON PAGE BACKROUND ====//
 //=======================================================================//
@@ -71,6 +77,7 @@
 //===== BRING CARDS IN FROM THE SIDE AS THE PAGE IS SCROLLED ============//
 //=======================================================================//
 //=======================================================================//
+
 var fadeIn = document.querySelectorAll('.fade-in'); //faders in tutorial
 
 var slideIn = document.querySelectorAll('.slide-in'); //sliders in tutorial
@@ -110,13 +117,11 @@ var subject = document.getElementById('subject');
 var text = document.getElementById('text');
 var popup = document.querySelector('.success-popup');
 var classCheck = document.querySelector('.form-control');
-form.addEventListener('submit', function (e) {
-  e.preventDefault(); //show success message
-
-  if (classCheck.classList.contains('success')) {
-    popup.classList.add('congrats');
-  }
-});
+var inputOne = false;
+var inputTwo = false;
+var inputThree = false;
+var inputFour = false;
+var inputFive = false;
 firstName.addEventListener('input', validate);
 lastName.addEventListener('input', validate);
 email.addEventListener('input', validate);
@@ -143,7 +148,6 @@ function isEmail(email) {
 }
 
 function validate(e) {
-  console.log(e.target.name);
   var target = e.target; //get the values from the inputs
 
   var firstNameValue = firstName.value.trim();
@@ -162,6 +166,7 @@ function validate(e) {
     } else {
       //add success class
       setSuccessFor(firstName);
+      inputOne = true;
     }
   }
 
@@ -175,6 +180,7 @@ function validate(e) {
     } else {
       //add success class
       setSuccessFor(lastName);
+      inputTwo = true;
     }
   }
 
@@ -188,6 +194,7 @@ function validate(e) {
     } else {
       //add success class
       setSuccessFor(email);
+      inputThree = true;
     }
   }
 
@@ -199,6 +206,7 @@ function validate(e) {
     } else {
       //add success class
       setSuccessFor(subject);
+      inputFour = true;
     }
   }
 
@@ -210,8 +218,38 @@ function validate(e) {
     } else {
       //add success class
       setSuccessFor(text);
+      inputFive = true;
     }
   }
-} // if(setSuccessFor(firstName) && setSuccessFor(lastName) && setSuccessFor(email) && setSuccessFor(subject) && setSuccessFor(text)) {
-//     popup.classList.add('congrats');
-// }
+}
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  if (inputOne == true && inputTwo == true && inputThree == true && inputFour == true && inputFive == true) {
+    popup.classList.add('congrats');
+    setTimeout(function () {
+      popup.classList.remove('congrats');
+    }, 3000);
+  }
+
+  if (inputOne == false) {
+    setErrorFor(firstName, 'First Name cannot be blank');
+  }
+
+  if (inputTwo == false) {
+    setErrorFor(lastName, 'Last Name cannot be blank');
+  }
+
+  if (inputThree == false) {
+    setErrorFor(email, 'Email cannot be blank');
+  }
+
+  if (inputFour == false) {
+    setErrorFor(subject, 'Subject cannot be blank');
+  }
+
+  if (inputFive == false) {
+    setErrorFor(text, 'Message cannot be blank');
+  }
+});
