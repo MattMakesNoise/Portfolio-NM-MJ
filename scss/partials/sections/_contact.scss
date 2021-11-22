@@ -89,6 +89,9 @@
                 font-size: .8rem;
                 font-family: 'Roboto', sans-serif;
             }
+            &:focus {
+                outline: 0;
+            }
         }
         i {
             position: absolute;

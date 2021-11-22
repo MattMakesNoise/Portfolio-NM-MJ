@@ -133,7 +133,10 @@
         align-self: flex-start;
     }
     .more-right {
-        align-self: flex-end;
+        align-self: flex-start;
+        @media screen and (min-width: $break-md) { 
+            align-self: flex-end;
+        }
     }
 }
 

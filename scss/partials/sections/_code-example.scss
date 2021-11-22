@@ -41,11 +41,8 @@
         justify-content: space-evenly;
     }
     .code-block {
-        background-color: #212121;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        padding: .75rem;
-        margin-bottom: 1rem;
-        border-radius: 1rem;
+        // margin-bottom: 1rem;
+        border-radius: 2rem;
         width: 300px;
         margin: 0 auto;
         @media screen and (min-width: $break-md){
@@ -84,6 +81,18 @@
             }
         }
     }
+}
+
+// code[class="language-javascript"] {
+//     font-size: 1rem !important;
+// }
+
+pre[class*=language-] {
+    padding: 0.75rem !important;
+    margin: 0 !important;
+    overflow: auto !important;
+    border-radius: 1rem !important;
+    font-size: 1rem !important;
 }
 
 .tab-one {
@@ -194,22 +203,22 @@
     background-color: #dddddd;
 }
 
-
-
-
-
 //========================= VS CODE STYLE COLOR PALETTE =========================//
 code {
-    color: #EEFFFF;
+    // color: #EEFFFF;
+    color: #d6d6d6; //Monokai
 }
 .code-orange {
-    color: #F78C6C;
+    // color: #F78C6C;
+    color: #e87d3e; //Monokai
 }
 .code-yellow {
-    color: #FFCB6B;
+    // color: #FFCB6B;
+    color: #e5b567; //Monokai
 }
 .code-blue {
-    color: #82AAFF;
+    // color: #82AAFF;
+    color: #6c99bb; //Monokai
 }
 .code-greyblue {
     color: #6EB3CE;
@@ -218,12 +227,19 @@ code {
     color: #89DDFF;
 }
 .code-purple {
-    color: #C792EA;
+    // color: #C792EA;
+    color: #9e86c8; //Monokai
 }
 .code-green {
-    color: #C3E88D;
+    // color: #C3E88D;
+    color: #b4d273; //Monokai
+}
+.code-red {
+    color: #b05279;
 }
 
 .code-grey {
-    color: #616161;
+    // color: #616161;
+    color: #797979; //Monokai
+    
 }

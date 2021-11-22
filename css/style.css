@@ -633,7 +633,12 @@ main {
   align-self: flex-start;
 }
 .card .more-right {
-  align-self: flex-end;
+  align-self: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .card .more-right {
+    align-self: flex-end;
+  }
 }
 
 .fade-in {
@@ -908,6 +913,10 @@ main {
   color: #00112B;
   font-size: 0.8rem;
   font-family: "Roboto", sans-serif;
+}
+.form .form-control input:focus,
+.form .form-control textarea:focus {
+  outline: 0;
 }
 .form .form-control i {
   position: absolute;
@@ -1355,11 +1364,7 @@ input[type=submit]:active {
   }
 }
 .code-wrapper .code-block {
-  background-color: #212121;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
   width: 300px;
   margin: 0 auto;
 }
@@ -1411,6 +1416,14 @@ input[type=submit]:active {
     margin-bottom: 1.25rem;
     line-height: 1.4;
   }
+}
+
+pre[class*=language-] {
+  padding: 0.75rem !important;
+  margin: 0 !important;
+  overflow: auto !important;
+  border-radius: 1rem !important;
+  font-size: 1rem !important;
 }
 
 .tab-one {
@@ -1546,19 +1559,19 @@ input[type=submit]:active {
 }
 
 code {
-  color: #EEFFFF;
+  color: #d6d6d6;
 }
 
 .code-orange {
-  color: #F78C6C;
+  color: #e87d3e;
 }
 
 .code-yellow {
-  color: #FFCB6B;
+  color: #e5b567;
 }
 
 .code-blue {
-  color: #82AAFF;
+  color: #6c99bb;
 }
 
 .code-greyblue {
@@ -1570,20 +1583,24 @@ code {
 }
 
 .code-purple {
-  color: #C792EA;
+  color: #9e86c8;
 }
 
 .code-green {
-  color: #C3E88D;
+  color: #b4d273;
+}
+
+.code-red {
+  color: #b05279;
 }
 
 .code-grey {
-  color: #616161;
+  color: #797979;
 }
 
 .scs-scheme-wrapper {
   background-image: linear-gradient(to top right, #005189, #00112B);
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

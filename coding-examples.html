@@ -19,6 +19,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
+    <!-- Prism CSS -->
+    <link rel="stylesheet" href="/css/prism.css">
     <title>Matt Jones - Web Developer | Coding Examples</title>
 </head>
 <body>
@@ -90,7 +92,7 @@
                     <h3>SQL Challenge</h3>
                     <div class="code-wrapper">
                         <div class="code-block">
-                            <code>
+                            <!-- <code>
                                 <p class="code-line"><span class="code-cyan">SELECT</span></p>
                                     <p class="code-line tab-one"><span class="code-blue">mov_title </span><span class="code-cyan">AS</span><span class="code-yellow"> "</span>Movie Title<span><span class="code-yellow">"</span></span></p>
                                     <p class="code-line tab-one"><span class="code-blue">mov_year </span><span class="code-cyan">AS</span><span class="code-yellow"> "</span>Year Released<span><span class="code-yellow">"</span></span></p>
@@ -104,9 +106,25 @@
                                     <p class="code-line tab-one"><span class="code-blue">mov_year </span><span class="code-cyan">BETWEEN</span><span class="code-orange"> 1950</span><span class="code-cyan"> AND</span><span class="code-orange"> 2000</span></p>
                                 <p class="code-line"><span class="code-cyan">AND</span></p>
                                     <p class="code-line tab-one"><span class="code-blue">mov_time </span><span class="code-cyan">> </span><span class="code-orange"> 120</span></p>
-                                <p class="code-line"><span class="code-cyan">ORDER BY </span><span class="code-blue">mov_year </span><span class="code-orange"> ASC</span></p>
+                                <p class="code-line"><span class="code-cyan">ORDER BY </span><span class="code-blue">mov_year </span><span class="code-orange"> ASC</span></p> -->
 
-                            </code>
+                            <!-- </code> -->
+<pre><code class="language-sql">
+SELECT
+    mov_title AS "Movie Title"
+    mov_year AS Year  "Year Released"
+    mov_time AS "Running Time"
+    mov_lang AS "Language"
+    rating.rev_stars AS "Rating"
+FROM movie
+JOIN rating ON rating.mov_id = movie.mov_id
+WHERE rating.rev_stars > 8
+AND
+    mov_year BETWEEN 1950 AND 2000
+AND
+    mov_time > 120
+ORDER BY mov_year ASC
+</code></pre>
                         </div>
                         <div class="explain-block">
                             <p>This challenge was to test my SQL skills by querying a movies database using a sub-query</p>
@@ -155,10 +173,51 @@
                             </div>
                         </div>
                     </div>
+                    <h3>JavaScript Reflection</h3>
+                    <div class="code-wrapper">
+                        <div class="code-block">
+<pre><code class="language-javascript">
+form.addEventListener('submit', e =>  {
+    e.preventDefault(); //Prevents browser reloading on user submit
+    //validation
+    let userEmail = form.email.value;
+    const regex = /^[a-zA-Z0-9\.!#$%&'*+/=?^_`{|}~-]{2,64}@[a-zA-Z0-9-]+\.[a-zA-Z]{2,8}(\.[a-zA-Z]{2,8})?$/;
+    //On submission of email link image to email address
+    if(regex.test(userEmail)){
+        emailModal.style.display = 'none';
+        linkToEmailButton.innerHTML = 'email added...';
+        linkToEmailButton.disabled = true;
+        setTimeout(() => {
+            linkToEmailButton.disabled = true;
+            linkToEmailButton.innerHTML = 'link to email';
+            getPhoto();
+        }, 2000);
+        let newEmailAddress = userEmail;
+        
+        if(! newPicBox[newEmailAddress]) { //If no array with that name in newPicBox make one and push pic to it 
+            newPicBox[newEmailAddress] = [];
+            newPicBox[newEmailAddress].push(result);
+        } else {
+            newPicBox[newEmailAddress].push(result);
+        }
+    } else {
+        alert("That's not a valid email!");
+    }
+});
+</code></pre>
+                        </div>
+                        <div class="explain-block">
+                            <p>This is an example of using SASS and CSS to create a tooltip that appears when you hover over a clients logo.</p>
+                            <p>The top section is an example of a mixin, which is a re-useable block of code which helps to reduce time.</p>
+                            <p>There are also examples of variables, in this case for colors used within the site. This is helpful because if at any point there is to be a change to a sites color scheme, the variables can be changed rather than every instance of the color being implemented.</p>
+                            <p>The second block contains an example of using psuedo elements, in this case using transparent borders to create an arrow shape that protrudes out of the elements container.</p>
+                            <p>It also demonstrates the use of nesting code within SASS and commenting code which is useful when you come back to a project and have no idea what anything does anymore!</p>
+                        </div>
+                    </div>
                     <h3>Homepage Reflection</h3>
                     <div class="code-wrapper">
                         <div class="code-block">
-                            <code>
+                            <!-- <code>
                                 <p class="code-line"><span class="code-cyan">@mixin</span><span class="code-blue"> tooltip-main</span><span class="code-yellow"> {</span></p>
                                     <p class="code-line tab-one"><span class="code-greyblue">background-color</span><span class="code-cyan">:</span> $dark-blue<span class="code-cyan">;</span></p>
                                     <p class="code-line tab-one"><span class="code-greyblue">color</span><span class="code-cyan">:</span> $white<span class="code-cyan">;</span></p>
@@ -194,7 +253,43 @@
                                         <p class="code-line tab-two"><span class="code-greyblue">pointer-events</span><span class="code-cyan">:</span> auto<span class="code-cyan">;</span></p>
                                     <p class="code-line tab-one"><span class="code-purple">}</span></p>
                                     <p class="code-line"><span class="code-yellow">}</span></p>
-                            </code>
+                            </code> -->
+<pre><code class="language-scss">
+@mixin tooltip-main {
+    background-color: $dark-blue;
+    color: $white;
+    position: absolute;
+    display: none;
+    max-width: 260px;
+    text-align: center;
+}
+.show {
+    .tooltip {
+        @include tooltip-main;
+        padding: 20px;
+        p {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            font-weight: $light;
+        }
+        &::after { //Creates the dropdown arrow
+            content: '';
+            border-left: solid transparent 30px;
+            border-right: solid transparent 30px;
+            border-top: solid $dark-blue 30px;
+            bottom: -29px; //Makes it sit flush with the bottom of the element
+            height: 0;
+            left: 37.5%; //Centers the arrow
+            position: absolute; //Makes it appear below
+            margin-left: 0px;
+        }
+    } 
+    &:hover .tooltip {
+        display: block;
+        pointer-events: auto;
+    }
+}
+</code></pre>
                         </div>
                         <div class="explain-block">
                             <p>This is an example of using SASS and CSS to create a tooltip that appears when you hover over a clients logo.</p>
@@ -214,5 +309,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- PUSHY JS FILE -->
     <script src="/pushy-master/js/pushy.min.js"></script>
+    <!-- PRISM JS FILE -->
+    <script src="/js/prism.js"></script>
 </body>
 </html>
