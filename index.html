@@ -4,18 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PUSHY CSS -->
+    <link rel="stylesheet" href="/dist/pushy.min.css">
     <!-- STYLESHEET -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/dist/style.min.css">
     <!-- FONT -- ROBOTO -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/8ac16a56cb.js" crossorigin="anonymous"> </script>
-    <title>Matt Jones - Web Developer</title>
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">  
+    <title>Matt Jones - Web Developer | Home</title>
 </head>
 <body>
-    <div class="page-wrapper">
+    <!-- Pushy Menu -->
+    <nav class="pushy pushy-left">
+        <a href="/index.html">
+            <div class="logo-wrapper-side">
+                <h1 class="logo-side">M</h1>
+            </div>
+        </a>
+        <div class="pushy-content nav-links-wrapper">
+            <ul>
+                <li class="pushy-link"><a href="/about.html">About</a></li>
+                <li class="pushy-link"><a href="#cards">Portfolio</a></li>
+                <li class="pushy-link"><a href="/coding-examples.html">Coding Examples</a></li>
+                <li class="pushy-link"><a href="/scs-scheme.html">SCS Scheme</a></li>
+                <li class="pushy-link"><a href="/index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="socials-wrapper">
+            <span><a href="https://github.com/MattMakesNoise" target="_blank"><i class="fab fa-github"></i></a></span> 
+            <span><a href="https://twitter.com/Me_Write_Code" target="_blank"><i class="fab fa-twitter"></i></a></span>
+            <span><a href="https://www.linkedin.com/in/matthewjones81/" target="_blank"><i class="fab fa-linkedin-in"></i></a></span>
+        </div>
+    </nav>
+
+    <!-- Site Overlay -->
+    <div class="site-overlay"></div>
+
+    <div class="page-wrapper" id="container">
         <!-- <section class="glass"> -->
             <!-- NAVIGATION BAR -->
             <nav class="navigation-bar">
@@ -27,7 +60,7 @@
                 <div class="nav-links-wrapper">
                     <ul>
                         <li><a href="/about.html">About</a></li>
-                        <li><a href="/portfolio.html">Portfolio</a></li>
+                        <li><a href="#cards">Portfolio</a></li>
                         <li><a href="/coding-examples.html">Coding Examples</a></li>
                         <li><a href="/scs-scheme.html">SCS Scheme</a></li>
                         <li><a href="/index.html#contact">Contact</a></li>
@@ -38,15 +71,16 @@
                     <span><a href="https://twitter.com/Me_Write_Code" target="_blank"><i class="fab fa-twitter"></i></a></span>
                     <span><a href="https://www.linkedin.com/in/matthewjones81/" target="_blank"><i class="fab fa-linkedin-in"></i></a></span>
                 </div>
-                <div class="burger-wrapper">
-                    <input type="checkbox" id="burger-menu">
-                    <label id="burger-icon" for="burger-menu">
-                        <span></span> 
-                        <span></span>
-                        <span></span>
-                    </label>
-                </div>
             </nav>
+            <div class="burger-wrapper menu-btn">
+                <!-- <input type="checkbox" id="burger-menu"> -->
+                <!-- <label id="burger-icon" for="burger-menu"> -->
+                <div id="burger-icon" for="burger-menu">
+                    <span class="burger-lineOne"></span> 
+                    <span class="burger-lineTwo"></span>
+                    <span class="burger-lineThree"></span>
+                </div>
+            </div>
             <!-- /NAVIGATION BAR END -->
 
             <!-- CONTENT -->
@@ -56,7 +90,7 @@
                         <div class="hero-text">
                             <div class="headings">
                                 <h2 class="my-name">Hi! My name's Matt.</h2>
-                                <h3 class="web-dev">I'm a Web Developer.</h3>
+                                <h3 class="web-dev cursor"><span id="typewriter"></span></h3>
                             </div>
                             <a href="#cards" class="scroll-down">
                                 <div class="scroll-wrapper"><h2>Scroll Down</h2><i class="fas fa-angle-down"></i></div>
@@ -65,78 +99,96 @@
                     </div>
                 </div>
                 <div class="cards-wrapper" id="cards"> <!-- CARDS SECTION -->
-                    <div class="card html-css">
-                        <a href="#">
-                            <div class="overlay overlay-one">
-                                <h2>Project One</h2>
-                                <p>Fantastic project, learned a lot.</p>
-                            </div>
-                        </a>
+                    <!-- Project One -->
+                    <div id="projOne" class="card">
+                        <div class="card-pic html-css fade-in from-right slide-in">
+                        </div>
+                        <div class="html-css-blurb blurb fade-in from-left slide-in">
+                            <h2>Homepage Reflection</h2>
+                            <p class="card-blurb">My first project on the SCS scheme, recreating the companies homepage using HTML, CSS/SASS and JavaScript</p>
+                            <a href="https://netmatters.matthew-jones.netmatters-scs.co.uk/" target="_blank" class="more more-left">View project</a>
+                        </div>
                     </div>
-                    <div class="card axure">
-                        <a href="#">
-                            <div class="overlay overlay-two">
-                                <h2>Project Two</h2>
-                                <p>Developed my skills with this one.</p>
-                            </div>
-                        </a>
+                    <!-- Project Two -->
+                    <div id="projTwo" class="card">
+                        <div class="card-pic pairs fade-in from-left slide-in">
+                        </div>
+                        <div class="pairs-blurb blurb fade-in from-right slide-in">
+                            <h2>Pairs Project</h2>
+                            <p class="card-blurb">A collaborative project with a fellow course member, creating a site for a fictional construction firm.</p>
+                            <a href="http://pairs.matthew-jones.netmatters-scs.co.uk/" target="_blank" class="more more-right">View project</a>
+                        </div>
                     </div>
-                    <div class="card project-three">
-                        <a href="#">
-                            <div class="overlay overlay-three">
-                                <h2>Project Three</h2>
-                                <p>Typed stuff on one of these.</p>
-                            </div>
-                        </a>
+                    <!-- Project Three -->
+                    <div id="projThree" class="card">
+                        <div class="card-pic link-n-image fade-in from-right slide-in">
+                        </div>
+                        <div class="link-n-image-blurb blurb fade-in from-left slide-in">
+                            <h2>Link-n-image</h2>
+                            <p class="card-blurb">A JavaScript project pulling a random image from an API and attaching it to an email address.</p>
+                            <a href="http://link-n-image.matthew-jones.netmatters-scs.co.uk/" target="_blank" class="more more-left">View project</a>
+                        </div>
                     </div>
-                    <div class="card project-four">
-                        <a href="#">
-                            <div class="overlay overlay-four">
-                                <h2>Project Four</h2>
-                                <p>World Wide Web innit.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card project-five">
-                        <a href="#">
-                            <div class="overlay overlay-five">
-                                <h2>Project Five</h2>
-                                <p>Wouldn't want to meet this guy in a dark alley!</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card project-six">
-                        <a href="#">
-                            <div class="overlay overlay-six">
-                                <h2>Project Six</h2>
-                                <p>Made stuff you can view on these.</p>
-                            </div>
-                        </a>
+                    <!-- Project Four -->
+                    <div id="projFour" class="card">
+                        <div class="card-pic wordpress fade-in from-left slide-in">
+                        </div>
+                        <div class="wordpress-blurb blurb fade-in from-right slide-in">
+                            <h2>Wordpress Project</h2>
+                            <p class="card-blurb">A collaborative project with a fellow course member, creating a site for a fictional construction firm.</p>
+                            <a href="http://wordpress.matthew-jones.netmatters-scs.co.uk/" target="_blank" class="more more-right">View project</a>
+                        </div>
                     </div>
                 </div>
                 <div class="contact-wrapper" id="contact"> <!-- CONTACT SECTION -->
                     <div class="contact-form">
-                        <h2>Get In Touch</h2>
-                        <p>Do you have a question or want to work together?</p>
-                        <div class="email-form">
-                            <form action="">
+                        <div class="form-header">
+                            <h2>Get In Touch</h2>
+                            <p>Do you have a question or want to work together?</p>
+                        </div>
+                        <form class="form" id="form">
+                            <div class="form-control">
                                 <label for="fname"><span class="make-maroon">*</span> First Name</label>
-                                <input type="text" id="fname" name="firstname" placeholder="Your name...">
-
+                                <input type="text" id="fname" name="firstname" placeholder="Your first name...">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>   
+                                <small class="error-message">Error</small>
+                            </div>
+                            <div class="form-control">
                                 <label for="lname"><span class="make-maroon">*</span> Last Name</label>
                                 <input type="text" id="lname" name="lastname" placeholder="Your last name...">
-
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error-message">Error</small>
+                            </div>
+                            <div class="form-control">
                                 <label for="email"><span class="make-maroon">*</span> Email</label>
-                                <input type="text" id="email" name="email" placeholder="Your email...">
-
+                                <input type="email" id="email" name="email" placeholder="Your email...">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error-message">Error</small>
+                            </div>
+                            <div class="form-control">
                                 <label for="subject"><span class="make-maroon">*</span> Subject</label>
                                 <input type="text" id="subject" name="subject" placeholder="Email subject..."></input>
-                                
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error-message">Error</small>
+                            </div>
+                            <div class="form-control">
                                 <label for="message"><span class="make-maroon">*</span> Message</label>
-                                <textarea id="message" name="message" placeholder="Your message..." style="height:200px"></textarea>
-
-                                <input type="submit" value="Submit">
-                            </form>
+                                <textarea id="text" name="message" placeholder="Your message..." style="height:200px"></textarea>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error-message">Error</small>
+                            </div>
+                            <div class="form-submit">
+                                <input type="submit" id="submit" value="Submit">
+                            </div>
+                        </form>
+                        <div class="success-popup">
+                            <h2 class="success-popup-header">Contratulations</h2>
+                            <p class="success-popup-blurb">Your form has been successfully submitted!</p>
                         </div>
                     </div>
                     <a href="#" class="scroll-up">
@@ -147,5 +199,13 @@
             <!-- /CONTENT END -->
         <!-- </section> -->
     </div>
+    <!-- JQUERY SCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- PUSHY JS FILE -->
+    <script src="dist/pushy.min.js"></script>
+    <!-- INTERSECTION OBSERVERS POLYFILL -->
+    <script src="/node_modules/intersection-observer/intersection-observer.js"></script>
+    <!-- MAIN JS FILE -->
+    <script src="dist/app.es5.min.js"></script>
 </body>
 </html>

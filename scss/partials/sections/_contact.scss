@@ -1,0 +1,228 @@
+//============================== MAIN WRAPPER FOR WHOLE SECTION ======================//
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top right, $light-blue, $dark-blue);
+}
+//============================== FORM WRAPPER AND HEADER =============================//
+.contact-form {
+    width: 90vw;
+    padding: 1rem 1rem 0 1rem;
+    border-radius: 2rem;
+    background-color: rgba(241,241,230,0.9);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0 1rem 0;
+    position: relative;   
+    @media screen and (min-width: $break-md) {
+        width: 80vw;
+    }   
+    @media screen and (min-width: $break-lg) { 
+        width: 90%;
+    }
+    @media screen and (min-width: $break-xl) { 
+        width: 70%;
+    }
+    @media screen and (min-width: $break-xxl) { 
+        width: 75%;
+    }
+    @media screen and (min-width: 1800px) {
+        width: 50%;
+    }
+    h2,
+    p {
+        color: $dark-blue;
+        @media screen and (min-width: $break-xxs) {
+            padding-bottom: 1rem;
+        }
+    }
+    h2::after {
+        content: '';
+        margin-top: .25rem;
+        background-color: $dark-blue;
+        width: 135px;
+        height: 4px;
+        display: block;
+    }
+    p {
+        font-weight: 500;
+        @media screen and (min-width: $break-xxs) {
+            text-align: center;
+        }
+        @media screen and (min-width: $break-lg) {
+            text-align: left;
+        }
+    } 
+}
+//============================== FORM INTERNALS ======================================//
+.form {
+    padding: 0 0 2rem 0;
+    width: 90%;
+    .form-control {
+        position: relative;
+        margin-bottom: .5rem;
+        label {
+            @media screen and (min-width: $break-xxs) { 
+                display: none;
+            }
+            @media screen and (min-width: $break-lg) {
+                display: inline-block;
+                padding-bottom: .4rem;
+            }
+        }
+        input, 
+        textarea {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: .25rem;
+            border: 2px solid $dark-blue;
+            @media screen and (min-width: $break-xxs) { 
+                margin: .25rem 0 .5rem 0;
+            }
+            &::placeholder {
+                color: $dark-blue;
+                font-size: .8rem;
+                font-family: 'Roboto', sans-serif;
+            }
+            &:focus {
+                outline: 0;
+            }
+        }
+        i {
+            position: absolute;
+            top: 14px;
+            right: 10px;
+            visibility: hidden;
+            @media screen and (min-width: $break-lg) { 
+                top: 48px;
+            }
+        }
+        small {
+            visibility: hidden;
+        }
+    }
+}
+
+.form-control.success input,
+.form-control.success textarea {
+    border-color: green;
+}
+.form-control.error input,
+.form-control.error textarea {
+    border-color: red;
+}
+.form-control.success i.fa-check-circle {
+    color: green;
+    visibility: visible;
+}
+.form-control.error i.fa-exclamation-circle {
+    color: red;
+    visibility: visible;
+}
+.form-control.error small {
+    color: red;
+    visibility: visible;
+}
+.success-popup {
+    display: none;
+    z-index: 10;
+    background-color: white;
+    border: 2px solid green;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 2rem;
+    h2, 
+    p {
+        color: green;
+    }
+    h2::after {
+        content: '';
+        margin-top: .25rem;
+        background-color: green;
+        width: 135px;
+        height: 4px;
+        display: block;
+    }
+}
+.success-popup.congrats {
+    display: block;
+    position: absolute;
+    top: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+//============================== SUBMIT BUTTON =======================================//   
+    input[type=submit] { //Style the submit button
+        background-color: $light-blue;
+        color: $nearly-white;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 700;
+        width: 8rem;
+        border-radius: .5rem;
+        border: none;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        @media screen and (min-width: $break-xxs) {
+            margin-left: 0;
+            margin-bottom: 8px;
+            padding: .75rem;
+        }
+        @media screen and (min-width: $break-sm) { 
+            padding: 1rem;
+        }
+        @media screen and (min-width: $break-lg) { 
+            // padding: 1rem;
+        }
+        @media screen and (min-width: $break-xl) { 
+            // margin-top: 1rem;
+            // padding: 1rem;
+        }
+        &:hover {
+            background-color: $dark-blue;
+            cursor: pointer;
+        }
+        &:active {
+            transform: scale(.98);
+        }
+    }
+    .make-maroon { //Asterixes
+        color: $dark-maroon;
+        font-size: 1.25rem;
+    }
+
+//============================== SCROLL UP BUTTON ====================================//
+.scroll-up {
+    text-decoration: none;
+    margin: 1rem 0;
+    @media screen and (min-width: $break-xxs) { 
+        display: none;
+    }
+    @media screen and (min-width: $break-lg) { 
+        display: block;
+    }
+    .scroll-up-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+        &:hover {
+            transform: scale(1.25);
+        }
+        h1 {
+            color: $nearly-white;
+            font-size: 1rem;
+        }
+        i {
+            color: $nearly-white;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+}

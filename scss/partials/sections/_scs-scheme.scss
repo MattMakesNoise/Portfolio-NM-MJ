@@ -1,0 +1,194 @@
+.scs-scheme-wrapper {
+    background-image: linear-gradient(to top right, $light-blue, $dark-blue);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    .scs-header {
+        margin: 1rem;
+        h1 {
+            color: $nearly-white;
+            font-size: 1.5rem;
+            @media screen and (min-width: $break-md) {
+                font-size: 2rem;
+            }
+            &::after {
+                content: '';
+                display: block;
+                border: 2px solid $nearly-white;
+                width: 200px;
+                margin-top: .5rem;
+                @media screen and (min-width: $break-md) {
+                    width: 300px;
+                }
+            }
+        }
+        
+    }
+    .about-scs,
+    .about-netmatters,
+    .about-treehouse {
+        background-color: $nearly-white;
+        border: 1px solid rgba(0,0,0,0.2);
+        border-radius: 1rem;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        padding: 2rem 2rem;
+        @media screen and (min-width: $break-xl) {
+            padding: 2rem 4rem;
+        }
+        p {
+            color: $dark-blue;
+            margin-bottom: .5rem;
+        }
+    }
+}
+
+
+
+.about-scs {
+    width: 90%;
+    color: $nearly-white;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.4;
+    @media screen and (min-width: 500px) {
+        width: 83%;
+    }
+    @media screen and (min-width: $break-md) {
+        width: 90%;
+        font-size: 1.1rem;
+    }
+    @media screen and (min-width: $break-lg) {
+        width: 90%;
+        margin: 1rem 0;
+        font-size: 1.1rem;
+    }
+    @media screen and (min-width: $break-xl) {
+        width: 60%;
+        font-size: 1.25rem;
+    }
+}
+
+.abouts { //Wraps the netmatters and treehouse sections
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    width: 100%;
+    @media screen and (min-width: $break-lg) {
+        width: 90%;
+    }
+    @media screen and (min-width: $break-xl) {
+        justify-content: space-evenly;
+        width: 60%;
+    }
+    .abouts-logo {
+        background-image: linear-gradient(to top right, $light-blue, $dark-blue);
+        padding: .5rem 1rem;
+        margin-bottom: 1rem;
+        border: 1px solid $dark-blue;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border-radius: 2rem;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    }
+    .about-netmatters {
+        width: 90%;
+        height: 100%;
+        color: $nearly-white;   
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+        img {
+            width: 200px;
+            height: 40px;
+        }
+        @media screen and (min-width: $break-md) { 
+            font-size: 1.1rem;
+            img {
+                width: 400px;
+                height: 80px;
+            }
+        }
+        @media screen and (min-width: $break-lg) { 
+            width: 100%;
+            font-size: 1.1rem;
+        }
+        @media screen and (min-width: $break-xl) { 
+            width: 100%;
+            font-size: 1.25rem;
+        }
+        p::before {
+            content: '. ';
+            width: 1rem;
+            color: $dark-blue;
+            font-weight: 900;
+            font-size: 2rem;
+        }
+    }
+    
+    .about-treehouse {
+        width: 90%;
+        height: 100%;
+        color: $nearly-white;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.2;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        @media screen and (min-width: $break-md) {
+            font-size: 1.1rem;
+            img {
+                width: 50%;
+            }
+        }
+        @media screen and (min-width: $break-lg) {
+            width: 100%;
+            font-size: 1.1rem;
+            img {
+                width: 40%;
+            }
+        }
+        @media screen and (min-width: $break-xl) {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+//============================== INTERNET EXPLORER ONLY ==============================//
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
+    .scs-scheme-wrapper {
+        width: 100vw;
+        min-height: 200%;
+        @media screen and (min-width: $break-lg) { 
+            width: calc(100vw - 200px);
+            height: 130vh;
+        }
+    }
+    .about-scs,
+    .abouts {
+        width: 260px;
+        @media screen and (min-width: $break-xs) { //Extra Small
+            width: 320px;
+        }
+        @media screen and (min-width: $break-sm) { 
+            width: 400px;
+        }
+        @media screen and (min-width: $break-md) { 
+            width: 600px;
+        }
+        @media screen and (min-width: $break-xl) { 
+            width: 900px;
+        }
+    }
+}
+

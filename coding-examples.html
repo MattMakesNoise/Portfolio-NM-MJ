@@ -4,18 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PUSHY CSS -->
+    <link rel="stylesheet" href="/dist/pushy.min.css">
     <!-- STYLESHEET -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/dist/style.min.css">
     <!-- FONT -- ROBOTO -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/8ac16a56cb.js" crossorigin="anonymous"> </script>
-    <title>Matt Jones - Web Developer | About</title>
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <!-- Prism CSS -->
+    <link rel="stylesheet" href="/dist/prism.min.css">
+    <title>Matt Jones - Web Developer | Coding Examples</title>
 </head>
 <body>
-    <div class="page-wrapper">
+    <!-- Pushy Menu -->
+    <nav class="pushy pushy-left">
+        <a href="/index.html">
+            <div class="logo-wrapper-side">
+                <h1 class="logo-side">M</h1>
+            </div>
+        </a>
+        <div class="pushy-content nav-links-wrapper">
+            <ul>
+                <li class="pushy-link"><a href="/about.html">About</a></li>
+                <li class="pushy-link"><a href="/index.html#cards">Portfolio</a></li>
+                <li class="pushy-link"><a href="/coding-examples.html">Coding Examples</a></li>
+                <li class="pushy-link"><a href="/scs-scheme.html">SCS Scheme</a></li>
+                <li class="pushy-link"><a href="/index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="socials-wrapper">
+            <span><a href="https://github.com/MattMakesNoise" target="_blank"><i class="fab fa-github"></i></a></span> 
+            <span><a href="https://twitter.com/Me_Write_Code" target="_blank"><i class="fab fa-twitter"></i></a></span>
+            <span><a href="https://www.linkedin.com/in/matthewjones81/" target="_blank"><i class="fab fa-linkedin-in"></i></a></span>
+        </div>
+    </nav>
+
+    <!-- Site Overlay -->
+    <div class="site-overlay"></div>
+
+    <div class="page-wrapper" id="container">
         <!-- <section class="glass"> -->
             <!-- NAVIGATION BAR -->
             <nav class="navigation-bar">
@@ -27,7 +62,7 @@
                 <div class="nav-links-wrapper">
                     <ul>
                         <li><a href="/about.html">About</a></li>
-                        <li><a href="/portfolio.html">Portfolio</a></li>
+                        <li><a href="index.html#cards">Portfolio</a></li>
                         <li><a href="/coding-examples.html">Coding Examples</a></li>
                         <li><a href="/scs-scheme.html">SCS Scheme</a></li>
                         <li><a href="/index.html#contact">Contact</a></li>
@@ -38,25 +73,191 @@
                     <span><a href="https://twitter.com/Me_Write_Code" target="_blank"><i class="fab fa-twitter"></i></a></span>
                     <span><a href="https://www.linkedin.com/in/matthewjones81/" target="_blank"><i class="fab fa-linkedin-in"></i></a></span>
                 </div>
-                <div class="burger-wrapper">
-                    <input type="checkbox" id="burger-menu">
-                    <label id="burger-icon" for="burger-menu">
-                        <span></span> 
-                        <span></span>
-                        <span></span>
-                    </label>
-                </div>
             </nav>
+            <div class="burger-wrapper menu-btn">
+                <!-- <input type="checkbox" id="burger-menu"> -->
+                <!-- <label id="burger-icon" for="burger-menu"> -->
+                <div id="burger-icon" for="burger-menu">
+                    <span class="burger-lineOne"></span> 
+                    <span class="burger-lineTwo"></span>
+                    <span class="burger-lineThree"></span>
+                </div>
+            </div>
             <!-- /NAVIGATION BAR END -->
 
             <!-- CONTENT -->
             <main>
                 <div class="coding-examples-wrapper">
-                    <h1>Coding Examples. Coming soon...</h1>
+                    <h1>Coding Examples</h1>
+                    <h3>SQL Challenge</h3>
+                    <div class="code-wrapper">
+                        <div class="code-block">
+<pre><code class="language-sql">
+SELECT
+    mov_title AS "Movie Title"
+    mov_year AS Year  "Year Released"
+    mov_time AS "Running Time"
+    mov_lang AS "Language"
+    rating.rev_stars AS "Rating"
+FROM movie
+JOIN rating ON rating.mov_id = movie.mov_id
+WHERE rating.rev_stars > 8
+AND
+    mov_year BETWEEN 1950 AND 2000
+AND
+    mov_time > 120
+ORDER BY mov_year ASC
+</code></pre>
+                        </div>
+                        <div class="explain-block">
+                            <p>This challenge was to test my SQL skills by querying a movies database using a sub-query</p>
+                            <p>My query retrieves all films with a rating of more than 8, that where made between 1950 and 2000 and running time of over 2 hours. </p>
+                            <p>To do this I joined the the movie table with the rating table using their matching primary key.</p>
+                            <p>Below you can see an example of the table structure and the result.</p>
+                        </div>
+                    </div>
+                    <div class="table-structure"></div>
+                    <div class="resp-table">
+                        <div class="resp-table-header">
+                            <div class="table-header-cell rounded-top-left">Movie Title</div>
+                            <div class="table-header-cell">Year Released</div>
+                            <div class="table-header-cell">Running Time</div>
+                            <div class="table-header-cell">Language</div>
+                            <div class="table-header-cell rounded-top-right">Rating</div>
+                        </div>
+                        <div class="resp-table-body">
+                            <div class="resp-table-row">
+                                <div class="table-body-cell">Vertigo</div>
+                                <div class="table-body-cell grey-cell">1958</div>
+                                <div class="table-body-cell">128</div>
+                                <div class="table-body-cell grey-cell">English</div>
+                                <div class="table-body-cell">8.4</div>
+                            </div>
+                            <div class="resp-table-row">
+                                <div class="table-body-cell grey-cell">Lawrence of Arabia</div>
+                                <div class="table-body-cell">1962</div>
+                                <div class="table-body-cell grey-cell">216</div>
+                                <div class="table-body-cell">English</div>
+                                <div class="table-body-cell grey-cell">8.3</div>
+                            </div>
+                            <div class="resp-table-row">
+                                <div class="table-body-cell">Aliens</div>
+                                <div class="table-body-cell grey-cell">1986</div>
+                                <div class="table-body-cell">137</div>
+                                <div class="table-body-cell grey-cell">English</div>
+                                <div class="table-body-cell">8.4</div>
+                            </div>
+                            <div class="resp-table-row">
+                                <div class="table-body-cell grey-cell rounded-bottom-left">Princess Mononoke</div>
+                                <div class="table-body-cell">1997</div>
+                                <div class="table-body-cell grey-cell">134</div>
+                                <div class="table-body-cell">Japanese</div>
+                                <div class="table-body-cell grey-cell rounded-bottom-right">8.4</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>JavaScript Reflection</h3>
+                    <div class="code-wrapper">
+                        <div class="code-block">
+<pre><code class="language-javascript">
+form.addEventListener('submit', e =>  {
+    e.preventDefault(); //Prevents browser reloading on user submit
+    //validation
+    let userEmail = form.email.value;
+    const regex = /^[a-zA-Z0-9\.!#$%&'*+/=?^_`{|}~-]{2,64}@[a-zA-Z0-9-]+\.[a-zA-Z]{2,8}(\.[a-zA-Z]{2,8})?$/;
+    //On submission of email link image to email address
+    if(regex.test(userEmail)){
+        emailModal.style.display = 'none';
+        linkToEmailButton.innerHTML = 'email added...';
+        linkToEmailButton.disabled = true;
+        setTimeout(() => {
+            linkToEmailButton.disabled = true;
+            linkToEmailButton.innerHTML = 'link to email';
+            getPhoto();
+        }, 2000);
+        let newEmailAddress = userEmail;
+        
+        if(! newPicBox[newEmailAddress]) { //If no array with that name in newPicBox make one and push pic to it 
+            newPicBox[newEmailAddress] = [];
+            newPicBox[newEmailAddress].push(result);
+        } else {
+            newPicBox[newEmailAddress].push(result);
+        }
+    } else {
+        alert("That's not a valid email!");
+    }
+});
+</code></pre>
+                        </div>
+                        <div class="explain-block">
+                            <p>The challenge that I was set was to retrieve a random image from an API (I used upsplash) and display it to the user with a button to choose another image.</p>
+                            <p>The user could the save this image by linking it to an email address and this is what this code block demonstrates.</p>
+                            <p>If the user email is valid and therefore passes the regex test the modal that they have inputted their email into disappears and the image on the page is refreshed.</p>
+                            <p>The email address is temporarily stored in the newEmailAddress variable and if an array with this name doesn't already exist in the newPicBox object then one is created and the picture URL is pushed into it. Otherwise if an array with this name does exist then the picture is pushed to it.</p>
+                            <p>In addition the user is able to link to numerous email address and then when the click each address a modal window displays all of the images that are linked to that email address.</p>
+                            <p>I found this challenge very useful as it really helped me to understand objects and arrays, how to sort and retrieve data from them. </p>
+                        </div>
+                    </div>
+                    <h3>Homepage Reflection</h3>
+                    <div class="code-wrapper">
+                        <div class="code-block">
+<pre><code class="language-scss">
+@mixin tooltip-main {
+    background-color: $dark-blue;
+    color: $white;
+    position: absolute;
+    display: none;
+    max-width: 260px;
+    text-align: center;
+}
+.show {
+    .tooltip {
+        @include tooltip-main;
+        padding: 20px;
+        p {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            font-weight: $light;
+        }
+        &::after { //Creates the dropdown arrow
+            content: '';
+            border-left: solid transparent 30px;
+            border-right: solid transparent 30px;
+            border-top: solid $dark-blue 30px;
+            bottom: -29px; //Makes it sit flush with the bottom of the element
+            height: 0;
+            left: 37.5%; //Centers the arrow
+            position: absolute; //Makes it appear below
+            margin-left: 0px;
+        }
+    } 
+    &:hover .tooltip {
+        display: block;
+        pointer-events: auto;
+    }
+}
+</code></pre>
+                        </div>
+                        <div class="explain-block">
+                            <p>This is an example of using SASS and CSS to create a tooltip that appears when you hover over a clients logo.</p>
+                            <p>The top section is an example of a mixin, which is a re-useable block of code which helps to reduce time.</p>
+                            <p>There are also examples of variables, in this case for colors used within the site. This is helpful because if at any point there is to be a change to a sites color scheme, the variables can be changed rather than every instance of the color being implemented.</p>
+                            <p>The second block contains an example of using psuedo elements, in this case using transparent borders to create an arrow shape that protrudes out of the elements container.</p>
+                            <p>It also demonstrates the use of nesting code within SASS and commenting code which is useful when you come back to a project and have no idea what anything does anymore!</p>
+                        </div>
+                    </div>
                 </div>
             </main>
             <!-- /CONTENT END -->
         <!-- </section> -->
     </div>
+    <!-- JQUERY SCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- PUSHY JS FILE -->
+    <script src="/dist/pushy.min.js"></script>
+    <!-- PRISM JS FILE -->
+    <script src="/dist/prism.es5.min.js"></script>
+    <!-- MAIN JS FILE -->
+    <script src="/dist/app.es5.min.js"></script>
 </body>
 </html>

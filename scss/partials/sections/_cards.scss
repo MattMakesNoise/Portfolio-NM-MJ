@@ -1,0 +1,289 @@
+.cards-wrapper { //Main wrapper for the cards section, decides how sections of 3 cards are laid out
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem 1rem 1rem;
+    width: 150px;
+    margin: 0 auto;
+    @media screen and (min-width: 375px) {
+        width: 200px;
+    }
+    @media screen and (min-width: $break-sm) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    @media screen and (min-width: $break-md) {
+        width: 650px;
+    }
+    @media screen and (min-width: $break-lg) {
+        flex-direction: column;
+        width: 750px;
+    }
+    @media screen and (min-width: $break-xl) {
+        flex-direction: row;
+    }
+    @media screen and (min-width: 1800px) {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+#projOne, //The main containers for each card
+#projTwo,
+#projThree,
+#projFour,
+#projFive,
+#projSix {
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: .25rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: 0.3s;
+    @media screen and (min-width: $break-md) {
+        flex-direction: row;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    .card-pic {
+        width: 150px;
+        height: 90px;
+        margin: 0 1rem;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        object-fit: contain;
+        border-radius: 1rem;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        @media screen and (min-width: 375px) {
+            width: 200px;
+            height: 120px;
+        }
+        @media screen and (min-width: $break-md) { 
+            width: 250px;
+            height: 150px;
+        }
+        @media screen and (min-width: $break-xl) { 
+            width: 350px;
+            height: 240px;
+        }
+        @media screen and (min-width: $break-xxl) { 
+            width: 450px;
+            height: 300px;
+        }
+        &:hover {
+            opacity: 80%;
+        }
+    }
+    .blurb {
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 1rem;
+        @media screen and (min-width: 375px) {
+            width: 200px;
+        }
+        @media screen and (min-width: $break-md) { 
+            width: 250px;
+            height: 150px;
+        }
+        @media screen and (min-width: $break-xxl) { 
+            width: 450px;
+        }
+        h2 {
+            text-transform: uppercase;
+        }
+        h2,
+        p,
+        a {
+            color: $dark-blue;
+            margin-bottom: .5rem;
+        }
+    }
+    .more {
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+        border: 2px solid $dark-blue;
+        border-radius: 1rem;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        padding: .5rem;
+        width: 150px;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover {
+            background-color: $dark-blue;
+            color: $nearly-white;
+            transform: scale(1.05);
+        }
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+    .more-left {
+        align-self: flex-start;
+    }
+    .more-right {
+        align-self: flex-start;
+        @media screen and (min-width: $break-md) { 
+            align-self: flex-end;
+        }
+    }
+}
+
+
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 750ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+.from-left {
+    transform: translateX(-50%);
+}
+
+.from-right {
+    transform: translateX(50%);
+}
+
+.from-left,
+.from-right {
+    transition: opacity 250ms ease-in, transform 750ms ease-in;
+    opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear {
+    transform: translateX(0);
+    opacity: 1;
+}
+#projOne {
+    .html-css {
+        background-image: url(/img/homepage-reflection.png);
+        order: 1;
+        @media screen and (min-width: $break-md) { 
+            order: 2;
+        }
+        @media screen and (min-width: $break-xl) { 
+            background-image: url(/img/homepage-reflection.png);
+        }
+    }
+    .html-css-blurb {
+        order: 2;
+        @media screen and (min-width: $break-md) { 
+            order: 1;
+        }
+    }
+}
+
+#projTwo {
+    .pairs {
+        background-image: url(/img/pairs.png);
+        order: 1;
+        @media screen and (min-width: $break-xl) { 
+            background-image: url(/img/pairs.png);
+        }
+    }
+    .pairs-blurb {
+        order: 2;
+        @media screen and (min-width: $break-md) { 
+            text-align: end;
+        }
+    }
+}
+
+#projThree {
+    .link-n-image {
+        background-image: url(/img/link-n-image.png);
+        order: 1;
+        @media screen and (min-width: $break-md) { 
+            order: 2;
+        }
+        @media screen and (min-width: $break-xl) { 
+            background-image: url(/img/link-n-image.png);
+        }
+    }
+    .link-n-image-blurb {
+        order: 2;
+        @media screen and (min-width: $break-md) { 
+            order: 1;
+        }
+    }
+}
+
+#projFour {
+    .wordpress {
+        background-image: url(/img/wordpress.png);
+        order: 1;
+        @media screen and (min-width: $break-xl) { 
+            background-image: url(/img/wordpress.png);
+        }
+    }
+    .wordpress-blurb {
+        order: 2;
+        @media screen and (min-width: $break-md) { 
+            text-align: end;
+        }
+    }
+}
+//============================== INTERNET EXPLORER ONLY ==============================//
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
+    @media screen and (min-width: $break-xxs) {
+        .overlay {
+            height: 50%;
+            p {
+                width: 250px;
+            }
+        }
+    }
+    @media screen and (min-width: $break-sm) {
+        .cards-wrapper {
+            width: 98vw;
+            height: 70vh;
+            justify-content: space-around;
+        }
+    }
+    @media screen and (min-width: $break-md) { //Medium
+        .cards-wrapper {
+            width: 98vw;
+        }
+        .overlay {
+            height: 50%;
+            p {
+                width: 250px;
+            }
+        }
+    }
+    @media screen and (min-width: $break-lg) { 
+        .cards-wrapper {
+            width: 790px;
+        }
+    }
+    @media screen and (min-width: $break-xl) { 
+        .cards-wrapper {
+            width: 790px;
+            height: 130vh;
+            width: calc(100vw - 250px);
+        }
+    }
+    @media screen and (min-width: $break-xxl) { 
+        .cards-wrapper {
+            width: 790px;
+            height: 80vh;
+            width: calc(100vw - 250px);
+        }
+    }
+}

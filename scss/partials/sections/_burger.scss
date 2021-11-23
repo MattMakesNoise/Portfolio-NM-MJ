@@ -1,0 +1,91 @@
+.logo-wrapper-side {
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid $light-blue;
+    &:hover {
+        border: 5px solid $dark-blue;
+    }
+    .logo-side {
+        font-weight: 700;
+        font-size: 3.5rem;
+        padding: .25rem .5rem;
+        color: $light-blue;
+        &:hover {
+            color: $dark-blue;
+        }
+    }
+}
+
+.pushy {
+    background: $nearly-white;
+    .socials-wrapper {
+        width: 100%;
+        padding: 1.5rem 0;
+        margin-top: 1rem;
+        border-top: 5px solid $dark-blue;
+        display: flex;
+        justify-content: space-evenly;
+        a {
+            text-decoration: none;
+            padding: 0;
+            .fa-github {
+                margin: .25rem;
+                color: $light-blue;
+                font-size: 1.75rem;
+                &:hover {
+                    color: $dark-blue;
+                }
+            }
+            .fa-twitter {
+                margin: .25rem;
+                color: $light-blue;
+                font-size: 1.75rem;
+                &:hover {
+                    color: #55acee;
+                }
+            }
+            .fa-linkedin-in {
+                margin: .25rem;
+                color: $light-blue;
+                font-size: 1.75rem;
+                &:hover {
+                    color: #0077B5;
+                }
+            }
+        }
+    }
+}
+
+.pushy-content {
+    a {
+        color: $light-blue;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+        &::after { //Adds moving border to links
+            content: '';
+            width: 65%;
+            height: 5px;
+            position: absolute;
+            top: 100%;
+            left: 1.75rem;
+            background: $dark-blue;
+            transition: transform 0.3s;
+            transform: scaleX(0);
+            transform-origin: right;
+        }
+        &:hover { //Aminates the border
+            color: $dark-blue;
+            &::after {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+        }
+    }
+}
+    
