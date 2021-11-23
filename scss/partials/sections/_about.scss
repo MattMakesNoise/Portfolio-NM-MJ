@@ -110,7 +110,7 @@
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)  {
     .about-wrapper {
         width: 100vw;
-        height: 100vh;
+        min-height: 100%;
     }
     .me-image-wrapper {
         height: 30%;

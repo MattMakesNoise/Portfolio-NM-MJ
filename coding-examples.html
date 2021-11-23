@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- PUSHY CSS -->
-    <link rel="stylesheet" href="/pushy-master/css/pushy.css">
+    <link rel="stylesheet" href="/dist/pushy.min.css">
     <!-- STYLESHEET -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/dist/style.min.css">
     <!-- FONT -- ROBOTO -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
     <!-- Prism CSS -->
-    <link rel="stylesheet" href="/css/prism.css">
+    <link rel="stylesheet" href="/dist/prism.min.css">
     <title>Matt Jones - Web Developer | Coding Examples</title>
 </head>
 <body>
@@ -92,23 +92,6 @@
                     <h3>SQL Challenge</h3>
                     <div class="code-wrapper">
                         <div class="code-block">
-                            <!-- <code>
-                                <p class="code-line"><span class="code-cyan">SELECT</span></p>
-                                    <p class="code-line tab-one"><span class="code-blue">mov_title </span><span class="code-cyan">AS</span><span class="code-yellow"> "</span>Movie Title<span><span class="code-yellow">"</span></span></p>
-                                    <p class="code-line tab-one"><span class="code-blue">mov_year </span><span class="code-cyan">AS</span><span class="code-yellow"> "</span>Year Released<span><span class="code-yellow">"</span></span></p>
-                                    <p class="code-line tab-one"><span class="code-blue">mov_time </span><span class="code-cyan">AS</span><span class="code-yellow"> "</span>Running Time<span><span class="code-yellow">"</span></span></p>
-                                    <p class="code-line tab-one"><span class="code-blue">mov_lang </span><span class="code-cyan">AS</span><span class="code-yellow"> "</span>Language<span><span class="code-yellow">"</span></span></p>
-                                    <p class="code-line tab-one"><span class="code-blue">rating.rev_stars </span><span class="code-cyan">AS</span><span class="code-yellow"> "</span>Rating<span><span class="code-yellow">"</span></span></p>
-                                <p class="code-line"><span class="code-cyan">FROM</span><span class="code-yellow"> movie</span></p>
-                                <p class="code-line"><span class="code-cyan">JOIN</span><span class="code-yellow"> rating</span><span class="code-cyan"> ON</span><span class="code-blue"> rating.mov_id = movie.mov_id</span></p>
-                                <p class="code-line"><span class="code-cyan">WHERE</span><span class="code-blue"> rating.rev_stars > 8</span></p>
-                                <p class="code-line"><span class="code-cyan">AND</span></p>
-                                    <p class="code-line tab-one"><span class="code-blue">mov_year </span><span class="code-cyan">BETWEEN</span><span class="code-orange"> 1950</span><span class="code-cyan"> AND</span><span class="code-orange"> 2000</span></p>
-                                <p class="code-line"><span class="code-cyan">AND</span></p>
-                                    <p class="code-line tab-one"><span class="code-blue">mov_time </span><span class="code-cyan">> </span><span class="code-orange"> 120</span></p>
-                                <p class="code-line"><span class="code-cyan">ORDER BY </span><span class="code-blue">mov_year </span><span class="code-orange"> ASC</span></p> -->
-
-                            <!-- </code> -->
 <pre><code class="language-sql">
 SELECT
     mov_title AS "Movie Title"
@@ -207,53 +190,17 @@ form.addEventListener('submit', e =>  {
 </code></pre>
                         </div>
                         <div class="explain-block">
-                            <p>This is an example of using SASS and CSS to create a tooltip that appears when you hover over a clients logo.</p>
-                            <p>The top section is an example of a mixin, which is a re-useable block of code which helps to reduce time.</p>
-                            <p>There are also examples of variables, in this case for colors used within the site. This is helpful because if at any point there is to be a change to a sites color scheme, the variables can be changed rather than every instance of the color being implemented.</p>
-                            <p>The second block contains an example of using psuedo elements, in this case using transparent borders to create an arrow shape that protrudes out of the elements container.</p>
-                            <p>It also demonstrates the use of nesting code within SASS and commenting code which is useful when you come back to a project and have no idea what anything does anymore!</p>
+                            <p>The challenge that I was set was to retrieve a random image from an API (I used upsplash) and display it to the user with a button to choose another image.</p>
+                            <p>The user could the save this image by linking it to an email address and this is what this code block demonstrates.</p>
+                            <p>If the user email is valid and therefore passes the regex test the modal that they have inputted their email into disappears and the image on the page is refreshed.</p>
+                            <p>The email address is temporarily stored in the newEmailAddress variable and if an array with this name doesn't already exist in the newPicBox object then one is created and the picture URL is pushed into it. Otherwise if an array with this name does exist then the picture is pushed to it.</p>
+                            <p>In addition the user is able to link to numerous email address and then when the click each address a modal window displays all of the images that are linked to that email address.</p>
+                            <p>I found this challenge very useful as it really helped me to understand objects and arrays, how to sort and retrieve data from them. </p>
                         </div>
                     </div>
                     <h3>Homepage Reflection</h3>
                     <div class="code-wrapper">
                         <div class="code-block">
-                            <!-- <code>
-                                <p class="code-line"><span class="code-cyan">@mixin</span><span class="code-blue"> tooltip-main</span><span class="code-yellow"> {</span></p>
-                                    <p class="code-line tab-one"><span class="code-greyblue">background-color</span><span class="code-cyan">:</span> $dark-blue<span class="code-cyan">;</span></p>
-                                    <p class="code-line tab-one"><span class="code-greyblue">color</span><span class="code-cyan">:</span> $white<span class="code-cyan">;</span></p>
-                                    <p class="code-line tab-one"><span class="code-greyblue">position</span><span class="code-cyan">:</span> absolute<span class="code-cyan">;</span></p>
-                                    <p class="code-line tab-one"><span class="code-greyblue">display</span><span class="code-cyan">:</span> none<span class="code-cyan">;</span></p>
-                                    <p class="code-line tab-one"><span class="code-greyblue">max-width</span><span class="code-cyan">:</span> <span class="code-orange">260px</span><span class="code-cyan">;</span></p>
-                                    <p class="code-line tab-one"><span class="code-greyblue">text-align</span><span class="code-cyan">:</span> center<span class="code-cyan">;</span></p>
-                                <p class="code-line"><span class="code-yellow">}</span></p>
-                                        <br>
-                                <p class="code-line"><span class="code-cyan">.</span><span class="code-yellow">show {</span></p>
-                                    <p class="code-line tab-one"><span class="code-cyan">.</span><span class="code-yellow">tooltip</span> <span class="code-purple">{</span></p>
-                                        <p class="code-line tab-two"><span class="code-cyan">@include</span> <span class="code-blue">tooltip-main</span><span class="code-cyan">;</span></p>
-                                        <p class="code-line tab-two"><span class="code-greyblue">padding</span><span class="code-cyan">:</span> <span class="code-orange">20px</span><span class="code-cyan">;</span></p>
-                                        <p class="code-line tab-two"><span class="code-yellow">p </span><span class="code-cyan">{</span></p>
-                                            <p class="code-line tab-three"><span class="code-greyblue">margin-top</span><span class="code-cyan">:</span> <span class="code-orange">1rem</span><span class="code-cyan">;</span></p>
-                                            <p class="code-line tab-three"><span class="code-greyblue">font-size</span><span class="code-cyan">:</span> <span class="code-orange">0.875rem</span><span class="code-cyan">;</span></p>
-                                            <p class="code-line tab-three"><span class="code-greyblue">font-weight</span><span class="code-cyan">:</span> $light<span class="code-cyan">;</span></p>
-                                        <p class="code-line tab-two"><span class="code-cyan">}</span></p>
-                                        <p class="code-line tab-two"><span class="code-yellow">&</span><span class="code-cyan">::</span><span class="code-purple">after</span><span class="code-cyan"> { </span><span class="code-grey">//Creates the dropdown arrow</span></p>
-                                            <p class="code-line tab-three"><span class="code-greyblue">content</span><span class="code-cyan">: '';</span></p>
-                                            <p class="code-line tab-three"><span class="code-greyblue">border-left</span><span class="code-cyan">:</span> solid transparent <span class="code-orange">30px</span><span class="code-cyan">;</span></p>
-                                            <p class="code-line tab-three"><span class="code-greyblue">border-right</span><span class="code-cyan">:</span> solid transparent <span class="code-orange">30px</span><span class="code-cyan">;</span></p>
-                                            <p class="code-line tab-three"><span class="code-greyblue">border-top</span><span class="code-cyan">:</span> solid $dark-blue <span class="code-orange">30px</span><span class="code-cyan">;</span></p>
-                                            <p class="code-line tab-three"><span class="code-greyblue">bottom</span><span class="code-cyan">:</span> <span class="code-orange">-29px</span><span class="code-cyan">;</span> <span class="code-grey">//Makes it sit flush with the bottom of the element</span></p>
-                                            <p class="code-line tab-three"><span class="code-greyblue">height</span><span class="code-cyan">:</span> <span class="code-orange">0</span><span class="code-cyan">;</span></p>
-                                            <p class="code-line tab-three"><span class="code-greyblue">left</span><span class="code-cyan">:</span> <span class="code-orange">37.5%</span><span class="code-cyan">;</span> <span class="code-grey">//Centers the arrow</span></p>
-                                            <p class="code-line tab-three"><span class="code-greyblue">position</span><span class="code-cyan">:</span> absolute<span class="code-cyan">;</span> <span class="code-grey">//Makes it appear below</span></p>
-                                            <p class="code-line tab-three"><span class="code-greyblue">margin-left</span><span class="code-cyan">:</span> <span class="code-orange">0px</span><span class="code-cyan">;</span></p>
-                                        <p class="code-line tab-two"><span class="code-cyan">}</span></p>
-                                    <p class="code-line tab-one"><span class="code-purple">}</span></p>
-                                    <p class="code-line tab-one"><span class="code-yellow">&</span><span class="code-cyan">:</span><span class="code-purple">hover</span> <span class="code-cyan">.</span><span class="code-yellow">tooltip</span><span class="code-purple"> {</span></p>
-                                        <p class="code-line tab-two"><span class="code-greyblue">display</span><span class="code-cyan">:</span> block<span class="code-cyan">;</span></p>
-                                        <p class="code-line tab-two"><span class="code-greyblue">pointer-events</span><span class="code-cyan">:</span> auto<span class="code-cyan">;</span></p>
-                                    <p class="code-line tab-one"><span class="code-purple">}</span></p>
-                                    <p class="code-line"><span class="code-yellow">}</span></p>
-                            </code> -->
 <pre><code class="language-scss">
 @mixin tooltip-main {
     background-color: $dark-blue;
@@ -304,12 +251,13 @@ form.addEventListener('submit', e =>  {
             <!-- /CONTENT END -->
         <!-- </section> -->
     </div>
-    <script src="js/app.js"></script>
     <!-- JQUERY SCRIPT -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- PUSHY JS FILE -->
-    <script src="/pushy-master/js/pushy.min.js"></script>
+    <script src="/dist/pushy.min.js"></script>
     <!-- PRISM JS FILE -->
-    <script src="/js/prism.js"></script>
+    <script src="/dist/prism.es5.min.js"></script>
+    <!-- MAIN JS FILE -->
+    <script src="/dist/app.es5.min.js"></script>
 </body>
 </html>

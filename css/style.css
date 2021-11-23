@@ -1192,7 +1192,7 @@ input[type=submit]:active {
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .about-wrapper {
     width: 100vw;
-    height: 100vh;
+    min-height: 100%;
   }
 
   .me-image-wrapper {
@@ -1796,6 +1796,7 @@ code {
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .scs-scheme-wrapper {
     width: 100vw;
+    min-height: 200%;
   }
 }
 @media screen and (-ms-high-contrast: active) and (min-width: 992px), screen and (-ms-high-contrast: none) and (min-width: 992px) {
