@@ -138,6 +138,15 @@ main {
     margin-left: 1rem;
   }
 }
+.logo-wrapper:hover {
+  background-color: #00112B;
+  border: 5px solid #F1F1E6;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.05);
+}
+.logo-wrapper:active {
+  transform: scale(0.98);
+}
 .logo-wrapper .logo {
   font-weight: 700;
   display: none;
@@ -163,6 +172,13 @@ main {
     color: #00112B;
   }
 }
+.logo-wrapper .logo:hover {
+  color: #F1F1E6;
+  transition: all 0.3s ease-in-out;
+}
+.logo-wrapper .logo:active {
+  transform: scale(0.98);
+}
 
 .logo-wrapper-side {
   display: block;
@@ -178,6 +194,13 @@ main {
     margin-left: 1rem;
   }
 }
+.logo-wrapper-side:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.05);
+}
+.logo-wrapper-side:active {
+  transform: scale(0.98);
+}
 .logo-wrapper-side .logo-side {
   font-weight: 700;
   display: block;
@@ -190,6 +213,12 @@ main {
     padding: 0.5rem 1rem;
     font-size: 3rem;
   }
+}
+.logo-wrapper-side .logo-side:hover {
+  transition: all 0.3s ease-in-out;
+}
+.logo-wrapper-side .logo-side:active {
+  transform: scale(0.98);
 }
 
 .burger-wrapper {
@@ -1365,8 +1394,13 @@ input[type=submit]:active {
 }
 .code-wrapper .code-block {
   border-radius: 2rem;
-  width: 300px;
+  width: 260px;
   margin: 0 auto;
+}
+@media screen and (min-width: 320px) {
+  .code-wrapper .code-block {
+    width: 300px;
+  }
 }
 @media screen and (min-width: 768px) {
   .code-wrapper .code-block {
@@ -1389,8 +1423,13 @@ input[type=submit]:active {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 0.75rem;
   border-radius: 1rem;
-  width: 300px;
+  width: 260px;
   margin-top: 1rem;
+}
+@media screen and (min-width: 320px) {
+  .code-wrapper .explain-block {
+    width: 300px;
+  }
 }
 @media screen and (min-width: 768px) {
   .code-wrapper .explain-block {
@@ -1443,11 +1482,17 @@ pre[class*=language-] {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   object-fit: contain;
-  width: 300px;
-  height: 200px;
+  width: 260px;
+  height: 160px;
   margin: 1rem;
   border-radius: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 320px) {
+  .table-structure {
+    width: 300px;
+    height: 200px;
+  }
 }
 @media screen and (min-width: 768px) {
   .table-structure {
@@ -1469,10 +1514,15 @@ pre[class*=language-] {
 }
 
 .resp-table {
-  width: 300px;
+  width: 260px;
   display: table;
   border-radius: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 320px) {
+  .resp-table {
+    width: 300px;
+  }
 }
 @media screen and (min-width: 768px) {
   .resp-table {

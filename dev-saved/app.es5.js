@@ -5,33 +5,6 @@
 //===== TYPEWRITER EFFECT ON HERO BANNER ================================//
 //=======================================================================//
 //=======================================================================//
-// // array to hold the text to be typed
-// let typing = ["human..." , "legend..." , "web developer!"];
-// // let typing = ["web developer!"];
-// let a = 0;
-// let b = 1;
-// let reverse = false;
-// let interval = setInterval(type, 150);
-// function type() {
-//     let nowText = typing[a];
-//     document.getElementById("typewriter").innerText = nowText.substring(0 , b);
-//     // reverse direction (delete) if end of string reached
-//     if (b == nowText.length + 5) { //+5 makes it stall for a moment before typing
-//         reverse = true;
-//     }
-//     b += reverse ? -2 : 1;
-//     //reset b and go forward again
-//     if (b <= 0) {
-//         b = 1;
-//         reverse = false;
-//         a++;
-//     }
-//     // reached end of list then start over 
-//     if (a == typing.length) { setTimeout(() => {
-//         a = 0;
-//     }, 5000);
-//     } 
-// };
 var toType = "I'm a web developer!";
 var speed = 100;
 var i = 0;
@@ -51,10 +24,8 @@ window.onload = typeWriter(); //================================================
 //=======================================================================//
 //=======================================================================//
 
-var fadeIn = document.querySelectorAll('.fade-in'); //faders in tutorial
-
-var slideIn = document.querySelectorAll('.slide-in'); //sliders in tutorial
-
+var fadeIn = document.querySelectorAll('.fade-in');
+var slideIn = document.querySelectorAll('.slide-in');
 var appearOnScrollOptions = {
   root: null,
   //it is the viewport
@@ -89,7 +60,13 @@ var email = document.getElementById('email');
 var subject = document.getElementById('subject');
 var text = document.getElementById('text');
 var popup = document.querySelector('.success-popup');
-var classCheck = document.querySelector('.form-control');
+var classCheck = document.querySelector('.form-control'); //get the values from the inputs
+
+var firstNameValue = firstName.value.trim();
+var lastNameValue = lastName.value.trim();
+var emailValue = email.value.trim();
+var subjectValue = subject.value.trim();
+var textValue = text.value.trim();
 var inputOne = false;
 var inputTwo = false;
 var inputThree = false;
@@ -134,8 +111,10 @@ function validate(e) {
       //show error 
       //add error class
       setErrorFor(firstName, 'First Name cannot be blank');
-    } else if (firstNameValue.length < 4) {
-      setErrorFor(firstName, 'First Name must be more than 4 characters');
+      inputOne = false;
+    } else if (firstNameValue.length < 2) {
+      setErrorFor(firstName, 'First Name must be at least 2 characters');
+      inputOne = false;
     } else {
       //add success class
       setSuccessFor(firstName);
@@ -148,8 +127,10 @@ function validate(e) {
       //show error 
       //add error class
       setErrorFor(lastName, 'Last Name cannot be blank');
-    } else if (lastNameValue.length < 4) {
-      setErrorFor(lastName, 'Last Name must be more than 4 characters');
+      inputOne = false;
+    } else if (lastNameValue.length < 2) {
+      setErrorFor(lastName, 'Last Name must be at least 2 characters');
+      inputOne = false;
     } else {
       //add success class
       setSuccessFor(lastName);
@@ -162,8 +143,10 @@ function validate(e) {
       //show error 
       //add error class
       setErrorFor(email, 'Email cannot be blank');
+      inputOne = false;
     } else if (!isEmail(emailValue)) {
       setErrorFor(email, 'Email is not valid');
+      inputOne = false;
     } else {
       //add success class
       setSuccessFor(email);
@@ -176,6 +159,7 @@ function validate(e) {
       //show error 
       //add error class
       setErrorFor(subject, 'Subject cannot be blank');
+      inputOne = false;
     } else {
       //add success class
       setSuccessFor(subject);
@@ -188,6 +172,7 @@ function validate(e) {
       //show error 
       //add error class
       setErrorFor(text, 'Message cannot be blank');
+      inputOne = false;
     } else {
       //add success class
       setSuccessFor(text);
@@ -199,8 +184,9 @@ function validate(e) {
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  if (inputOne == true && inputTwo == true && inputThree == true && inputFour == true && inputFive == true) {
+  if (inputOne === true && inputTwo === true && inputThree === true && inputFour === true && inputFive === true) {
     popup.classList.add('congrats');
+    form.reset();
     setTimeout(function () {
       popup.classList.remove('congrats');
     }, 3000);
