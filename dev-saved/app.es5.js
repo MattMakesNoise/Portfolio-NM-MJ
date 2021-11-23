@@ -60,13 +60,13 @@ var email = document.getElementById('email');
 var subject = document.getElementById('subject');
 var text = document.getElementById('text');
 var popup = document.querySelector('.success-popup');
-var classCheck = document.querySelector('.form-control'); //get the values from the inputs
+var classCheck = document.querySelector('.form-control'); // //get the values from the inputs
+// let firstNameValue = firstName.value.trim();
+// let lastNameValue = lastName.value.trim();
+// let emailValue = email.value.trim();
+// let subjectValue = subject.value.trim();
+// let textValue = text.value.trim();
 
-var firstNameValue = firstName.value.trim();
-var lastNameValue = lastName.value.trim();
-var emailValue = email.value.trim();
-var subjectValue = subject.value.trim();
-var textValue = text.value.trim();
 var inputOne = false;
 var inputTwo = false;
 var inputThree = false;
@@ -189,6 +189,13 @@ form.addEventListener('submit', function (e) {
     form.reset();
     setTimeout(function () {
       popup.classList.remove('congrats');
+    }, 3000);
+    setTimeout(function () {
+      inputOne = false;
+      inputTwo = false;
+      inputThree = false;
+      inputFour = false;
+      inputFive = false;
     }, 3000);
   }
 

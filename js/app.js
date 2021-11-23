@@ -63,12 +63,12 @@ const text = document.getElementById('text');
 const popup = document.querySelector('.success-popup');
 const classCheck = document.querySelector('.form-control');
 
-//get the values from the inputs
-let firstNameValue = firstName.value.trim();
-let lastNameValue = lastName.value.trim();
-let emailValue = email.value.trim();
-let subjectValue = subject.value.trim();
-let textValue = text.value.trim();
+// //get the values from the inputs
+// let firstNameValue = firstName.value.trim();
+// let lastNameValue = lastName.value.trim();
+// let emailValue = email.value.trim();
+// let subjectValue = subject.value.trim();
+// let textValue = text.value.trim();
 
 let inputOne = false;
 let inputTwo = false;
@@ -190,7 +190,13 @@ form.addEventListener('submit', (e) => {
         form.reset();
         setTimeout(() => {
             popup.classList.remove('congrats');
-            
+        }, 3000);
+        setTimeout(() => {
+            inputOne = false;
+            inputTwo = false;
+            inputThree = false;
+            inputFour = false;
+            inputFive = false;
         }, 3000);
     } 
     if(inputOne == false ) {
