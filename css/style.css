@@ -872,36 +872,29 @@ main {
     width: 50%;
   }
 }
-.contact-form h2,
-.contact-form p {
+.contact-form .form-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form .form-header h2,
+.contact-form .form-header p {
   color: #00112B;
 }
 @media screen and (min-width: 280px) {
-  .contact-form h2,
-.contact-form p {
+  .contact-form .form-header h2,
+.contact-form .form-header p {
     padding-bottom: 1rem;
   }
 }
-.contact-form h2::after {
+.contact-form .form-header h2::after {
   content: "";
   margin-top: 0.25rem;
   background-color: #00112B;
   width: 135px;
   height: 4px;
   display: block;
-}
-.contact-form p {
-  font-weight: 500;
-}
-@media screen and (min-width: 280px) {
-  .contact-form p {
-    text-align: center;
-  }
-}
-@media screen and (min-width: 992px) {
-  .contact-form p {
-    text-align: left;
-  }
 }
 
 .form {
@@ -930,6 +923,7 @@ main {
   padding: 0.75rem;
   border-radius: 0.25rem;
   border: 2px solid #00112B;
+  font-family: "Roboto", sans-serif;
 }
 @media screen and (min-width: 280px) {
   .form .form-control input,

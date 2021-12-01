@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/dist/pushy.min.css">
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="/dist/style.min.css">
-    <!-- FONT -- ROBOTO -->
+    <!-- FONT ROBOTO -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
     <nav class="pushy pushy-left">
         <a href="/index.html">
             <div class="logo-wrapper-side">
-                <h1 class="logo-side">M</h1>
+                <h2 class="logo-side">M</h2>
             </div>
         </a>
         <div class="pushy-content nav-links-wrapper">
@@ -54,7 +54,7 @@
             <nav class="navigation-bar">
                 <a href="/index.html">
                     <div class="logo-wrapper">
-                        <h1 class="logo">M</h1>
+                        <h2 class="logo">M</h2>
                     </div>
                 </a>
                 <div class="nav-links-wrapper">
@@ -75,7 +75,7 @@
             <div class="burger-wrapper menu-btn">
                 <!-- <input type="checkbox" id="burger-menu"> -->
                 <!-- <label id="burger-icon" for="burger-menu"> -->
-                <div id="burger-icon" for="burger-menu">
+                <div id="burger-icon">
                     <span class="burger-lineOne"></span> 
                     <span class="burger-lineTwo"></span>
                     <span class="burger-lineThree"></span>
@@ -89,8 +89,9 @@
                     <div class="hero-img">                    
                         <div class="hero-text">
                             <div class="headings">
-                                <h2 class="my-name">Hi! My name's Matt.</h2>
-                                <h3 class="web-dev cursor"><span id="typewriter"></span></h3>
+                                <h1 class="my-name">Hi! My name's Matt.</h1>
+                                <!-- <h3 class="web-dev cursor"><span id="typewriter"></span></h3> -->
+                                <h3 class="web-dev cursor" id="typewriter"></h3>
                             </div>
                             <a href="#cards" class="scroll-down">
                                 <div class="scroll-wrapper"><h2>Scroll Down</h2><i class="fas fa-angle-down"></i></div>
@@ -170,13 +171,13 @@
                             </div>
                             <div class="form-control">
                                 <label for="subject"><span class="make-maroon">*</span> Subject</label>
-                                <input type="text" id="subject" name="subject" placeholder="Email subject..."></input>
+                                <input type="text" id="subject" name="subject" placeholder="Email subject...">
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
                                 <small class="error-message">Error</small>
                             </div>
                             <div class="form-control">
-                                <label for="message"><span class="make-maroon">*</span> Message</label>
+                                <label for="text"><span class="make-maroon">*</span> Message</label>
                                 <textarea id="text" name="message" placeholder="Your message..." style="height:200px"></textarea>
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
@@ -206,6 +207,6 @@
     <!-- INTERSECTION OBSERVERS POLYFILL -->
     <script src="/node_modules/intersection-observer/intersection-observer.js"></script>
     <!-- MAIN JS FILE -->
-    <script src="dist/app.es5.min.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>

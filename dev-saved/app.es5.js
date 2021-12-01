@@ -60,13 +60,11 @@ var email = document.getElementById('email');
 var subject = document.getElementById('subject');
 var text = document.getElementById('text');
 var popup = document.querySelector('.success-popup');
-var classCheck = document.querySelector('.form-control'); // //get the values from the inputs
-// let firstNameValue = firstName.value.trim();
-// let lastNameValue = lastName.value.trim();
-// let emailValue = email.value.trim();
-// let subjectValue = subject.value.trim();
-// let textValue = text.value.trim();
-
+var formContOne = document.querySelector('#fname');
+var formContTwo = document.querySelector('#lname');
+var formContThree = document.querySelector('#email');
+var formContFour = document.querySelector('#subject');
+var formContFive = document.querySelector('#text');
 var inputOne = false;
 var inputTwo = false;
 var inputThree = false;
@@ -127,10 +125,10 @@ function validate(e) {
       //show error 
       //add error class
       setErrorFor(lastName, 'Last Name cannot be blank');
-      inputOne = false;
+      inputTwo = false;
     } else if (lastNameValue.length < 2) {
       setErrorFor(lastName, 'Last Name must be at least 2 characters');
-      inputOne = false;
+      inputTwo = false;
     } else {
       //add success class
       setSuccessFor(lastName);
@@ -143,10 +141,10 @@ function validate(e) {
       //show error 
       //add error class
       setErrorFor(email, 'Email cannot be blank');
-      inputOne = false;
+      inputThree = false;
     } else if (!isEmail(emailValue)) {
       setErrorFor(email, 'Email is not valid');
-      inputOne = false;
+      inputThree = false;
     } else {
       //add success class
       setSuccessFor(email);
@@ -159,7 +157,7 @@ function validate(e) {
       //show error 
       //add error class
       setErrorFor(subject, 'Subject cannot be blank');
-      inputOne = false;
+      inputFour = false;
     } else {
       //add success class
       setSuccessFor(subject);
@@ -172,7 +170,7 @@ function validate(e) {
       //show error 
       //add error class
       setErrorFor(text, 'Message cannot be blank');
-      inputOne = false;
+      inputFive = false;
     } else {
       //add success class
       setSuccessFor(text);
@@ -195,27 +193,38 @@ form.addEventListener('submit', function (e) {
       inputTwo = false;
       inputThree = false;
       inputFour = false;
-      inputFive = false;
+      inputFive = false; //Clear input green borders
+
+      formContOne.parentElement.classList.remove('success');
+      formContTwo.parentElement.classList.remove('success');
+      formContThree.parentElement.classList.remove('success');
+      formContFour.parentElement.classList.remove('success');
+      formContFive.parentElement.classList.remove('success');
     }, 3000);
   }
 
-  if (inputOne == false) {
+  if (inputOne === false) {
     setErrorFor(firstName, 'First Name cannot be blank');
+    console.log("First name is ".concat(inputOne));
   }
 
-  if (inputTwo == false) {
+  if (inputTwo === false) {
     setErrorFor(lastName, 'Last Name cannot be blank');
+    console.log("Last name is ".concat(inputTwo));
   }
 
-  if (inputThree == false) {
+  if (inputThree === false) {
     setErrorFor(email, 'Email cannot be blank');
+    console.log("Email name is ".concat(inputThree));
   }
 
-  if (inputFour == false) {
+  if (inputFour === false) {
     setErrorFor(subject, 'Subject cannot be blank');
+    console.log("Subject name is ".concat(inputFour));
   }
 
-  if (inputFive == false) {
+  if (inputFive === false) {
     setErrorFor(text, 'Message cannot be blank');
+    console.log("First name is ".concat(inputFive));
   }
 });
