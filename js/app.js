@@ -74,6 +74,13 @@ let inputThree = false;
 let inputFour = false;
 let inputFive = false;
 
+//get the values from the inputs
+let firstNameValue = firstName.value.trim();
+let lastNameValue = lastName.value.trim();
+let emailValue = email.value.trim();
+let subjectValue = subject.value.trim();
+let textValue = text.value.trim();
+
 firstName.addEventListener('input', validate);
 lastName.addEventListener('input', validate);
 email.addEventListener('input', validate);
@@ -114,7 +121,6 @@ function validate(e) {
     let emailValue = email.value.trim();
     let subjectValue = subject.value.trim();
     let textValue = text.value.trim();
-    
     if(target.name == "firstname" ) {
         if(firstNameValue === "") {
             //show error 
@@ -197,6 +203,12 @@ function validate(e) {
 }
 
 form.addEventListener('submit', (e) => {
+    //get the values from the inputs
+    let firstNameValue = firstName.value.trim();
+    let lastNameValue = lastName.value.trim();
+    let emailValue = email.value.trim();
+    let subjectValue = subject.value.trim();
+    let textValue = text.value.trim();
     e.preventDefault()
     if (inputOne === true && inputTwo === true && inputThree === true && inputFour === true && inputFive === true) {
         popup.classList.add('congrats');
@@ -218,24 +230,29 @@ form.addEventListener('submit', (e) => {
             popup.classList.remove('congrats');
         }, 5000);
     } 
-    if(inputOne === false ) {
+    if(firstNameValue === "") {
         setErrorFor(firstName, 'First Name cannot be blank');
-        console.log(`First name is ${inputOne}`);
-    } 
-    if(inputTwo === false) {
+    } else if(inputOne === false && !isFirstName(firstNameValue)) {
+        setErrorFor(firstName, 'First Name must be between 2 and 16 characters with only letters');
+    }
+    if(lastNameValue === "") {
         setErrorFor(lastName, 'Last Name cannot be blank');
-        console.log(`Last name is ${inputTwo}`);
-    } 
-    if(inputThree === false) {
+    } else if(inputTwo === false && !isLastName(lastNameValue)) {
+        setErrorFor(lastName, 'Last Name must be between 2 and 16 characters with only letters');
+    }
+    if(emailValue === "") {
         setErrorFor(email, 'Email cannot be blank');
-        console.log(`Email name is ${inputThree}`);
-    } 
-    if(inputFour === false) {
+    } else if(inputThree === false && !isEmail(emailValue)) {
+        setErrorFor(email, 'Email is not valid');
+    }
+    if(subjectValue === "") {
         setErrorFor(subject, 'Subject cannot be blank');
-        console.log(`Subject name is ${inputFour}`);
-    } 
-    if(inputFive === false) {
+    } else if(inputFour === false && !isSubject(subjectValue)) {
+        setErrorFor(subject, 'Subject can only be between 2 and 64 characters and contain letters and numbers');
+    }
+    if(textValue === "") {
         setErrorFor(text, 'Message cannot be blank');
-        console.log(`First name is ${inputFive}`);
+    } else if(inputFour === false && textValue.length <= 2 || textValue.length > 500) {
+        setErrorFor(text, "Message must be between 2 and 500 characters");
     }
 });

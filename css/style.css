@@ -1009,7 +1009,7 @@ main {
 .success-popup.congrats {
   display: block;
   position: absolute;
-  top: 360px;
+  top: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
