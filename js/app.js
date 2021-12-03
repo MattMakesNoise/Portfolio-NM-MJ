@@ -93,8 +93,17 @@ function setSuccessFor(input) {
     //add error class 
     formControl.className = 'form-control success';
 }
+function isFirstName(fName) {
+    return /^[a-zA-Z]{2,16}$/.test(fName);
+}
+function isLastName(lName) {
+    return /^[a-zA-Z]{2,16}$/.test(lName);
+}
 function isEmail(email) {
-    return /^[a-zA-Z0-9\.!#$%&'*+/=?^_`{|}~-]{2,64}@[a-zA-Z0-9-]+\.[a-zA-Z]{2,8}(\.[a-zA-Z]{2,8})?$/.test(email);
+    return /^[a-zA-Z0-9\.!#$%&'*+/=?^_`{|}~-]{3,32}@[a-zA-Z0-9-]{3,16}\.[a-zA-Z]{2,8}(\.[a-zA-Z]{2,8})?$/.test(email);
+}
+function isSubject(subj) {
+    return /^[a-zA-Z0-9_ ]{2,64}$/.test(subj);
 }
 
 function validate(e) {
@@ -112,8 +121,8 @@ function validate(e) {
             //add error class
             setErrorFor(firstName, 'First Name cannot be blank');
             inputOne = false;
-        } else if(firstNameValue.length < 2) {
-            setErrorFor(firstName, 'First Name must be at least 2 characters');
+        } else if(!isFirstName(firstNameValue)) {
+            setErrorFor(firstName, 'First Name must be between 2 and 16 characters with only letters');
             inputOne = false;
         } else {
             //add success class
@@ -128,8 +137,8 @@ function validate(e) {
             //add error class
             setErrorFor(lastName, 'Last Name cannot be blank');
             inputTwo = false;
-        } else if(lastNameValue.length < 2) {
-            setErrorFor(lastName, 'Last Name must be at least 2 characters');
+        } else if(!isLastName(lastNameValue)) {
+            setErrorFor(lastName, 'Last Name must be between 2 and 16 characters with only letters');
             inputTwo = false;
         } else {
             //add success class
@@ -160,6 +169,9 @@ function validate(e) {
             //add error class
             setErrorFor(subject, 'Subject cannot be blank');
             inputFour = false;
+        } else if(!isSubject(subjectValue)) {
+            setErrorFor(subject, 'Subject can only be between 2 and 64 characters and contain letters and numbers');
+            inputFour = false;
         } else {
             //add success class
             setSuccessFor(subject);
@@ -172,6 +184,9 @@ function validate(e) {
             //show error 
             //add error class
             setErrorFor(text, 'Message cannot be blank');
+            inputFive = false;
+        } else if(textValue.length <= 2 || textValue.length > 500) {
+            setErrorFor(text, "Message must be between 2 and 500 characters");
             inputFive = false;
         } else {
             //add success class
@@ -187,9 +202,6 @@ form.addEventListener('submit', (e) => {
         popup.classList.add('congrats');
         form.reset();
         setTimeout(() => {
-            popup.classList.remove('congrats');
-        }, 3000);
-        setTimeout(() => {
             inputOne = false;
             inputTwo = false;
             inputThree = false;
@@ -201,7 +213,10 @@ form.addEventListener('submit', (e) => {
             formContThree.parentElement.classList.remove('success');
             formContFour.parentElement.classList.remove('success');
             formContFive.parentElement.classList.remove('success');
-        }, 3000);
+        }, 100);
+        setTimeout(() => {
+            popup.classList.remove('congrats');
+        }, 5000);
     } 
     if(inputOne === false ) {
         setErrorFor(firstName, 'First Name cannot be blank');

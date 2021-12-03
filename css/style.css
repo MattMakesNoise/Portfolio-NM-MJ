@@ -985,7 +985,7 @@ main {
   display: none;
   z-index: 10;
   background-color: white;
-  border: 2px solid green;
+  border: 5px solid green;
   border-radius: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 2rem;
@@ -993,6 +993,9 @@ main {
 .success-popup h2,
 .success-popup p {
   color: green;
+}
+.success-popup p {
+  padding-top: 1rem;
 }
 .success-popup h2::after {
   content: "";
@@ -1006,7 +1009,7 @@ main {
 .success-popup.congrats {
   display: block;
   position: absolute;
-  top: 180px;
+  top: 360px;
   display: flex;
   flex-direction: column;
   justify-content: center;

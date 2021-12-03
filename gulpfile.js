@@ -40,7 +40,7 @@ function minifycss() {
     //1. Where is my CSS file?
     return gulp.src('./css/**/*.css')
         //2. Make the task wait so that Sass has compiled and outputted.
-        .pipe(wait(500))
+        .pipe(wait(100))
         //3. Pass that file through CSS Uglifier.
         .pipe(uglifyCSS())
         //4. Rename the output file to be .min.css
